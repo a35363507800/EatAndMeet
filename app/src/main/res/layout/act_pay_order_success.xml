@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/topbar_template" />
+    <!--<com.yalantis.taurus.PullToRefreshView-->
+    <!--android:id="@+id/pull_to_refresh"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">		-->
+    <!--</com.yalantis.taurus.PullToRefreshView>-->
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c16"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70px">
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/MC5"
+                    android:text="{eam-s-smile-face @color/c13 39sp}" />
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="您已支付成功"
+                    android:textColor="@color/c3"
+                    android:textSize="@dimen/f2" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80px"
+                android:layout_marginTop="60px"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="100px"
+                android:paddingRight="100px">
+
+                <Button
+                    android:id="@+id/btn_check_order"
+                    style="@style/round_corner_btn_white_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="88px"
+                    android:layout_weight="1"
+                    android:text="查看订单"
+                    android:textSize="@dimen/f3"
+                    android:background="@drawable/shape_lookorder_button"
+                    android:textColor="@color/C0316" />
+
+                <Button
+                    android:id="@+id/btn_back_res"
+                    style="@style/round_corner_sec_main_btn_mc1_bg"
+                    android:layout_width="0dp"
+                    android:background="@drawable/shape_return_button"
+                    android:layout_height="88px"
+                    android:layout_marginLeft="30px"
+                    android:textSize="@dimen/f3"
+                    android:layout_weight="1"
+                    android:text="返回餐厅"
+                    android:textColor="@color/white" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40px"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal"
+            android:paddingLeft="100px"
+            android:paddingRight="100px">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/c5" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:text="{eam-s-love-circle @color/MC1 @dimen/f3}" />
+
+            <TextView
+                style="@style/commonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="可能邂逅的人" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16px"
+                android:layout_weight="1"
+                android:background="@color/c5" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/c16">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            android:id="@+id/gv_meet_person"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:clipToPadding="false"
+            android:columnWidth="100dp"
+            android:listSelector="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="20px"
+            android:numColumns="2"
+            android:paddingLeft="4px"
+            android:paddingRight="4px"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="20px"
+            ptr:ptrMode="both" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

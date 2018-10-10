@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     android:background="@color/c16"
+                                     android:orientation="vertical">
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT"
+        ></com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/FC3"/>
+
+    </com.zhy.autolayout.AutoLinearLayout></ScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

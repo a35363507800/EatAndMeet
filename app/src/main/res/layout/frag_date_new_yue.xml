@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+    
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_all_yue_info"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@color/white"-->
+        <!--android:layout_height="70dp">-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:background="@color/C0313"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:layout_marginBottom="13dp"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/ll_bg_icon">-->
+    <!--<com.joanzapata.iconify.widget.IconTextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="{eam-e622}"-->
+        <!--android:textSize="30sp"-->
+        <!--android:id="@+id/iv_almclock"/>-->
+    <!--</LinearLayout>-->
+
+
+        <!--<TextView-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@+id/ll_bg_icon"-->
+            <!--android:text="35s4f5fsdhavdsv"-->
+            <!--android:layout_marginLeft="6dp"-->
+            <!--android:lines="2"-->
+            <!--android:textColor="@color/BlackP"-->
+            <!--android:layout_alignTop="@+id/ll_bg_icon"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:id="@+id/tv_content"/>-->
+
+
+        <!--<com.joanzapata.iconify.widget.IconTextView-->
+            <!--android:layout_width="13dp"-->
+            <!--android:layout_height="22dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="12.5dp"-->
+            <!--android:id="@+id/itv_next"-->
+            <!--android:text="{eam-e909}"-->
+            <!--android:textColor="@color/C0323"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="66dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_stop"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="用户评价"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="@color/C0321"-->
+            <!--android:textSize="@dimen/f1"/>-->
+
+        <!--<View-->
+            <!--android:id="@+id/view_left"-->
+            <!--android:layout_width="8dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_toLeftOf="@+id/tv_stop"-->
+            <!--android:background="@color/C0321"/>-->
+
+        <!--<View-->
+            <!--android:id="@+id/view_right"-->
+            <!--android:layout_width="8dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_toRightOf="@+id/tv_stop"-->
+            <!--android:background="@color/C0321"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <com.echoesnet.eatandmeet.views.DateCommentRecycleView
+        android:id="@+id/rv_yue_content"
+        android:background="@color/main_background_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <com.echoesnet.eatandmeet.utils.EmptyView
+            android:id="@+id/tv_emptyview"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"/>
+<!--    android:layout_marginTop="80dp"-->
+</RelativeLayout>

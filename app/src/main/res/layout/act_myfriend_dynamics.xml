@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c16"
+	android:orientation="vertical">
+
+	<include
+		android:id="@+id/top_bar"
+		layout="@layout/topbar_template"/>
+	<com.zhy.autolayout.AutoRelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			android:id="@+id/lv_dyn"
+			android:scrollbars="none"
+            android:background="@color/main_background_color"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:divider="@color/FC7"
+			android:dividerHeight="1px"/>
+
+		<include android:id="@+id/loading_view"
+				 layout="@layout/view_loading_cover"/>
+	</com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

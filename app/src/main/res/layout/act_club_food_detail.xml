@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.echoesnet.eatandmeet.activities.MyOrdersAct">
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar_switch"
+        switchBtnsIntervalPx="60"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT"/>
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/rv_food_type"
+       android:overScrollMode="never"
+       android:layout_marginLeft="12dp"
+       android:layout_marginTop="15dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="351dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="1px"
+
+        android:background="@color/C0332"
+        ></View>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/rv_food_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

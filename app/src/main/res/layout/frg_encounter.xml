@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rl_all_content"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/main_background_color"
+	android:clipChildren="false"
+	android:focusable="true"
+	android:focusableInTouchMode="true">
+
+	<com.handmark.pulltorefresh.library.PullToRefreshHeaderGridView
+		android:id="@+id/pull_to_refresh_header_gv"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white"
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="3dp"/>
+	<com.echoesnet.eatandmeet.views.widgets.DragLayout
+		android:id="@+id/iv_day_gq_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="95dp"
+		android:layout_marginRight="13dp"
+		android:visibility="gone">
+		<ImageView
+			android:id="@+id/iv_gq"
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:src="@drawable/gq_gif"/>
+	</com.echoesnet.eatandmeet.views.widgets.DragLayout>
+	<com.echoesnet.eatandmeet.views.widgets.DragLayout
+		android:id="@+id/iv_day_seven_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="20dp"
+		android:layout_marginRight="13dp"
+		android:visibility="gone">
+		<ImageView
+			android:id="@+id/iv_day_seven"
+			android:layout_width="80dp"
+			android:layout_height="75dp"
+			android:src="@drawable/prize_gift"
+		/>
+
+		<!--<View-->
+		<!--android:id="@+id/sevenday_hongdian"-->
+		<!--android:layout_width="8dp"-->
+		<!--android:layout_height="8dp"-->
+		<!--android:layout_alignRight="@+id/iv_day_seven"-->
+		<!--android:layout_marginTop="3dp"-->
+		<!--android:background="@drawable/setting_hongdian"-->
+		<!--/>-->
+	</com.echoesnet.eatandmeet.views.widgets.DragLayout>
+</RelativeLayout>

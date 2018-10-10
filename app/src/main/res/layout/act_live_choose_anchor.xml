@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	android:id="@+id/act_live_choose_anchor"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/main_background_color"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.live.LiveChooseAnchorAct">
+	<include
+		android:id="@+id/top_bar"
+		layout="@layout/topbar_template"/>
+	<com.zhy.autolayout.AutoRelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="70px"
+		android:layout_marginBottom="10px"
+		android:layout_marginLeft="24px"
+		android:layout_marginRight="24px"
+		android:layout_marginTop="10px"
+		android:background="@drawable/search_dish_round_strock"
+		android:focusable="true"
+		android:focusableInTouchMode="true">
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/ll_search"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true">
+
+			<ImageView
+				android:id="@+id/iv_delete"
+				android:layout_width="28px"
+				android:layout_height="28px"
+				android:layout_marginLeft="@dimen/f5"
+				android:layout_marginRight="@dimen/f5"
+				android:scaleType="fitCenter"/>
+
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<EditText
+			android:id="@+id/et_search"
+			android:layout_width="match_parent"
+			android:layout_height="70px"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="10px"
+			android:layout_toLeftOf="@+id/ll_search"
+			android:layout_toRightOf="@+id/iv_search"
+			android:background="@null"
+			android:hint="请输入主播昵称或ID"
+			android:imeOptions="actionSearch"
+			android:lines="1"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:textColor="@color/FC2"
+			android:textColorHint="@color/FC3"
+			android:textSize="@dimen/f4"/>
+
+		<ImageView
+			android:id="@+id/iv_search"
+			android:layout_width="28px"
+			android:layout_height="28px"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="10px"
+			android:scaleType="fitCenter"
+			android:src="@color/c1"/>
+	</com.zhy.autolayout.AutoRelativeLayout>
+	<include android:id="@+id/empty_view"
+			 layout="@layout/empty_view"
+			 android:visibility="gone"/>
+	<com.zhy.autolayout.AutoRelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			android:id="@+id/ptrListView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+            android:background="@color/main_background_color"
+			android:divider="@null"/>
+		<TextView
+			android:id="@+id/text_dialog"
+			android:layout_width="100px"
+			android:layout_height="100px"
+			android:layout_centerInParent="true"
+			android:background="@color/main_background_color"
+			android:gravity="center"
+			android:text="A"
+			android:textColor="@color/black"
+			android:textSize="26sp"
+			android:visibility="gone"/>
+		<com.echoesnet.eatandmeet.views.widgets.SideBar
+			android:id="@+id/sidebar"
+			android:layout_width="50px"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_marginBottom="10px"
+			android:layout_marginTop="10px"/>
+	</com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

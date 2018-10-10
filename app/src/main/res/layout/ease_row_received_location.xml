@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tool="http://schemas.android.com/tools"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:orientation="vertical"
+				android:paddingTop="13dp">
+
+	<TextView
+		android:id="@+id/timestamp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textColor="@color/C0323"
+		android:textSize="@dimen/f4"
+		tool:text="下午 06:01"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/timestamp"
+		android:layout_marginTop="@dimen/margin_chat_activity">
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+			android:id="@+id/iv_userhead"
+			android:layout_width="@dimen/size_avatar"
+			android:layout_height="@dimen/size_avatar"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="@dimen/margin_chat_activity"/>
+
+		<LinearLayout
+			android:id="@+id/bubble"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/tv_userid"
+			android:layout_marginLeft="@dimen/margin_chat_activity"
+			android:layout_toRightOf="@id/iv_userhead"
+			android:background="@drawable/bg_map_receiver"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/tv_location"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="8dp"
+				android:maxWidth="214dp"
+				android:textColor="@color/C0321"
+				android:textSize="@dimen/f3"
+				tool:text="茂业大厦"/>
+			<TextView
+				android:id="@+id/tv_location_address"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="4dp"
+				android:ellipsize="end"
+				android:maxLines="1"
+				android:maxWidth="214dp"
+				android:textColor="@color/C0323"
+				android:textSize="@dimen/f3"
+				tool:text="河北区海河东路世纪钟南行50米路北茂业"/>
+		</LinearLayout>
+		<TextView
+			android:id="@+id/tv_userid"
+			style="@style/chat_text_name_style"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/chat_nick_margin_left"
+			android:layout_toRightOf="@id/iv_userhead"
+			android:textSize="@dimen/chat_nick_text_size"
+			android:visibility="gone"/>
+
+		<ImageView
+			android:id="@+id/msg_status"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="6dp"
+			android:layout_toRightOf="@id/bubble"
+			android:clickable="true"
+			android:src="@drawable/ease_msg_state_failed_resend"
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/tv_ack"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="6dp"
+			android:layout_toRightOf="@id/bubble"
+			android:background="@drawable/round_btn_c0315"
+			android:paddingBottom="2dp"
+			android:paddingLeft="4dp"
+			android:paddingRight="4dp"
+			android:paddingTop="2dp"
+			android:text="@string/text_ack_msg"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f6"
+			android:visibility="gone"/>
+	</RelativeLayout>
+
+</RelativeLayout>

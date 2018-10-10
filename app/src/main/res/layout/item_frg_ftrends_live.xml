@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tool="http://schemas.android.com/tools"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingBottom="16.5dp">
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:background="@color/C0333"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp">
+            <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+                android:id="@+id/img_head"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/userhead"
+                app:riv_oval="true"/>
+            <ImageView
+                android:id="@+id/img_v_icon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:visibility="gone"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/v_icon"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/C0321"
+                android:textSize="@dimen/f3"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_distance"
+                android:text="1分钟前"
+                android:textColor="@color/C0322"
+                android:textSize="@dimen/f4"/>
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="fadfasfs"
+                android:textColor="@color/C0322"
+                android:textSize="@dimen/f4"/>
+
+            <com.echoesnet.eatandmeet.views.widgets.GenderView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_below="@+id/tv_nickname"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="22"
+                android:textColor="@color/white"
+                android:textSize="@dimen/f6"/>
+
+
+            <com.echoesnet.eatandmeet.views.widgets.LevelView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_below="@+id/tv_nickname"
+                android:layout_toRightOf="@+id/tv_sex"
+                app:text_size ="@dimen/f6"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_sex"
+                android:layout_marginTop="11dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <com.echoesnet.eatandmeet.views.widgets.FolderTextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/C0322"
+                    android:textSize="@dimen/f3"
+                    app:foldline="2"/>
+                <FrameLayout
+                    android:id="@+id/fl_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible">
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/riv_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:riv_corner_radius="4dp"/>
+                    <ImageView
+                        android:id="@+id/img_living"
+                        android:layout_width="55dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/encounter_living_ico"/>
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/read_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/f6"
+                android:textColor="@color/C0323"
+                android:layout_marginBottom="10dp"
+                tool:text="0人 已读"
+                android:background="@drawable/read_num_bg"
+                android:layout_below="@+id/ll_content"
+                />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/tv_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/read_num_tv"
+                android:layout_marginRight="22dp"
+                android:text="{eam-p-praise @color/white @dimen/f6}"
+                android:textColor="@color/C0323"
+                android:textSize="12sp"/>
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/read_num_tv"
+                android:layout_toRightOf="@+id/tv_praise"
+                android:textColor="@color/C0323"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/read_num_tv"
+                android:background="@drawable/round_stroke_0323_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="2.85dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="2.85dp">
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="{eam-e9c1}"
+                    android:textColor="@color/C0313"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/C0322"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxEms="5"
+                    android:textSize="@dimen/f6"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

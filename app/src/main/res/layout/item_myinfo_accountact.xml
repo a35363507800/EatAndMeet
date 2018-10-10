@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+
+    >
+  <RelativeLayout
+      android:id="@+id/rl_egg"
+      android:layout_width="100dp"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:background="@drawable/egg_count_bg"
+      >
+
+    <TextView
+        android:id="@+id/tv_egg_count"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/f2"
+
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/C0322"
+        android:text="55枚"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_below="@+id/tv_egg_count"
+        android:id="@+id/tv_egg_twocount"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/f4"
+        android:textColor="@color/C0323"
+        android:text="送1--"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+
+  </RelativeLayout>
+
+
+
+
+</RelativeLayout>

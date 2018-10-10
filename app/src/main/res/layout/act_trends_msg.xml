@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/main_background_color">
+<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+    android:id="@+id/top_bar_switch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:topbarType="TEXT"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_trends_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+        android:paddingTop="5.5dp"
+        android:divider="@color/c2"
+        app:ptrAnimationStyle="echoes"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"/>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/transparent"
+			  android:orientation="vertical"
+			  android:gravity="center_horizontal"
+			  android:paddingBottom="4dp">
+	<RelativeLayout android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1">
+		<TextView
+			android:id="@+id/tv_tab_title"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:paddingBottom="8dp"
+			android:paddingTop="8dp"
+			android:text="直播"
+			android:textColor="@drawable/live_msg_tab_tv_selector"
+			android:textSize="@dimen/f2"/>
+		<TextView
+			android:id="@+id/tv_tab_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/shape_round_corner_red_with_num"
+			android:gravity="center|top"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:text="1"
+			android:textColor="@color/white"
+			android:visibility="gone"
+		/>
+	</RelativeLayout>
+	<ImageView
+		android:id="@+id/img_tab"
+		android:layout_width="20dp"
+		android:layout_height="2dp"
+		android:background="@drawable/live_msg_tab_img_selector"/>
+</LinearLayout>

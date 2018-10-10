@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EatAndMeet.iml" filepath="$PROJECT_DIR$/EatAndMeet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pingpp/EatAndMeet-pingpp.iml" filepath="$PROJECT_DIR$/pingpp/EatAndMeet-pingpp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShortcutBadger/ShortcutBadger.iml" filepath="$PROJECT_DIR$/ShortcutBadger/ShortcutBadger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cycleImageShow/cycleImageShow.iml" filepath="$PROJECT_DIR$/cycleImageShow/cycleImageShow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gridPasswordInput/gridPasswordInput.iml" filepath="$PROJECT_DIR$/gridPasswordInput/gridPasswordInput.iml" />
+      <module fileurl="file://$PROJECT_DIR$/icontextmodule/icontextmodule.iml" filepath="$PROJECT_DIR$/icontextmodule/icontextmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jazzyViewPager_lib/jazzyViewPager_lib.iml" filepath="$PROJECT_DIR$/jazzyViewPager_lib/jazzyViewPager_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsBridge/jsBridge.iml" filepath="$PROJECT_DIR$/jsBridge/jsBridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/pingpp/lib-pingpp.iml" filepath="$PROJECT_DIR$/lib/pingpp/lib-pingpp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/photo_view_lib/photo_view_lib.iml" filepath="$PROJECT_DIR$/photo_view_lib/photo_view_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/pingpp_one/pingpp_one.iml" filepath="$PROJECT_DIR$/lib/pingpp_one/pingpp_one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pull_refresh_lib/pull_refresh_lib.iml" filepath="$PROJECT_DIR$/pull_refresh_lib/pull_refresh_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swiprecycleview_lib/swiprecycleview_lib.iml" filepath="$PROJECT_DIR$/swiprecycleview_lib/swiprecycleview_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ufilesdk/ufilesdk.iml" filepath="$PROJECT_DIR$/ufilesdk/ufilesdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpage_indicator_lib/viewpage_indicator_lib.iml" filepath="$PROJECT_DIR$/viewpage_indicator_lib/viewpage_indicator_lib.iml" />
+    </modules>
+  </component>
+</project>

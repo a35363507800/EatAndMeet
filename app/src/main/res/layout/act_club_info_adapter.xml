@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.echoesnet.eatandmeet.activities.MyOrdersAct">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/f3"
+            android:layout_marginBottom="13.5dp"
+            android:textColor="@color/C0321"
+            android:textStyle="bold"
+
+            />
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/itv_food_info"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{eam-e60d}"
+            android:layout_marginLeft="5dp"
+           android:textSize="12dp"
+            />
+
+    </LinearLayout>
+
+
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_clubinfo"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+     
+</LinearLayout>

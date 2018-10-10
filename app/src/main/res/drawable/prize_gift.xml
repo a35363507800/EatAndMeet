@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    根标签为animation-list，其中oneshot代表着是否只展示一遍，设置为false会不停的循环播放动画
+    根标签下，通过item标签对动画中的每一个图片进行声明
+    android:duration 表示展示所用的该图片的时间长度
+ -->
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+>
+    <item android:drawable="@drawable/haitun_00" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_01" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_02" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_03" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_04" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_05" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_06" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_07" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_08" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_09" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_10" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_11" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_12" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_13" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_14" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_15" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_16" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_17" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_18" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_19" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_20" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_21" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_22" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_23" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_24" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_25" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_26" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_27" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_28" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_29" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_30" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_31" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_32" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_33" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_34" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_35" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_36" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_37" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_38" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_40" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_41" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_42" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_43" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_44" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_45" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_46" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_47" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_48" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_49" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_50" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_51" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_52" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_53" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_54" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_55" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_56" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_57" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_58" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_59" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_60" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_61" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_62" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_63" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_64" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_65" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_66" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_67" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_68" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_69" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_70" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_71" android:duration="40"></item>
+    <item android:drawable="@drawable/haitun_72" android:duration="40"></item>
+
+
+
+</animation-list>

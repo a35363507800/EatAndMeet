@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ll_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/itv_report_restaurant"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_tanchuan"
+        android:paddingTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="{eam-s-warning} 举报"
+        android:textColor="@color/C0322"
+        android:textSize="@dimen/f3"/>
+
+</RelativeLayout>

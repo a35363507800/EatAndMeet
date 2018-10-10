@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackT30"
+    android:paddingTop="24dp">
+    <ImageView
+        android:id="@+id/img_hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dashan1"/>
+    <ImageView
+        android:id="@+id/img_next"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/img_hello"
+        android:layout_marginTop="208px"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/next_xia"/>
+    <ImageView
+        android:id="@+id/img_iknow"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/img_girl"
+        android:layout_marginTop="182px"
+        android:src="@drawable/iknow_xia" />
+
+    <ImageView
+        android:id="@+id/img_girl"
+        android:layout_width="246dp"
+        android:layout_height="251dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/dashan2" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--自定义 可滑动的Layout-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRoomLayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.echoesnet.eatandmeet.views.widgets.SwipeMoveRelativeLayout
+        android:id="@+id/slBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:id="@+id/room_root_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/room_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/room_amin_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/MC1"/>
+
+                <RelativeLayout
+                    android:id="@+id/room_fighting_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/MC2"/>
+
+                <RelativeLayout
+                    android:id="@+id/room_uio_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/MC3"/>
+
+                <ListView
+                    android:id="@+id/room_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="100dp"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="7dp"
+                    android:paddingLeft="12dp"
+                    android:background="@color/MC4"/>
+                <!-- 底部操作布局-->
+                <RelativeLayout
+                    android:id="@+id/room_controller"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:padding="@dimen/d12"
+                    android:visibility="visible"
+
+                    android:background="@color/MC5"/>
+                <!--发送消息布局-->
+                <LinearLayout
+                    android:id="@+id/dialog_send_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <!-- 弹幕按钮 -->
+                    <RelativeLayout
+                        android:id="@+id/dialog_barrage_layout"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/selector_chat_barrage_bg"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/dialog_barrage_text"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/shape_chat_barrage_bg"
+                            android:gravity="center"
+                            android:text="弹"
+                            android:textColor="@drawable/selector_chat_barrage_color"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#c8c7cc"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:id="@+id/dialog_input"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="和大家说点什么"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/FC3" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#c8c7cc" />
+
+                    <Button
+                        android:id="@+id/dialog_send"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:text="发送"
+                        android:textColor="@color/MC1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlHostInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/d4"
+                android:layout_marginStart="@dimen/d4"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_bg_live_play_head"
+                android:paddingEnd="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="8dp"
+                android:paddingStart="5dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/rivHostAvatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/userhead"
+                    app:riv_oval="true" />
+
+                <LinearLayout
+                    android:id="@+id/llRoomInfoGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/rivHostAvatar"
+                    android:layout_toRightOf="@+id/rivHostAvatar"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvRoomName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="roomName"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/f5" />
+
+                    <TextView
+                        android:id="@+id/tvMembersCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/f5" />
+                </LinearLayout>
+
+                <com.echoesnet.extensionui.widgets.IconTV
+                    android:id="@+id/tvFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/llRoomInfoGroup"
+                    android:layout_toRightOf="@+id/llRoomInfoGroup"
+                    android:background="@drawable/round_corner_18_mc1_bg"
+                    android:padding="4dp"
+                    android:text="@string/liveFollowIconWithDesc"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f3" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAudienceAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/d8"
+                android:layout_marginStart="@dimen/d8"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/rlHostInfo"
+                android:layout_toLeftOf="@+id/itvCloseLive"
+                android:layout_toRightOf="@+id/rlHostInfo"
+                android:layout_toStartOf="@+id/itvCloseLive" />
+
+            <ImageView
+                android:id="@+id/itvCloseLive"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/btn_live_close_selector" />
+
+
+            <LinearLayout
+                android:id="@+id/llMealTicketGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_below="@+id/rlHostInfo"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/round_bg_live_play_head"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelMealTicket"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f3" />
+
+                <TextView
+                    android:id="@+id/tvMealTicketCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f3" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.echoesnet.eatandmeet.views.widgets.SwipeMoveRelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCleanGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/itvCleansss"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:src="@drawable/btn_live_close_selector" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlPopCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent"
+        android:visibility="gone"/>
+</RelativeLayout>
+
+

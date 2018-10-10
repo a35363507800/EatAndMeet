@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<com.zhy.autolayout.AutoRelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:padding="20px">
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+			android:id="@+id/riv_head"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center_horizontal"/>
+
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/all_all_info"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/riv_head"
+			android:layout_toRightOf="@+id/riv_head"
+			android:gravity="center_vertical"
+			android:layout_marginLeft="20px"
+			android:orientation="horizontal">
+
+			<com.echoesnet.eatandmeet.views.widgets.LevelView
+				android:id="@+id/ll_level"
+				android:layout_width="wrap_content"
+				android:layout_height="13dp"/>
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:id="@+id/itv_age"
+				android:layout_marginLeft="10px"
+				android:layout_gravity="center_vertical"
+				android:layout_width="60px"
+				android:layout_height="30px"
+				android:gravity="center"
+				android:text="{eam-e94f}"
+				android:textColor="@color/white"
+				android:textSize="@dimen/f5"/>
+
+			<TextView
+				android:id="@+id/tv_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20px"
+				android:textColor="@color/MC3"
+				android:textSize="@dimen/f3"/>
+		</com.zhy.autolayout.AutoLinearLayout>
+
+
+		<com.echoesnet.eatandmeet.views.widgets.CustomRatingBar.CustomRatingBar
+			android:id="@+id/crb_rating_bar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+
+			android:layout_alignLeft="@+id/all_all_info"
+			android:layout_below="@+id/all_all_info"
+			android:layout_marginTop="22px"
+			android:layout_toRightOf="@+id/riv_head"/>
+
+		<TextView
+			android:id="@+id/tv_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignTop="@+id/tv_name"
+			android:textColor="@color/FC3"
+			android:textSize="@dimen/f4"/>
+
+		<!--<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/all_content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/crb_rating_bar"
+			android:layout_below="@+id/crb_rating_bar"
+			android:layout_marginTop="30px"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/description_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:lineSpacingExtra="16px"
+				android:textColor="@color/FC1"
+				android:textSize="@dimen/f3"/>
+
+			<TextView
+				android:id="@+id/tv_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginTop="16px"
+				android:text="- 展开 -"
+				android:textColor="@color/FC1"
+				android:textSize="@dimen/f3"
+				android:visibility="gone"/>
+		</com.zhy.autolayout.AutoLinearLayout>-->
+
+		<com.ms.square.android.expandabletextview.ExpandableTextView
+			android:id="@+id/all_content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/crb_rating_bar"
+			android:layout_below="@+id/crb_rating_bar"
+			android:layout_marginTop="15dp"
+			app:animDuration="200"
+			app:maxCollapsedLines="3"
+		>
+			<TextView
+				android:id="@+id/expandable_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:lineSpacingExtra="16px"
+				android:textColor="@color/FC1"
+				android:textSize="@dimen/f3"/>
+			<ImageButton
+				android:id="@+id/expand_collapse"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right|bottom"
+				android:background="@color/transparent"
+				android:padding="5dp"/>
+		</com.ms.square.android.expandabletextview.ExpandableTextView>
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/ll_horizontal_listview"
+			android:layout_width="match_parent"
+			android:layout_height="160px"
+			android:layout_alignLeft="@+id/crb_rating_bar"
+			android:layout_below="@+id/all_content"
+			android:layout_marginTop="20px"
+			android:background="@color/white">
+
+			<com.echoesnet.eatandmeet.views.widgets.HorizontalListView
+				android:id="@+id/hlv_imgs"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"/>
+
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/tv_name"
+			android:layout_below="@+id/ll_horizontal_listview"
+			android:layout_marginTop="18px"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+			<!--
+			<ImageView android:layout_width="32px"
+					   android:layout_height="32px"
+					   android:src="@drawable/linzuo_liaohongdian_xxhdpi"/>
+					   -->
+			<com.joanzapata.iconify.widget.IconTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:text="{eam-e94e}"
+				android:textColor="@color/FC3"
+				android:textSize="@dimen/f3"/>
+			<TextView
+				android:id="@+id/tv_dynamics_address"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="16px"
+				android:textColor="@color/FC3"
+				android:textSize="@dimen/f3"/>
+		</com.zhy.autolayout.AutoLinearLayout>
+
+	</com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

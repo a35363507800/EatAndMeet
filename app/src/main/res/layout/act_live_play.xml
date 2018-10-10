@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlBody"
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+	<!--<ImageView-->
+		<!--android:id="@+id/ivRoomFlyPage"-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="match_parent"-->
+		<!--android:visibility="gone"-->
+		<!--android:scaleType="centerCrop"/>-->
+
+	<fr.castorflex.android.verticalviewpager.VerticalViewPager
+		android:id="@+id/vvpSwitchRoom"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<!--&lt;!&ndash;直播离开&ndash;&gt;-->
+	<!--<LinearLayout-->
+		<!--android:id="@+id/llHostLeaveGroup"-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="match_parent"-->
+		<!--android:background="#8c000000"-->
+		<!--android:gravity="center_horizontal"-->
+		<!--android:orientation="vertical"-->
+		<!--android:visibility="gone">-->
+
+		<!--<ImageView-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_marginTop="152dp"-->
+			<!--android:src="@drawable/waiting_xhdpi"/>-->
+
+		<!--<TextView-->
+			<!--android:id="@+id/tvWaitingDesc"-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_marginTop="@dimen/d12"-->
+			<!--android:text="@string/liveHostLeave"-->
+			<!--android:textColor="@color/white"-->
+			<!--android:textSize="@dimen/f2"/>-->
+	<!--</LinearLayout>-->
+
+	<!-- 7.1.1 toast 会崩溃 这个用来显示snack bar的 -->
+	<!--<android.support.design.widget.CoordinatorLayout-->
+	<!--android:id="@+id/clGroup"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:layout_alignParentBottom="true">-->
+	<!--</android.support.design.widget.CoordinatorLayout>-->
+</RelativeLayout>

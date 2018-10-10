@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+                                     android:layout_gravity="left"
+     >
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_gravity="left"
+        android:gravity="center"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:text="LOLOLOLOLOLOLOLOL"
+        android:textSize="@dimen/f3"
+        android:background="@drawable/tvlabel_bg_0313"
+        android:textColor="@color/MC3"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

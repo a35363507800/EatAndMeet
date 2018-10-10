@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tool="http://schemas.android.com/tools" android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:orientation="vertical"
+				android:paddingTop="13dp">
+
+	<TextView
+		android:id="@+id/timestamp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textColor="@color/C0323"
+		android:textSize="@dimen/f4"
+		tool:text="下午 06:01"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/timestamp"
+		android:layout_marginTop="@dimen/margin_chat_activity">
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+			android:id="@+id/iv_userhead"
+			android:layout_width="@dimen/size_avatar"
+			android:layout_height="@dimen/size_avatar"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginRight="@dimen/margin_chat_activity"/>
+		<RelativeLayout
+			android:id="@+id/rl_bubble"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="@dimen/margin_chat_activity"
+			android:layout_toLeftOf="@id/iv_userhead">
+			<RelativeLayout
+				android:id="@+id/image_bubble"
+				android:layout_width="120dp"
+				android:layout_height="170dp">
+				<com.makeramen.roundedimageview.RoundedImageView
+					android:id="@+id/bubble"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					app:riv_border_width="0dp"
+					app:riv_corner_radius_bottom_left="5dp"
+					app:riv_corner_radius_top_left="5dp"
+					app:riv_oval="false"/>
+				<ImageView android:layout_width="wrap_content"
+						   android:layout_height="match_parent"
+						   android:layout_alignParentRight="true"
+						   android:background="@drawable/chat_new"/>
+			</RelativeLayout>
+			<!--<com.echoesnet.eatandmeet.views.widgets.ChatImageView
+				android:id="@+id/bubble"
+				android:layout_width="120dp"
+				android:layout_height="170dp"
+				android:background="@drawable/chat_sender_bg"
+				android:scaleType="centerCrop"
+				android:visibility="gone"
+			/>-->
+			<LinearLayout
+				android:id="@+id/ll_loading"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:gravity="center"
+				android:orientation="vertical"
+				android:visibility="gone">
+				<ProgressBar
+					android:id="@+id/progress_bar"
+					style="?android:attr/progressBarStyleSmall"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:visibility="gone"/>
+
+				<TextView
+					android:id="@+id/percentage"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@android:color/black"
+					android:visibility="visible"
+					tool:text="0%"/>
+			</LinearLayout>
+		</RelativeLayout>
+		<ImageView
+			android:id="@+id/msg_status"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="6dp"
+			android:layout_toLeftOf="@id/rl_bubble"
+			android:clickable="true"
+			android:src="@drawable/chat_send_error"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/tv_ack"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="6dp"
+			android:layout_toLeftOf="@id/rl_bubble"
+			android:background="@drawable/round_btn_c0315"
+			android:paddingBottom="2dp"
+			android:paddingLeft="4dp"
+			android:paddingRight="4dp"
+			android:paddingTop="2dp"
+			android:text="@string/chat_is_sending"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f6"
+			android:visibility="visible"/>
+	</RelativeLayout>
+
+</RelativeLayout>

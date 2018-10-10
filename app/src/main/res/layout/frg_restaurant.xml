@@ -1,0 +1,588 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:ptr="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/main"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/c6"
+             tools:context="com.echoesnet.eatandmeet.fragments.RestaurantFrg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/prs_res_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--轮播图-->
+
+                <com.echoesnet.eatandmeet.views.widgets.ImageIndicatorView.NetworkImageIndicatorView
+                    android:id="@+id/icv_cycle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"/>
+                <!--餐厅信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="14.5dp">
+                    <!-- 餐厅名称和预定桌数 -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_res_name"
+                            android:layout_width="118dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/h12"
+                            tools:text="啡梵记忆咖啡"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_res_name"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日已预订"
+                                android:textColor="@color/C0321"
+                                android:textSize="@dimen/f4"/>
+
+                            <TextView
+                                android:id="@+id/tv_res_ordered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/C0412"
+                                android:textSize="@dimen/f4"
+                                android:textStyle="bold"
+                                tools:text="5"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="桌"
+                                android:textColor="@color/C0321"
+                                android:textSize="@dimen/f4"/>
+                        </LinearLayout>
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/itv_report_restaurant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="{eam-s-warning} 举报"
+                            android:textColor="@color/FC3"
+                            android:textSize="@dimen/f5"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                    <!--人均和起订价-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp">
+
+                        <!--编辑时不可见，所有编辑后记得打开-->
+                        <com.echoesnet.eatandmeet.views.widgets.CustomRatingBar.CustomRatingBar
+                            android:id="@+id/rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:visibility="visible"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:text="人均 : "
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:id="@+id/tv_res_average"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"
+                            tools:text="78"/>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="12dp"
+                            android:background="@color/FC2"
+                            android:gravity="bottom"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12.5dp"
+                            android:text="起订价 : "
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:id="@+id/tv_res_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"
+                            tools:text="10"/>
+
+                    </LinearLayout>
+                    <!--商家地址-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp">
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="{eam-e94e}"
+                            android:textColor="@color/FC3"
+                            android:textSize="@dimen/f3"
+                            android:visibility="gone"
+                            tools:text="无用"/>
+
+                        <TextView
+                            android:id="@+id/tv_res_address"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:singleLine="true"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"
+                            tools:text="天津市和平区绍兴道"/>
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/all_res_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="{eam-e9c1}"
+                            android:textColor="@color/C0315"
+                            android:textSize="22sp"/>
+                    </RelativeLayout>
+                    <!--商家电话-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17.5dp">
+
+                        <TextView
+                            android:id="@+id/tv_res_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:singleLine="true"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"
+                            tools:text="商家电话 186"/>
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/all_call_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="{eam-s-call}"
+                            android:textColor="@color/C0315"
+                            android:textSize="22sp"/>
+                    </RelativeLayout>
+                    <!--品牌故事-->
+                    <Button
+                        android:id="@+id/btn_brand_story"
+                        android:layout_width="275dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="35px"
+                        android:background="@drawable/round_frame_36_mc1_selector"
+                        android:text="品牌故事"
+                        android:textColor="@color/MC1"
+                        android:textSize="@dimen/f2"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <!-- 分割线 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@color/FC0332"/>
+                <!-- 消费须知-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="25.5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="消费须知"
+                        android:textColor="@color/C0321"
+                        android:textSize="@dimen/f3"
+                        android:textStyle="bold"/>
+                    <!--营业时间-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="· "
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="营业时间 : "
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:id="@+id/tv_res_opentime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"
+                            tools:text="10:30-23:59"/>
+
+                    </LinearLayout>
+                    <!-- 特别提示 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="· "
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="特别提示 : "
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="节假日用餐请提前致电商家"
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                    </LinearLayout>
+                    <!-- 消费须知-->
+                    <com.echoesnet.eatandmeet.views.widgets.ExpandCollapseView
+                        android:id="@+id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp">
+
+                        <TextView
+                            android:id="@id/id_source_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="15dp"
+                            android:textColor="@color/C0322"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:id="@id/id_expand_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/round_corner_14_c0331_bg"
+                            android:text="展开全部"
+                            android:textColor="@color/C0323"/>
+
+                    </com.echoesnet.eatandmeet.views.widgets.ExpandCollapseView>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_bigTop_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="20px"
+                    android:background="@color/FC5"/>
+                <!--打折活动，v1.0展示隐藏-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="24px"
+                    android:paddingRight="24px"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_res_discount"
+                        android:layout_width="36px"
+                        android:layout_height="36px"
+                        android:layout_marginTop="36px"
+                        android:src="@drawable/res_discount"/>
+
+                    <com.linearlistview.LinearListView
+                        android:id="@+id/lv_res_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_toRightOf="@id/iv_res_discount"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@color/main_separator_color"
+                        android:listSelector="#00000000"
+                        android:orientation="vertical"
+                        android:showDividers="middle"
+                        ptr:dividerThickness="1dp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/all_more_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_below="@id/lv_res_discount"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center"
+                            android:gravity="center_vertical"
+                            android:text="更多优惠"
+                            android:textColor="@color/c2"
+                            android:textSize="@dimen/f3"/>
+
+                        <ImageView
+                            android:id="@+id/iv_res_down_arrow"
+                            android:layout_width="28px"
+                            android:layout_height="28px"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5px"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_user_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="用户评价"
+                        android:textColor="@color/C0321"
+                        android:textSize="@dimen/f1"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/view_left"
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/tv_stop"
+                        android:background="@color/C0321"/>
+
+                    <View
+                        android:id="@+id/view_right"
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_stop"
+                        android:background="@color/C0321"/>
+
+                </RelativeLayout>
+                <!-- 大咖标题 -->
+                <LinearLayout
+                    android:id="@+id/ll_Big_comment"
+                    style="@style/common_linear_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_res_big_v"
+                        android:layout_width="36px"
+                        android:layout_height="36px"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/res_bigv_comment"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="大咖点评"
+                        android:textColor="@color/c2"
+                        android:textSize="@dimen/f3"/>
+                </LinearLayout>
+
+                <!--<View
+                    android:id="@+id/view_bigbottom_line"
+                    style="@style/line_vertical"/>-->
+                <!-- 大咖列表 -->
+                <com.linearlistview.LinearListView
+                    android:id="@+id/lv_res_bigv_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/transparent"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    ptr:dividerThickness="1dp"/>
+
+                <View
+                    android:id="@+id/view_vip_top_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="20px"
+                    android:background="@color/c16"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_vip_comment"
+                    style="@style/common_linear_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="24px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="会员点评"
+                        android:textColor="@color/c2"
+                        android:textSize="@dimen/f3"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_vertical"
+                    android:visibility="gone"/>
+
+                <com.linearlistview.LinearListView
+                    android:id="@+id/lv_res_loser_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/transparent"
+                    android:listSelector="@color/transparent"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    ptr:dividerThickness="1dp">
+                </com.linearlistview.LinearListView>
+
+                <TextView
+                    android:id="@+id/tv_zanwu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:background="@color/main_background_color"
+                    android:gravity="center"
+                    android:text="- 别拉了, 宝宝也是有底线的 -"
+                    android:textColor="@color/FC3"
+                    android:textSize="@dimen/f3"
+                    android:visibility="gone"/>
+
+
+
+            </LinearLayout>
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49.5dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/C0332"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_res_book_desk"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="点菜订桌"
+                android:textColor="@color/C0412"
+                android:textSize="@dimen/f2"/>
+
+            <Button
+                android:id="@+id/btn_flash_pay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@drawable/btn4_selector"
+                android:text="余额闪付"
+                android:textColor="@color/C0324"
+                android:textSize="@dimen/f2"/></LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rest_bg_zhezhao_continued"
+        android:layout_marginBottom="49dp">
+    </FrameLayout>
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/view_loading_cover"
+        android:visibility="gone"/>
+</FrameLayout>

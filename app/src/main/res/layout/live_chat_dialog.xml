@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/transparent"
+	android:orientation="vertical">
+	<!--android:background="@color/transparent"651-->
+
+	<TextView
+		android:id="@+id/root"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"/>
+	<LinearLayout
+		android:id="@+id/lLayout_main"
+		android:layout_width="match_parent"
+		android:layout_height="370dp"
+		android:layout_alignParentBottom="true"
+		android:background="@drawable/input_bg"
+		android:gravity="center_horizontal"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:id="@+id/dialog_top"
+			android:layout_width="match_parent"
+			android:layout_height="44dp">
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:id="@+id/icon_back"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="12dp"
+				android:gravity="center"
+				android:text="{eam-n-previous}"
+				android:textColor="@color/C0323"
+				android:textSize="@dimen/f2"/>
+
+			<TextView
+				android:id="@+id/to_chat_username"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_centerVertical="true"
+				android:text="用户昵称"
+				android:textColor="@color/C0321"
+				android:textSize="@dimen/f2"/>
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:id="@+id/icon_close"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="12dp"
+				android:gravity="center"
+				android:text="{eam-s-close}"
+				android:textColor="@color/C0323"
+				android:textSize="@dimen/f2"/>
+		</RelativeLayout>
+
+		<LinearLayout
+			android:id="@+id/lLayout_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal"/>
+	</LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="11dp">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="340px"
+        android:layout_height="205px"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_meet_res"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:riv_border_color="@color/FC7"
+            app:riv_border_width="1px"
+            app:riv_corner_radius="12px" />
+
+        <TextView
+            android:id="@+id/tv_meet_maker"
+            android:layout_width="32px"
+            android:layout_height="78px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18px"
+            android:visibility="gone"
+            android:background="@drawable/faxian_qizi_lan_xhdpi" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_meet_resname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="10px"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/c3"
+        android:textSize="@dimen/f3" />
+
+</com.zhy.autolayout.AutoLinearLayout>

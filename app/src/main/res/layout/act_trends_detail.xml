@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/main_background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="54dp"
+        android:orientation="vertical">
+
+        <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+            android:id="@+id/top_bar_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:topbarType="TEXT"/>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/list_view_trends_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptrAnimationStyle="echoes"
+            android:layout_below="@+id/top_bar_switch"
+            android:background="@color/main_background_color"
+            android:divider="@color/c2"
+            android:dividerHeight="0dp"
+            android:paddingTop="1dp"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+    <com.echoesnet.eatandmeet.views.widgets.CommentInputView
+        android:id="@+id/comment_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_comment_root"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:fitsSystemWindows="true">-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/ll_comment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="bottom"-->
+        <!--android:paddingBottom="12dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentStart="true">-->
+
+        <!--<View-->
+            <!--android:id="@+id/view_line"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/C0332"/>-->
+
+        <!--<com.joanzapata.iconify.widget.IconTextView-->
+            <!--android:id="@+id/icon_tv_emoji"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:text="{eam-s-smile-face}"-->
+            <!--android:textColor="@color/C0323"-->
+            <!--android:textSize="19sp"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_to_comment"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="7dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:alpha="0.3"-->
+            <!--android:background="@drawable/round_btn_c0412_bg"-->
+            <!--android:enabled="false"-->
+            <!--android:gravity="center"-->
+            <!--android:text="评论"-->
+            <!--android:textColor="@color/C0324"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edit_comment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/view_line"-->
+            <!--android:layout_marginBottom="12dp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:layout_toLeftOf="@+id/tv_to_comment"-->
+            <!--android:layout_toRightOf="@id/icon_tv_emoji"-->
+            <!--android:textCursorDrawable="@drawable/edit_cursor_color"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@color/transparent"-->
+            <!--android:hint="输入评论"-->
+            <!--android:maxLines="3"-->
+            <!--android:maxLength="300"-->
+            <!--android:textColor="@color/C0321"-->
+            <!--android:textColorHint="@color/C0323"-->
+            <!--android:textSize="@dimen/f3"/>-->
+    <!--</RelativeLayout>-->
+    <!--<com.echoesnet.eatandmeet.views.widgets.TrendsEmojiView-->
+        <!--android:id="@+id/emoji_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/ll_comment"-->
+        <!--android:background="@color/main_background_color"-->
+        <!--android:visibility="gone"/>-->
+<!--</RelativeLayout>-->
+
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical">
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<ListView
+				android:id="@+id/listView"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:divider="@null"/>
+			<TextView
+				android:id="@+id/text_dialog"
+				android:layout_width="100px"
+				android:layout_height="100px"
+				android:layout_centerInParent="true"
+				android:background="#f2f2f2"
+				android:gravity="center"
+				android:text="A"
+				android:textColor="#000000"
+				android:textSize="26sp"
+				android:visibility="gone"/>
+			<com.yqh.mysamplechat.widget.SideBar
+				android:id="@+id/sidebar"
+				android:layout_width="50px"
+				android:layout_height="match_parent"
+				android:layout_alignParentRight="true"
+				android:layout_marginBottom="10px"
+				android:layout_marginTop="10px"/>
+		</RelativeLayout>
+	</android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/C0333"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.CPhoneContactAct">
+
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/tab_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="TEXT"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="5dp"
+		android:background="@color/C0333"/>
+	<RelativeLayout android:layout_width="match_parent"
+					android:layout_height="match_parent">
+		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			android:id="@+id/lv_contact_lst"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/main_background_color"
+			android:divider="@color/transparent"
+			android:dividerHeight="0dp"/>
+		<include
+			android:id="@+id/loading_view"
+			layout="@layout/view_loading_cover"
+			android:visibility="gone"/>
+	</RelativeLayout>
+
+
+</LinearLayout>

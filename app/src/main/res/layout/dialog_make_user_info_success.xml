@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="294dp"
+	android:layout_height="292dp"
+	android:background="@drawable/wszl_hdpi_2"
+	android:gravity="center_horizontal">
+
+	<com.zhy.autolayout.AutoLinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginTop="49dp">
+		<TextView
+			android:id="@+id/tv_title"
+			android:text="完善资料"
+			android:textSize="@dimen/f3"
+			android:textStyle="bold"
+			android:textColor="#fd9534"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		/>
+	</com.zhy.autolayout.AutoLinearLayout>
+
+	<com.zhy.autolayout.AutoRelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="84dp"
+		android:gravity="center_horizontal">
+		<ImageView
+			android:id="@+id/songnin"
+			android:layout_width="130px"
+			android:layout_height="82px"
+			android:layout_alignBottom="@+id/image_money"
+			android:src="@drawable/wszl_songnin_hdpi"
+		/>
+		<ImageView
+			android:id="@+id/image_money"
+			android:layout_width="72px"
+			android:layout_height="108px"
+			android:layout_marginLeft="8px"
+			android:layout_marginRight="8px"
+			android:layout_toRightOf="@+id/songnin"
+			android:src="@drawable/wszl_0_hdpi"/>
+		<ImageView
+			android:id="@+id/image_money2"
+			android:layout_width="wrap_content"
+			android:layout_height="108px"
+			android:layout_marginLeft="8px"
+			android:layout_marginRight="8px"
+			android:layout_toRightOf="@+id/image_money"
+		/>
+		<ImageView
+			android:layout_width="38px"
+			android:layout_height="38px"
+			android:layout_alignBottom="@+id/image_money"
+			android:layout_toRightOf="@+id/image_money2"
+			android:src="@drawable/wszl_yuan_hdpi"/>
+	</com.zhy.autolayout.AutoRelativeLayout>
+
+	<com.zhy.autolayout.AutoLinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="235dp"
+		android:gravity="center_horizontal">
+		<Button
+			android:id="@+id/btn_ok"
+			android:layout_width="422px"
+			android:layout_height="82px"
+			android:background="@drawable/wszl_yes_hdpi"/>
+	</com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

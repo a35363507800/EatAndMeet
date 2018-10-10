@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.echoesnet.eatandmeet.activities.MyAuthenticationAct">
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ptr:topbarType="TEXT"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="4.5dp"
+            android:background="@color/main_background_color">
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvReportContentDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/actReportFouls_ReportContent_Text"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f2"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp">
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="4.5dp"
+        android:background="@color/main_background_color">
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="21dp"
+        android:gravity="top"
+        android:text="@string/actReportFouls_ReportRemark_Text"
+        android:textColor="@color/FC1"
+        android:textSize="@dimen/f2"/>
+
+    <com.echoesnet.eatandmeet.views.widgets.EditViewWithCharIndicate
+        android:id="@+id/evciRemarkContent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        custom:bodyBackGroundColor="@color/white"
+        custom:editTextGravity="top"
+        custom:inputHint="请详细填写以确保举报能够更快的被受理..."
+        custom:maxCharNum="100"/>
+
+    <Button
+        android:id="@+id/btnComment"
+        android:layout_width="275dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="99dp"
+        android:background="@drawable/round_corner_44_c0313_selector"
+        android:text="提交"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/C0324"
+        android:textSize="@dimen/f2"/>
+</LinearLayout>

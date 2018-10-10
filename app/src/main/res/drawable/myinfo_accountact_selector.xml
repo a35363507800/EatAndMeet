@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <stroke
+                android:width="1dp"
+                android:color="@color/C0313" />
+            <solid android:color="@color/white"/>
+
+        </shape>
+        </item>
+    <item android:state_selected="true">
+        <shape>
+
+            <stroke
+                android:width="11dp"
+                android:color="@color/C0313" />
+
+            <solid android:color="@color/white"/>
+
+        </shape>
+        </item>
+
+    <item android:state_focused="false">
+        <shape>
+
+            <stroke
+                android:width="11dp"
+                android:color="@color/C0313" />
+
+            <solid android:color="@color/white"/>
+
+        </shape>
+    </item>
+   <!-- &lt;!&ndash; 没有焦点时的背景图片 &ndash;&gt;
+    <item android:state_window_focused="false"
+          android:drawable="@drawable/myinfo_accountact_default" />
+    &lt;!&ndash;获得焦点时的图片背景&ndash;&gt;
+    <item android:state_focused="true"   android:drawable="@drawable/myinfo_accountact_selected" />-->
+</selector>

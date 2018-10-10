@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/FC6"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.CContactLstAct">
+
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+
+	<com.zhy.autolayout.AutoLinearLayout
+		android:id="@+id/all_friend_container"
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:background="@drawable/item_click_white_selector"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:visibility="visible"
+	>
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/all_new_friend"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"/>
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="20px"
+			android:layout_weight="1"
+			android:gravity="center_vertical"
+			android:text="新的朋友"
+			android:textColor="@color/c2"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:id="@+id/tv_new_friend_count"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10px"
+			android:background="@drawable/round_cornor_18_mc1_bg"
+			android:gravity="center"
+			android:minHeight="18dp"
+			android:minWidth="18dp"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f4"
+			android:visibility="gone"/>
+	</com.zhy.autolayout.AutoLinearLayout>
+
+	<RelativeLayout
+		android:id="@+id/fragment_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+	/>
+</com.zhy.autolayout.AutoLinearLayout>

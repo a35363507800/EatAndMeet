@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+	<TextView
+		android:id="@+id/tv_large_floor"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="@color/white"
+		android:textSize="@dimen/f2"
+		android:layout_gravity="center_horizontal"
+		android:gravity="center"
+	    android:layout_marginTop="25dp"
+	    android:text="3F"/>
+	<View android:layout_width="18dp"
+		  android:layout_height="1dp"
+		  android:layout_marginTop="15dp"
+		  android:layout_gravity="center_horizontal"
+	      android:background="@color/white"/>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/list_itease_layout"
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tool="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="71dp"
+				android:background="@color/white">
+
+	<RelativeLayout
+		android:id="@+id/avatar_container"
+		android:layout_width="54dp"
+		android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="12dp">
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+			android:id="@+id/avatar"
+			android:layout_width="45dp"
+			android:layout_height="45dp"
+			android:layout_centerVertical="true"/>
+		<TextView
+			android:id="@+id/unread_msg_number"
+			android:layout_width="wrap_content"
+			android:layout_height="14dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="10dp"
+			android:background="@drawable/shape_circle_c0319_bg"
+			android:gravity="center"
+			android:minWidth="14dp"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+			android:textColor="@android:color/white"
+			android:textSize="@dimen/f6"
+			tool:text="99+"/>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/ll_name_title_c"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="13dp"
+		android:layout_toRightOf="@+id/avatar_container"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/tv_username"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="3dp"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"
+			tool:text="小明"/>
+
+		<com.echoesnet.eatandmeet.views.widgets.GenderView
+			android:id="@+id/gender_icon"
+			android:layout_width="wrap_content"
+			android:layout_height="13dp"
+			android:layout_marginLeft="5dp"
+			android:gravity="center"
+			android:paddingLeft="1dp"
+			android:paddingRight="1dp"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f6"
+			tool:text="123"/>
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelView
+			android:id="@+id/lv_level_icon"
+			android:layout_width="wrap_content"
+			android:layout_height="13dp"
+			android:layout_marginLeft="5dp"
+			app:text_size="@dimen/f6"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"/>
+		<TextView
+			android:id="@+id/tv_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="12dp"
+			android:textColor="#666666"
+			tool:text="17:54"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_below="@+id/ll_name_title_c"
+				  android:layout_marginTop="6dp"
+				  android:layout_toRightOf="@+id/avatar_container"
+				  android:gravity="center_vertical"
+				  android:orientation="horizontal">
+		<ImageView
+			android:id="@+id/msg_state"
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:layout_marginLeft="3dp"
+			android:src="@drawable/ease_msg_state_fail_resend"
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/tv_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="12dp"
+			android:ellipsize="end"
+			android:gravity="center_vertical"
+			android:maxLines="1"
+			android:textColor="@color/C0322"
+			android:textSize="@dimen/f3"
+			tool:text="小明，一起来打游戏啊"/>
+	</LinearLayout>
+
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="57dp"
+		android:background="@color/main_separator_color"/>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_period"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@drawable/actionsheet_textview_selector"
+        android:gravity="center"
+        android:textColor="@drawable/textview_color_selector"
+        android:textSize="@dimen/f3" />
+
+</com.zhy.autolayout.AutoLinearLayout>

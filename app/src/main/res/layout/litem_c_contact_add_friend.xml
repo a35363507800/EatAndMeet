@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70.5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+            android:id="@+id/rdv_u_img"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:riv_border_color="@color/transparent"
+            app:riv_border_width="0dp"
+            app:riv_oval="true"/>
+
+        <TextView
+            android:id="@+id/tv_u_nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/rdv_u_img"
+            android:layout_marginLeft="11.5dp"
+            android:layout_toRightOf="@id/rdv_u_img"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3"
+            tools:text="测试姓名"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.GenderView
+            android:id="@+id/img_u_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@+id/tv_u_nickName"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_u_nickName"
+            android:gravity="center"
+          />
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelView
+            android:id="@+id/level_u_view"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@+id/tv_u_nickName"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/img_u_sex"
+            android:gravity="center"
+            app:text_size="@dimen/f5"/>
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_u_nickName"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/rdv_u_img"
+            android:layout_toLeftOf="@+id/btn_operate"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/C0322"
+            android:textSize="@dimen/f3"
+            tools:text="个性签名"
+            android:layout_alignBottom="@+id/rdv_u_img"/>
+
+        <Button
+            android:id="@+id/btn_operate"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_cornor_11_c0412_bg"
+            android:gravity="center"
+            android:textColor="@color/C0412"
+            android:textSize="@dimen/f4"
+            tools:text="+关注"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="57.5dp"
+        android:background="@color/C0332"/>
+
+</LinearLayout>

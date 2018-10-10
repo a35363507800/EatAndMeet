@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.echoesnet.eatandmeet.activities.GiftDialogAct"
+    >
+    <RelativeLayout
+        android:layout_width="254dp"
+        android:layout_height="498dp"
+        android:background="@drawable/find_newuser_gift"
+        android:layout_centerHorizontal="true">
+    </RelativeLayout>
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/itv_gift_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{eam-s-close-circle @color/white 30sp}"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="17dp"/>
+
+</RelativeLayout>

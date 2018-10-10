@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center">
+
+	<GridView
+		android:id="@+id/gv_say_user"
+		android:layout_width="636px"
+		android:layout_height="848px"
+		android:layout_centerHorizontal="true"
+		android:layout_gravity="center_horizontal"
+		android:background="@drawable/input_bg"
+		android:cacheColorHint="@color/transparent"
+		android:horizontalSpacing="0px"
+		android:listSelector="@color/transparent"
+		android:numColumns="2"
+		android:scrollbars="none"
+		android:verticalSpacing="0px"/>
+
+	<ImageView
+		android:id="@+id/iv_hint"
+		android:layout_width="44px"
+		android:layout_height="24px"
+		android:layout_below="@+id/gv_say_user"
+		android:layout_centerHorizontal="true"
+		android:src="@drawable/dashan_fujinren"/>
+
+	<com.joanzapata.iconify.widget.IconTextView
+		android:id="@+id/iv_close_icon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/iv_hint"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="20px"
+		android:text="{eam-s-close-circle @color/white @dimen/close}"/>
+
+</com.zhy.autolayout.AutoRelativeLayout>

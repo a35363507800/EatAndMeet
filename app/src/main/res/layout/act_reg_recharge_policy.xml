@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_horizontal"
+	tools:context="com.echoesnet.eatandmeet.activities.MRechargePolicy">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<ScrollView android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/top_bar"
+				android:background="@color/white">
+		<TextView
+			android:id="@+id/reg_recharge_policy"
+			android:textColor="@color/black"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="24px"
+			android:layout_marginRight="24px"
+			android:layout_marginTop="24px"
+			android:layout_marginBottom="24px"
+			android:lineSpacingExtra="4px"
+			android:textSize="@dimen/f4"/>
+	</ScrollView>
+
+</com.zhy.autolayout.AutoRelativeLayout>

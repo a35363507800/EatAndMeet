@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="MC1">@color/MC1</item>
+    <item type="drawable" name="MCP1">@color/MCP1</item>
+    <item type="drawable" name="c12">@color/c12</item>
+    <item type="drawable" name="cp12">@color/cp12</item>
+    <item type="drawable" name="white">@color/white</item>
+    <item type="drawable" name="whiteT50">@color/whiteT50</item>
+    <item type="drawable" name="black">@color/black</item>
+    <item type="drawable" name="c5">@color/c5</item>
+    <item type="drawable" name="c7">@color/c7</item>
+    <item type="drawable" name="translucent">@color/translucent</item>
+    <item type="drawable" name="transparent">@color/transparent</item>
+    <item type="drawable" name="C0321">@color/C0321</item>
+</resources>

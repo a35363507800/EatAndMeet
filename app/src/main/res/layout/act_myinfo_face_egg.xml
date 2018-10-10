@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:orientation="vertical">
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="TEXT"/>
+	<ScrollView
+		android:id="@+id/scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="135dp"
+				android:gravity="center_horizontal"
+				android:layout_gravity="center_horizontal"
+				android:background="@color/C0313"
+				android:orientation="vertical">
+
+				<ImageView
+					android:layout_marginTop="13dp"
+					android:layout_width="wrap_content"
+					android:src="@drawable/wode_ico_liandan_xxhdpi"
+					android:layout_height="45dp"/>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginTop="6dp"
+					>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="脸蛋 "
+						android:textSize="@dimen/f1"
+						android:textColor="@color/white"
+						/>
+
+					<TextView
+						android:id="@+id/tv_egg_ct"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="25sp"
+						android:textStyle="bold"
+						android:textColor="@color/white"
+						/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="枚"
+						android:textSize="@dimen/f1"
+						android:textColor="@color/white"
+						/>
+
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/textView5"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="7dp"
+					android:text="提示:脸蛋可用于直播间内购买礼物、道具呦~"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f4"/>
+
+
+			</LinearLayout>
+
+		<com.echoesnet.eatandmeet.views.widgets.MyGridView
+			android:id="@+id/gv_account"
+			android:layout_width="fill_parent"
+			android:layout_marginTop="50dp"
+			android:layout_height="fill_parent"
+			android:cacheColorHint="@android:color/transparent"
+			android:clipChildren="true"
+			android:layout_marginLeft="19dp"
+			android:layout_marginRight="19dp"
+			android:listSelector="@android:color/transparent"
+			android:numColumns="3"
+			android:horizontalSpacing="19dp"
+			android:verticalSpacing="19dp"/>
+
+		<Button
+			android:id="@+id/bt_shopping"
+			android:layout_width="275dp"
+			android:text="购 买"
+			style="@style/Widget.AppCompat.Button.Borderless"
+			android:layout_gravity="center_horizontal"
+			android:textSize="@dimen/f2"
+			android:textColor="@color/white"
+			android:enabled="false"
+			android:layout_marginTop="71dp"
+			android:background="@drawable/egg_bt_bg0331"
+			android:layout_height="44dp"/>
+			
+		<LinearLayout
+			android:id="@+id/ll_accept"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		    android:layout_gravity="center_horizontal"
+			android:layout_marginTop="10dp"
+			android:gravity="center_horizontal"
+			android:visibility="visible">
+			<com.joanzapata.iconify.widget.IconTextView
+				android:id="@+id/cb_register_statement"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="{eam-p-box}"
+				android:textColor="@color/C0311"
+				android:layout_marginRight="4dp"
+				android:layout_gravity="center_vertical"
+				android:textSize="@dimen/f3"
+				android:textStyle="normal"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				android:text="我同意"
+				android:textColor="@color/c4"
+				android:layout_gravity="center_vertical"
+				android:textSize="@dimen/f4"
+				android:textStyle="normal"/>
+			<TextView
+				android:id="@+id/tv_disclaimer"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:text="《充值有礼服务协议》"
+				android:textColor="@color/c10"
+				android:textSize="@dimen/f4"/>
+
+		</LinearLayout>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+
+</LinearLayout>

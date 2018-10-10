@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/yue_selete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bg_find_qiri"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/yue_selete"
+        android:layout_alignRight="@+id/yue_selete"
+        android:layout_centerHorizontal="true">
+
+        <View
+            android:id="@+id/selete_yue_click"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></View>
+
+        <View
+            android:id="@+id/selete_qi_click"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></View>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/killcard_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/yue_selete"
+        android:layout_alignLeft="@+id/yue_selete"
+        android:layout_alignRight="@+id/yue_selete"
+        android:layout_alignTop="@+id/yue_selete"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/prize_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/scroll_view"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="-2dp"
+            android:layout_toLeftOf="@+id/scroll_view"
+            android:divider="@color/transparent"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"></ListView>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="230dp"
+            android:layout_height="204dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/killcart_sc_bg"
+            android:scrollbars="none">
+
+            <com.echoesnet.eatandmeet.views.widgets.MyGridView
+                android:id="@+id/gv_killcard"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:listSelector="@color/translucent"
+                android:numColumns="7"
+                android:verticalSpacing="3dp"></com.echoesnet.eatandmeet.views.widgets.MyGridView>
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/iv_getday"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/scroll_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/lingqu"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/iv_getday2"
+            style="@style/circle_corner_btn_44_red_bg"
+            android:layout_width="132dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="51dp"
+            android:gravity="center"
+            android:text="今日签到"
+            android:textColor="@color/white"
+            android:textSize="@dimen/f2"
+            android:textStyle="bold"
+            android:visibility="visible"/>
+
+
+        <ImageView
+            android:id="@+id/iv_day_anim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_lottie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_loop="false"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="false"
+            android:visibility="gone"
+            app:lottie_imageAssetsFolder="images/signin/"/>
+
+            <!--app:lottie_fileName="signin.json"-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/s_killcard_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/yue_selete"
+        android:layout_alignLeft="@+id/yue_selete"
+        android:layout_alignRight="@+id/yue_selete"
+        android:layout_alignTop="@+id/yue_selete"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        >
+
+        <com.echoesnet.eatandmeet.views.widgets.MyGridView
+            android:id="@+id/s_gv_killcard"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:horizontalSpacing="0dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="3"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.MyGridView
+            android:id="@+id/s_gv_killcard2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/s_gv_killcard"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="4"/>
+
+
+        <ImageView
+            android:id="@+id/s_iv_getday"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/s_gv_killcard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/prize_pup"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/s_iv_getday2"
+            android:layout_width="132dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="51dp"
+            android:background="@drawable/btn_killcard_red"
+            android:gravity="center"
+            android:text="领取福利"
+            android:textColor="@color/white"
+            android:textSize="@dimen/f2"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

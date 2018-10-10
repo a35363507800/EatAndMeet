@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/all_order_container"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="5dp"
+	android:background="@drawable/white"
+	android:descendantFocusability="blocksDescendants"
+	android:orientation="vertical"
+	>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="36dp"
+		android:orientation="horizontal"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:text="订单号："
+			android:textColor="@color/c3"
+			android:textSize="@dimen/f4"/>
+
+		<TextView
+			android:id="@+id/tv_order_id"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:textColor="@color/c3"
+			android:textSize="@dimen/f4"/>
+
+		<TextView
+			android:id="@+id/tv_order_time"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1"
+			android:gravity="right|center"
+			android:textColor="@color/c4"
+			android:textSize="@dimen/f4"/>
+
+
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:background="@color/c5"/>
+
+	<com.zhy.autolayout.AutoRelativeLayout
+		android:id="@+id/all_order_info"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+
+		<TextView
+			android:id="@+id/tv_order_res_name"
+			android:layout_width="200dp"
+			android:layout_height="wrap_content"
+			android:textColor="@color/c2"
+			android:singleLine="false"
+			android:textSize="@dimen/f3"/>
+
+		<TextView
+			android:id="@+id/tv_order_type"
+			android:layout_alignParentRight="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical|right"
+			android:gravity="center"
+			android:textColor="@color/MC1"
+			android:textSize="@dimen/f3"/>
+
+	</com.zhy.autolayout.AutoRelativeLayout>
+
+	<com.linearlistview.LinearListView
+		android:id="@+id/lv_order_dish_lst"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20px"
+		android:layout_marginRight="20px"
+		android:focusable="false"
+		android:focusableInTouchMode="false"
+		android:cacheColorHint="@color/transparent"
+		android:listSelector="@color/transparent"
+		android:orientation="vertical"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="20px"
+		android:background="@drawable/white"/>
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:text="总额："
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+
+		<TextView
+			android:id="@+id/tv_order_total_money"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1"
+			android:gravity="left|center_vertical"
+			android:textColor="@color/C0412"
+			android:textSize="@dimen/f1"/>
+		<Button
+			android:id="@+id/btn_order_check_code"
+			android:layout_width="60dp"
+			android:layout_height="30dp"
+			android:layout_marginLeft="5dp"
+			android:text="评价"
+			android:gravity="center"
+			android:layout_gravity="center_horizontal"
+			android:background="@drawable/shape_15dp_c0312"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f4"/>
+		<Button
+			android:id="@+id/tv_friend_pay"
+			android:layout_width="60dp"
+			android:layout_height="30dp"
+			android:layout_marginLeft="12dp"
+			android:background="@drawable/shape_15dp_c0323"
+			android:padding="3dp"
+			android:text="删除"
+			android:textColor="@color/C0323"
+			android:textSize="@dimen/f3"/>
+	</LinearLayout>
+
+</LinearLayout>

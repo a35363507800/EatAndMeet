@@ -1,0 +1,358 @@
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="viewmore">查看更多</string>
+    <string name="dropdownrefresh">下拉刷新</string>
+    <string name="loosentheloadmore">松开载入更多</string>
+    <string name="loosentherefreshdata">松开刷新数据</string>
+    <string name="tryingtoload">加载中...</string>
+    <string name="lastupdated">上次更新：</string>
+
+
+    <!--发现页-->
+    <string name="encounter">邂逅</string>
+    <string name="trends">动态</string>
+    <string name="v_trends">"大V专栏"</string>
+    <string name="trends_detail">动态详情</string>
+    <string name="trends_publish">发布动态</string>
+    <string name="trends_msg">互动通知</string>
+    <string name="trends_praise_list">赞过的人(%s)</string>
+    <string name="switch_to_video">仅支持发送相同种类动态\n是否切换到视频?</string>
+    <string name="switch_to_picture">仅支持发送相同种类动态\n是否切换到图文?</string>
+    <string name="trends_select_location">选择位置</string>
+    <string name="restaurant">餐厅</string>
+    <string name="date_anchor">约主播</string>
+    <string name="art_anchor">才艺主播</string>
+    <string name="nearby_anchor">附近主播</string>
+    <string name="check_more">查看全部</string>
+    <string name="today_recommend">今日推荐</string>
+    <string name="recently_in">最近入驻</string>
+    <string name="today_recommend_price">%1$s元/位</string>
+
+    <!--任务-->
+    <string name="task_title">任务</string>
+    <string name="achievement_title">成就</string>
+    <string name="finish_task_title_above">恭喜你获得了</string>
+    <string name="finish_task_exp">%1$s点经验值！</string>
+    <string name="finish_task_balance">%1$s元余额！</string>
+    <string name="finish_task_face_egg">%1$s个脸蛋！</string>
+    <string name="finish_task_meal">%1$s张饭票！</string>
+
+    <!--认证-->
+    <string name="auth_notice">认证提示</string>
+    <string name="auth_notice_content">根据国家相关规定,您必须进行身份认证!</string>
+    <string name="auth_real_name">真实姓名:</string>
+    <string name="auth_id_num">身份证号:</string>
+    <string name="auth_alipay">支付宝一键认证</string>
+    <string name="auth_official">看脸吃饭官方认证</string>
+    <string name="auth_alipay_fail">你的身份证信息错误,请更换支付宝账号重新认证或使用看脸吃饭认证</string>
+
+    <!--我的等级-->
+    <string name="my_level_title">我的等级</string>
+    <string name="level_rule_title">等级规则</string>
+
+    <!-- 订餐界面 -->
+    <string name="order_area">区域</string>
+    <string name="order_class">分类</string>
+    <string name="order_selection">筛选</string>
+    <string name="order_search">搜索</string>
+    <string name="choose_anchor">选择主播</string>
+    <string name="choose_rest">选择餐厅</string>
+    <string name="find_city">选择城市</string>
+    <string name="order_search_result">搜索结果</string>
+    <string name="myinfo_title">我的</string>
+    <string name="login">登录</string>
+    <string name="weChat_login">微信登录</string>
+    <string name="register">注册</string>
+    <string name="input_phone_num">请输入手机号</string>
+    <string name="input_password">请输入登录密码</string>
+    <string name="input_verify_code">请输入验证码</string>
+    <string name="tryOtherStyle">收不到验证码？试试</string>
+    <string name="voiceCode">语音验证码</string>
+    <string name="change_verify_code">换一张?</string>
+    <string name="forget_pw">忘记密码?</string>
+    <string name="register_acount">注册账号</string>
+    <string name="getVerifyCode">获取验证码</string>
+    <string name="registerAccount">注册账号</string>
+    <string name="eatFaceDisclaimer">《看脸吃饭》免责声明</string>
+    <string name="register_account_hint">已有账号？点击登录</string>
+    <string name="profile_finish">完成</string>
+    <string name="make_userInfo">完善资料</string>
+    <string name="weChat_make_userInfo">完善资料</string>
+    <string name="order_dinner">订餐</string>
+    <string name="order_dinner_table">订 位</string>
+    <string name="select_table">选桌</string>
+    <string name="select_table_title">请选择就餐桌位</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="food_detail_title">菜品详情</string>
+    <string name="order_confirm_title">订单确认</string>
+    <string name="take_camera">拍照</string>
+    <string name="take_photo">从相册中选择</string>
+    <string name="album">相册</string>
+    <string name="delete">删除</string>
+    <string name="photo">选择相册</string>
+    <string name="camera_cancel">取消</string>
+    <string name="preview">预览</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="myinfo_edit_title">编辑资料</string>
+    <string name="myinfo_edit_submit">提交</string>
+    <string name="myinfo_choose_photo">选择图片</string>
+    <string name="preson_signa_title">个性签名</string>
+    <string name="preson_label_title">标签</string>
+    <string name="input_phone_err">请输入正确的手机号</string>
+    <string name="input_empty_err">不能为空</string>
+
+
+    <string name="btn_ok">确定</string>
+    <string name="my_account_right">余额明细</string>
+    <string name="my_faceEgg_right">脸蛋明细</string>
+    <string name="my_account_title">我的账户</string>
+    <string name="my_realName">实名认证</string>
+    <string name="has_auth">已认证</string>
+    <string name="my_faceEgg_title">购买脸蛋</string>
+    <string name="go_recharge">继续充值</string>
+    <string name="go_recharge_title">充值有礼</string>
+    <string name="go_recharge_face_title">购买脸蛋</string>
+    <string name="go_recharge_content">恭喜您, 充值成功!</string>
+    <string name="go_recharge_btn">查看余额</string>
+    <string name="recharge_title">充值</string>
+    <string name="order_confirm_detail_title">订单详情</string>
+    <string name="add_friend_success">我通过了你的好友请求，现在可以发起聊天了</string>
+
+    <!-- 邻座界面 -->
+    <string name="personal_info_title">基本信息</string>
+    <string name="personal_info_nickname">昵称 :</string>
+    <string name="personal_info_sex">性别 :</string>
+    <string name="personal_info_height">身高 :</string>
+    <string name="personal_info_constellation">星座 :</string>
+    <string name="personal_info_dish_location">就餐位置</string>
+    <string name="personal_info_top_title">个人信息</string>
+    <string name="personal_info_feeling_state">情感状态</string>
+
+    <string name="at_your_in_group">%s在群聊中@了你</string>
+    <string name="user_already_in_contactlist">此用户已是你好友(被拉黑状态)，从黑名单列表中移出即可</string>
+    <string name="id_virify_policy">
+		1.申请人必须为年满18周岁的成年人\n2.身份证照内容必须包含整个身份证面板，文字及图片必须清晰可见，且未经PS修改\n3.正面头照中，身份证必须为本人身份证，且身份证上的信息清晰可见
+	</string>
+    <string name="tixian_rule" formatted="false">
+		1.用户每天最多可以提现%1$s次,最低提现%2$s元,最高为%3$s元\n2.根据平台规定余额的%4$s归属用户,%5$s归属平台\n3.提现金额会以微信零钱的方式发到你的微信账户
+	</string>
+
+    <!-- 我的 -->
+    <string name="collect_title">我的收藏</string>
+    <string name="collect_right_title">编辑</string>
+    <string name="collect_cancel_title">取消</string>
+    <string name="collect_delete_title">删 除</string>
+
+    <!-- 扫描二维码 -->
+    <string name="placeHolder">placeHolder</string>
+    <string name="seekbar_add">+</string>
+    <string name="seekbar_minus">-</string>
+    <string name="create">生成</string>
+    <string name="scan_failed">扫描失败</string>
+    <string name="bottom_hint">建议与镜头保持10CM距离，尽量避免逆光和阴影</string>
+    <string name="top_hint">将条形码或二维码置于取景框内系统会自动扫描</string>
+    <string name="cancel">取消</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="button_ok">确定</string>
+    <string name="pay_fault_due_to_net">由于您的网络原因，支付没有完成</string>
+    <string name="request_fault_due_to_net">由于您的网络原因请求失败</string>
+
+    <string name="confirm_forward_to">确定转发到：%1$s ?</string>
+
+    <!--liveplay-->
+    <!--live -->
+    <string name="liveLoadingStream">视频流加载中……</string>
+    <string name="liveHostLeave">主播正在回来的路上，请稍等片刻……</string>
+    <string name="liveFollowIconWithDesc">＋关注</string>
+    <string name="liveFollowed">已关注</string>
+    <string name="live_end_tips">直播结束</string>
+    <string name="btn_return_home">返回</string>
+    <string name="live_time_tips">时长</string>
+    <string name="live_members_tips">观众</string>
+    <string name="live_admires_tips">饭票</string>
+    <string name="live_ranking_total">总榜</string>
+    <string name="live_ranking_this">本场</string>
+    <string name="live_id">看脸播主 %1$s</string>
+    <string name="live_level_infor">等级说明</string>
+    <string name="live_booty_call_succ">邀请发送成功,等待接受</string>
+
+    <string name="labelID">ID:</string>
+    <string name="labelID1">ID</string>
+    <string name="labelAge">岁</string>
+    <string name="labelMealTicket">饭票:</string>
+    <string name="labelBigGift">下载大礼物:</string>
+    <string name="labelMealTicket1">饭票</string>
+    <string name="labelRoomAdmin">房间管理 ></string>
+
+
+    <string name="live_search_hint">请输入用户昵称或ID号</string>
+
+
+    <string name="register_name_digits">0123456789xX</string>
+    <string name="my_date_detail_title">接受邀请</string>
+    <string name="live_video_hint">感谢宝宝来看我的直播，如果宝宝喜欢主播点击“约吃饭”图标跟宝宝一起约饭哦~</string>
+    <string name="live_list_title">官方倡导绿色直播，网警24小时在线，违规违法、低俗、暴力、色情等都会被查封账号哦~</string>
+
+    <string name="tipUserStatesIsHidden">对方处于隐身状态，无法查看！</string>
+    <string name="tipLiveRoomNotExist">直播房间不存在。</string>
+    <string name="tipErrInputIsEmpty">输入内容不能为空!</string>
+    <string name="tipErrInputBeyondLength">输入消息过长!</string>
+    <string name="tipErrMessageCantSend">数据可能有问题,消息没有发送</string>
+    <string name="tipErrMessageSendDefeat">消息发送失败</string>
+    <string name="tipErrMessageShutUp">您被房主禁言</string>
+    <string name="edHintBarrageOn">发送弹幕，10脸蛋/条</string>
+    <string name="edHintBarrageOff">来说点什么吧~！</string>
+
+    <!--by kevin -->
+    <!--房间-->
+    <string name="actReportFouls_TopBarTitle_Text">举报用户</string>
+    <string name="actReportRes_TopBarTitle_Text">商户举报</string>
+    <string name="actReportLiveRoom_TopBarTitle_Text">直播间举报</string>
+
+    <string name="actReportFouls_ReportContent_Text">举报内容</string>
+    <string name="actReportFouls_ReportRemark_Text">以上选项都无法表达我想吐槽的内容</string>
+    <string name="actReportFouls_ReportRemark_Hint">以上功能不能表达，必须吐槽！~~</string>
+
+    <string name="actReportFouls_BtnText">提交</string>
+
+
+    <string name="actReportFouls_ReportReason_ViolationPolicy">政治反动</string>
+    <string name="actReportFouls_ReportReason_Porn">淫秽色情</string>
+    <string name="actReportFouls_ReportReason_Ads">广告骚扰</string>
+    <string name="actReportFouls_ReportReason_PersonalAttack">人身攻击</string>
+
+
+    <string name="loadingReportFouls">正在举报……</string>
+
+
+    <string name="itvCheckbox_Checked">{eam-n-previous @color/f3 22sp}</string>
+    <string name="itvCheckbox_None">{eam-n-previous @color/f3 22sp}</string>
+    <string name="live_recommend_host">请输入顾问ID号或扫描二维码</string>
+    <string name="title_activity_user_want_to_go_edit">UserWantToGoEdit</string>
+
+    <string name="actComplaint_TopBarTitle_Text">投诉</string>
+    <string name="actComplaint_Content_Text">投诉内容</string>
+
+    <string name="actComplaint_Time">迟到时间过长</string>
+    <string name="actComplaint_Miss">主播爽约</string>
+    <string name="actComplaint_Fake">含欺诈行为</string>
+    <string name="actComplaint_Else">其它</string>
+
+    <string name="loadingComplaint">正在投诉……</string>
+
+    <string name="actComplaint_Remark_Text">我有想吐槽的内容</string>
+
+    <string name="act_Comment_Title_Text">我的点评</string>
+    <string name="title_activity_exchange_record_detail">ExchangeRecordDetailActivity</string>
+    <string name="find_bottom_hint">到底了, 去别处看看吧~</string>
+    <string name="et_psw_without_special_text">
+		0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+	</string>
+    <string name="live_without_camera">直播中不允许调用摄像头哦~</string>
+    <string name="live_without_photo">直播中不允许发送照片哦~</string>
+    <string name="live_without_location">直播中不允许发送位置哦~</string>
+    <string name="live_add_admin">添加管理员</string>
+
+    <!-- some id-->
+    <item name="viewTagFirst" type="id"/>
+    <item name="viewTagSecond" type="id"/>
+    <item name="viewTagThird" type="id"/>
+    <item name="viewTagFourth" type="id"/>
+
+    <string name="red_packet_hint">单个红包金额不能低于0.01元</string>
+    <!--百度统计自定义事件分组-->
+    <string name="baidu_society">社交</string>
+    <string name="baidu_live">直播</string>
+    <string name="baidu_recharge">充值</string>
+    <string name="baidu_other">其他</string>
+
+    <string name="redpacket_explain">1.在直播间内, 点击左下方的“···”按钮打开功能列表\n2.点击“红包”进入发红包页\n3.选择任意额度红包,
+		手动输入红包个数\n4.点击发红包即可发送到直播间内\n5.观众可以点击直播间下方的红包按钮"
+	</string>
+    <string name="redpacket_rule">
+		1.单个红包金额不能低于0.01元\n2.同一个红包每个用户只能抢一次\n3.未领取的红包将在24小时后发起退款,退款至看脸吃饭账户余额
+	</string>
+    <string name="per_camera_never_ask">您禁止了“小饭”使用摄像机权限，所以需要您到手机权限管理面板手动打开才可正常使用此功能</string>
+    <string name="per_permission_never_ask">您禁止了“小饭”使用!=end=!权限，所以需要您到手机权限管理面板手动打开才可正常使用此功能</string>
+    <string name="per_location_never_ask">请打开GPS才可正常使用此功能</string>
+    <string name="per_phone_contact_never_ask">您先前禁止了联系人权限，所以需要您到手机权限管理面板手动打开才可正常使用此功能</string>
+    <string name="per_phone_contact_never_gps">您先前禁止了定位权限，所以需要您到手机权限管理面板手动打开才可正常使用此功能</string>
+    <string name="per_record_never_ask">您先前禁止了麦克风权限，所以需要您到手机权限管理面板手动打开才可正常使用此功能</string>
+
+    <string name="club_info_content">"本产品支持退款服务\n申请退款时间早于开始使用时间24小时，平台不扣除手续费。\n申请退款时间小于开始使用时间24小时，平台扣除50%订单费用作为违约金。\n申请退款时间超过预定套餐的结束时间后，平台不再支持退款。"</string>
+    <string name="birthday_content">你横空出世的日子</string>
+    <string name="take_nickName">你想叫个什么名 ?</string>
+    <string name="in_position">此时你身在何方</string>
+    <string name="review_head_title1">请换上</string>
+    <string name="review_head_title2">真实头像</string>
+    <string name="review_head_title3">本人头像更容易被匹配到哦~</string>
+    <string name="review_head_title4">新头像已提交</string>
+    <string name="review_head_title5">人工审核</string>
+    <string name="review_head_title6">我们将尽快处理审核结果，请注意查收哦~</string>
+    <string name="review_left_btn_text">我知道了</string>
+    <string name="review_right_btn_text">立刻更换</string>
+
+
+    <string name="search">搜索</string>
+    <string name="unable_to_connect">不能连接到服务器</string>
+    <string name="text_ack_msg">已读</string>
+    <string name="text_delivered_msg">已送达</string>
+    <string name="text_sending_msg">发送中</string>
+
+    <string name="location_prefix">[我的位置]</string>
+    <string name="picture">[图片]</string>
+    <string name="video">[视频]</string>
+    <string name="file">[文件]</string>
+    <string name="voice_prefix">[语音]</string>
+    <string name="voice_call">[语音通话]</string>
+    <string name="video_call">[视频通话]</string>
+    <string name="dynamic_expression">[动态表情]</string>
+    <string name="Network_error">网络出错</string>
+    <string name="please_check">key 验证出错! 请在 AndroidManifest.xml 文件中检查 key 设置</string>
+    <string name="Making_sure_your_location">正在确定你的位置...</string>
+    <string name="Download_the_pictures">下载图片: 0%</string>
+    <string name="Download_the_pictures_new">下载图片:</string>
+    <string name="Invite_you_to_join_a_group_chat">邀请你加入了群聊</string>
+    <string name="Agreed_to_your_group_chat_application">同意了你的群聊申请</string>
+    <string name="send_fail">发送消息失败,</string>
+    <string name="connect_failuer_toast">请检查网络或稍候重试</string>
+    <string name="error_send_invalid_content">你发送了不合法的消息内容</string>
+    <string name="error_send_not_in_the_group">你已经不在此群了</string>
+    <string name="not_download">未下载:</string>
+    <string name="Delete_the_contact">删除联系人</string>
+    <string name="setting">设置</string>
+    <string name="Have_downloaded">已下载</string>
+    <string name="Did_not_download">未下载</string>
+    <string name="Is_download_voice_click_later">正在下载语音，稍后点击</string>
+    <string name="black_list_title">黑名单</string>
+    <string name="phone_contact_title">通讯录好友</string>
+
+
+    <string name="ucloud_app_id">1205079d16ca495583102fc683f10712</string>
+    <string name="invite_friend_content">赶快邀请你的小伙伴加入看脸吃饭吧！被邀请人注册后填写邀请码有惊喜！</string>
+    <string name="chat_is_sending">发送中</string>
+
+    <string name="video_red_packet_share">分享到朋友圈\n红包奖励翻倍</string>
+
+    <string name="chat_copy">复制</string>
+    <string name="chat_share">转发</string>
+    <string name="chat_delete">删除</string>
+    <string name="chat_recall">撤回</string>
+    <string name="game_dialog_beinvited_msg">邀请您一起玩《合到10》小游戏，快去对战吧！</string>
+    <string name="game_dialog_gofight_msg">接受了您的游戏邀请火速前往对战！</string>
+    <string name="chat_game_name">合到10</string>
+    <string name="chat_game_live_tips">您当前正在直播间，开启游戏将自动结束直播。</string>
+
+    <string name="VideoView_ar_aspect_fit_parent">Aspect / Fit parent</string>
+    <string name="VideoView_ar_aspect_fill_parent">Aspect / Fill parent</string>
+    <string name="VideoView_ar_aspect_wrap_content">Aspect / Wrap content</string>
+    <string name="VideoView_ar_match_parent">Free / Fill parent</string>
+    <string name="VideoView_ar_16_9_fit_parent">16:9 / Fit parent</string>
+    <string name="VideoView_ar_4_3_fit_parent">4:3 / Fit parent</string>
+	<string name="clear_shop_car_tip">是否清空购物车？</string>
+	<string name="live_host_quite_tip">您当前正在直播，\n是否确定退出直播间？</string>
+	<string name="mobie_net_tip">当前为移动网络环境，是否进行更新？</string>
+	<!--<string name="live_host_quite_tip">直播结束啦</string>-->
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			 android:layout_width="100dp"
+			 android:layout_height="100dp">
+	<RelativeLayout
+		android:id="@+id/rl_gift_number"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="8dp"
+		android:background="@drawable/rec_yellow_bg"
+		android:visibility="visible">
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="8dp">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_gravity="center"
+			android:layout_margin="10dp"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/img_gift_icon"
+				android:layout_width="40dp"
+				android:layout_height="40dp"/>
+
+			<TextView
+				android:id="@+id/tv_gift_price"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="10sp"/>
+
+			<TextView
+				android:id="@+id/tv_gift_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:lines="1"
+				android:textSize="10sp"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/tv_gift_isPrivilege"
+			android:layout_width="30dp"
+			android:layout_height="15dp"
+			android:layout_margin="4dp"
+			android:background="@drawable/round_cornor_0313"
+			android:gravity="center"
+			android:text="特权"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f6"/>
+
+	</RelativeLayout>
+
+	<TextView
+		android:id="@+id/tv_gift_number"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="right"
+
+		android:background="@drawable/round_cornor_36_mc2_bg"
+		android:gravity="center"
+		android:paddingLeft="4dp"
+		android:paddingRight="4dp"
+		android:text="x0"
+		android:textColor="@color/black"
+		android:textSize="@dimen/f3"/>
+
+</FrameLayout>

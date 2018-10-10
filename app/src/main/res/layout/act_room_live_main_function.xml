@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llroom_live_mainfunction_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="给粉丝们发个红包，联络一下感情吧~"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/llroom_live_mainfunction_layout3"
+            android:layout_marginTop="49dp"
+            android:background="@color/main_separator_color" />
+
+        <RelativeLayout
+            android:id="@+id/llroom_live_mainfunction_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_room_live_mainfunction_sendtext"
+                android:layout_toLeftOf="@+id/tv_room_live_mainfunction_packet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="65dp"
+                android:drawableTop="@drawable/sendtext_mainfunction_xhdpi"
+                android:gravity="center"
+                android:text="发言"
+                android:textColor="@color/C0321"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/tv_room_live_mainfunction_packet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:drawableTop="@drawable/package_mainfunction"
+                android:gravity="center"
+                android:text="红包"
+                android:textColor="@color/C0321"
+                android:textSize="@dimen/f3"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_room_live_mainfunction_link"
+                android:layout_toRightOf="@+id/tv_room_live_mainfunction_packet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="65dp"
+                android:drawableTop="@drawable/link_mainfunction"
+                android:gravity="center"
+                android:text="连麦"
+                android:textColor="@color/C0321"
+                android:textSize="@dimen/f3" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

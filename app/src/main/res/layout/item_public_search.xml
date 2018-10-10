@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:layout_marginLeft="12dp"
+		android:layout_marginRight="12dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:layout_gravity="center_vertical">
+
+			<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+				android:id="@+id/riv_head"
+				android:layout_width="45dp"
+				android:layout_height="45dp"
+				android:layout_centerVertical="true"
+				android:scaleType="centerCrop"
+				android:src="@drawable/userhead"
+				app:riv_border_color="@color/transparent"
+				app:riv_border_width="0dp"
+				app:riv_oval="true"/>
+
+			<TextView
+				android:id="@+id/tv_explain"
+				android:layout_width="60dp"
+				android:layout_height="22dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="12dp"
+				android:background="@drawable/round_cornor_14_c0412_bg"
+				android:gravity="center"
+				android:textColor="@color/C0412"
+				android:textSize="@dimen/f4"
+				tools:text="+关注"/>
+			<!--  等级,年龄,昵称-->
+			<RelativeLayout
+				android:id="@+id/all_all_info"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/riv_head"
+				android:layout_marginLeft="12dp"
+				android:layout_toLeftOf="@+id/tv_explain"
+				android:layout_toRightOf="@+id/riv_head"
+				android:gravity="center_vertical"
+				android:paddingRight="12dp">
+				<LinearLayout
+					android:id="@+id/name_container"
+					android:layout_width="wrap_content"
+					android:gravity="center_vertical"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:id="@+id/tv_name"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:singleLine="true"
+						android:textColor="@color/C0321"
+						android:textSize="@dimen/f3"
+						tools:text="测试名称"/>
+
+					<com.echoesnet.eatandmeet.views.widgets.GenderView
+						android:id="@+id/itv_age"
+						android:layout_width="wrap_content"
+						android:layout_height="13dp"
+						android:layout_gravity="center_vertical"
+						android:layout_marginLeft="5dp"
+						android:layout_toRightOf="@+id/tv_name"
+						android:gravity="center"
+						android:textColor="@color/white"
+						android:textSize="@dimen/f6"/>
+
+					<com.echoesnet.eatandmeet.views.widgets.LevelView
+						android:id="@+id/lv_level"
+						android:layout_width="wrap_content"
+						android:layout_height="13dp"
+						android:layout_marginLeft="5dp"
+						android:layout_toRightOf="@+id/itv_age"
+						android:gravity="center"
+						android:textColor="@color/white"
+						app:text_size="@dimen/f6"/>
+				</LinearLayout>
+
+
+				<TextView
+					android:id="@+id/tv_info"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_below="@+id/name_container"
+					android:gravity="bottom"
+					android:singleLine="true"
+					android:textColor="@color/c3"
+					android:textSize="@dimen/f4"
+					tools:text="测试数据内容测试数据内容测试数据内容测试数据内容"/>
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+	</LinearLayout>
+
+	<View
+		style="@style/line_vertical"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginLeft="24px"
+		android:visibility="gone"/>
+</LinearLayout>

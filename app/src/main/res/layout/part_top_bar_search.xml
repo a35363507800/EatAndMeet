@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<com.zhy.autolayout.AutoRelativeLayout
+		android:layout_width="250dp"
+		android:layout_height="34dp"
+		android:layout_centerInParent="true"
+		android:gravity="center_vertical"
+		android:background="@drawable/search_dish_round_strock"	>
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/ll_search"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true">
+			<ImageView
+				android:id="@+id/iv_delete"
+				android:layout_width="14dp"
+				android:layout_height="14dp"
+				android:layout_marginLeft="@dimen/f5"
+				android:layout_marginRight="@dimen/f5"
+				android:scaleType="fitCenter"/>
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<EditText
+			android:id="@+id/et_search"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="16px"
+			android:layout_toLeftOf="@+id/ll_search"
+			android:layout_toRightOf="@+id/iv_search"
+			android:background="@null"
+			android:hint="@string/live_search_hint"
+			android:imeOptions="actionSearch"
+			android:singleLine="true"
+			android:textColor="@color/FC2"
+			android:textColorHint="@color/FC3"
+			android:textSize="@dimen/f4"/>
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:id="@+id/iv_search"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="10px"
+			android:text="{eam-s-search @color/FC3 @dimen/f4}"/>
+
+	</com.zhy.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>

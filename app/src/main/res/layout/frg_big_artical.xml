@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_background_color">
+
+    <com.echoesnet.eatandmeet.utils.EmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <!--<com.echoesnet.eatandmeet.views.widgets.VipArticalRecycleView-->
+        <!--android:id="@+id/rv_recview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/transparent"/>-->
+    <com.ss007.swiprecycleview.SwipeRefreshRecycleView
+        android:id="@+id/srrv_recyview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"/>
+
+
+</RelativeLayout>

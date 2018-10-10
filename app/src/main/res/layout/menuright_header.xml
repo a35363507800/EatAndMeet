@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_dish_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c6">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/iv_sure_left_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:scaleType="fitCenter"
+            android:text="{eam-s-yes-circle3 @color/MC7 @dimen/f4}"/>
+
+        <TextView
+            android:id="@+id/tv_sure_left_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/iv_sure_left_icon"
+            android:text="支持随时退"
+            android:textColor="@color/FC1"
+            android:textSize="@dimen/f4" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/iv_sure_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/tv_sure_left_hint"
+            android:text="{eam-s-yes-circle3 @color/MC7 @dimen/f4}"/>
+
+        <TextView
+            android:id="@+id/tv_sure_right_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/iv_sure_right_icon"
+            android:text="支持过期退"
+            android:textColor="@color/FC1"
+            android:textSize="@dimen/f4" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

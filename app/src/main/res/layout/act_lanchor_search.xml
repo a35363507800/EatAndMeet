@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@color/c7"
+	android:orientation="vertical">
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/ll_search_top"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="CUSTOM"/>
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/rv_search"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/ll_search_top">
+	</android.support.v7.widget.RecyclerView>
+	<include
+		android:id="@+id/no_data"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:layout_below="@+id/ll_search_top"
+		layout="@layout/empty_view" />
+</com.zhy.autolayout.AutoRelativeLayout>

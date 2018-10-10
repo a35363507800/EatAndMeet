@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/prize_ll_content"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignTop="@+id/scroll_view"
+        android:background="@drawable/round_btn_mc0332"
+        >
+
+        <ImageView
+            android:layout_width="34.5dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/prize_content"
+            android:scaleType="centerCrop"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/prize_ll"
+        android:layout_alignLeft="@+id/prize_ll_content"
+        android:layout_alignRight="@+id/prize_ll_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/prize_ll_content"
+        >
+        <TextView
+            android:id="@+id/prize_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/C0322"
+            android:text=""
+            android:textSize="@dimen/f6"
+            />
+
+        <TextView
+            android:id="@+id/prize_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/C0313"
+            android:layout_marginLeft="3dp"
+            android:text=""
+            android:textSize="@dimen/f6"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_nextprize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/C0315"
+        android:gravity="center"
+        android:layout_marginTop="7.5dp"
+        android:layout_alignLeft="@+id/prize_ll_content"
+        android:layout_alignRight="@+id/prize_ll_content"
+        android:textSize="@dimen/f6"
+        android:visibility="visible"
+        android:layout_below="@id/prize_ll"
+        android:text="明日奖励"
+        />
+</RelativeLayout>

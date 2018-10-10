@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlLiveControl"
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+>
+
+	<!--	<Button
+			android:id="@+id/btn_invite_time"
+			android:layout_width="60dp"
+			android:layout_height="30dp"
+			android:background="@drawable/round_white_bg_live_connect"
+			android:gravity="center"
+			android:textColor="@color/white"
+			android:layout_marginBottom="13dp"
+			android:textSize="@dimen/f2"
+			android:visibility="visible"/>-->
+	<Button
+		android:id="@+id/btnSendMessage"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_marginBottom="13dp"
+		android:layout_marginLeft="12dp"
+		android:background="@drawable/live_fayan_selector"/>
+
+	<Button
+		android:id="@+id/btnReport"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="15dp"
+		android:layout_toRightOf="@+id/btnSendMessage"
+		android:background="@drawable/live_report_selector"/>
+	<Button
+		android:id="@+id/btnCloseConnectLive"
+		android:layout_width="80dp"
+		android:layout_height="30dp"
+		android:layout_marginBottom="13dp"
+		android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@+id/btnReport"
+		android:background="@drawable/round_white_bg_live_connect"
+		android:text="关闭连麦"
+		android:textColor="@color/C0324"
+		android:textSize="@dimen/f3"
+		android:visibility="gone"/>
+
+
+	<Button
+		android:id="@+id/btnGift"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_alignParentRight="true"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="13dp"
+		android:background="@drawable/live_liwu_xhdpi"/>
+	<Button
+		android:id="@+id/btnPackage"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="15dp"
+		android:layout_toLeftOf="@+id/btnGift"
+		android:background="@drawable/live_hongbao_xhdpi"/>
+
+	<Button
+		android:id="@+id/btnShare"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="15dp"
+		android:layout_toLeftOf="@+id/btnPackage"
+		android:background="@drawable/live_shared_selector"/>
+
+
+	<RelativeLayout
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="@dimen/d12"
+		android:layout_toLeftOf="@+id/btnShare"
+		android:background="@drawable/live_xiaoxi_xhdpi">
+
+		<ImageView
+			android:id="@+id/btn_message"
+			android:layout_width="30dp"
+			android:layout_height="30dp"/>
+
+		<ImageView
+			android:id="@+id/btn_message_dian"
+			android:layout_width="10dp"
+			android:layout_height="10dp"
+		    android:layout_alignParentRight="true"
+			android:src="@drawable/em_tab_unread_bg"
+			android:visibility="gone"
+			/>
+
+	</RelativeLayout>
+
+
+</RelativeLayout>

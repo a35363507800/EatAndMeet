@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tool="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/ll_top_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:id="@+id/iv_top_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_top_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="11dp"
+                android:textColor="@color/C0323"
+                android:textSize="@dimen/f3"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+            android:id="@+id/riv_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="58.5dp"
+            android:layout_marginTop="11dp"
+            />
+        <!--  等级,年龄,昵称-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/riv_head"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/riv_head"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxEms="7"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3"/>
+        <View
+            android:id="@+id/view_empty"
+            android:layout_width="12dp"
+            android:layout_toRightOf="@+id/riv_head"
+            android:layout_below="@+id/tv_name"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/transparent">
+
+        </View>
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelView
+            android:id="@+id/ll_host_level"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/view_empty"
+            app:text_size="@dimen/f6"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.GenderView
+            android:id="@+id/itv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/ll_host_level"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_star_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="28dp"
+            android:textColor="@color/C0322"
+            android:textSize="@dimen/f4"
+            tool:text="260"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_add_focus"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_below="@+id/tv_star_num"-->
+        <!--android:layout_marginRight="12.5dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@drawable/focus_add_shape"-->
+        <!--android:gravity="center"-->
+        <!--android:text="+关注"-->
+        <!--android:textColor="@color/C0412"-->
+        <!--android:textSize="@dimen/f4"/>-->
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="13dp"
+        android:background="@color/C0332"/>
+
+
+</RelativeLayout>

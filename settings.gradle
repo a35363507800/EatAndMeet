@@ -1,0 +1,7 @@
+include ':app', ':pull_refresh_lib', ':ufilesdk', ':viewpage_indicator_lib', ':pingpp', ':lib:pingpp', ':lib:pingpp_one', ':cycleImageShow', ':gridPasswordInput', ':photo_view_lib', ':icontextmodule', ':jsBridge', ':ShortcutBadger', ':swiprecycleview_lib' //, ':ease_chat'
+
+include ':jazzyViewPager_lib'
+// ':pull_refresh_layout_lib'
+//include ':easeui'
+
+//include ':multiple_images_selector'

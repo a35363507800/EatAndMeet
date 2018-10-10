@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/main"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c16"
+	tools:context="com.echoesnet.eatandmeet.activities.MySettingAct"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar_switch"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="TEXT"
+		/>
+
+	<ScrollView android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/top_bar_switch"
+		>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+
+			<LinearLayout
+				android:visibility="gone"
+				android:id="@+id/all_my_user_help"
+				style="@style/common_linear_item_clickable"
+				android:layout_width="match_parent"
+				android:layout_height="44dp">
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="16px"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:text="用户帮助"
+					android:textColor="@color/FC2"
+					android:textSize="@dimen/f3"/>
+				<com.joanzapata.iconify.widget.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:gravity="center"
+					android:singleLine="true"
+					android:text="{eam-e909}"
+					android:textColor="@color/FC7"
+					android:textSize="@dimen/f3"
+				/>
+			</LinearLayout>
+
+
+			<RelativeLayout
+				android:layout_marginTop="10dp"
+				android:id="@+id/all_my_user_account_security"
+				style="@style/common_linear_item_clickable"
+				android:layout_width="match_parent"
+				android:layout_height="50dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_centerVertical="true"
+					android:text="账户安全"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+				<View
+					android:id="@+id/v_update_hongdian"
+					android:layout_width="14dp"
+					android:layout_height="14dp"
+					android:layout_centerVertical="true"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="37dp"
+					></View>
+
+				<com.joanzapata.iconify.widget.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:layout_alignParentRight="true"
+					android:gravity="center"
+					android:singleLine="true"
+					android:text="{eam-e909}"
+					android:textColor="@color/FC7"
+					android:textSize="@dimen/f3"
+				/>
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:visibility="gone"
+				android:layout_marginTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				style="@style/common_linear_item_clickable"
+			    android:clickable="false">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="订餐信息展示"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+
+				<com.echoesnet.eatandmeet.views.widgets.SwitchView
+					android:id="@+id/my_set_order_show"
+					android:layout_width="50dp"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"/>
+
+			</RelativeLayout>
+
+
+			<com.zhy.autolayout.AutoRelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginTop="10dp"
+				style="@style/common_linear_item_clickable">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="推送消息提醒"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+
+				<com.echoesnet.eatandmeet.views.widgets.SwitchView
+					android:id="@+id/my_set_msg_show"
+					android:layout_width="50dp"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"/>
+
+			</com.zhy.autolayout.AutoRelativeLayout>
+
+			<RelativeLayout
+				android:layout_marginTop="1dp"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				style="@style/common_linear_item_clickable"
+			    android:visibility="gone">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="不让陌生人看我"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+
+				<com.echoesnet.eatandmeet.views.widgets.SwitchView
+					android:id="@+id/my_set_person_show"
+					android:layout_width="50dp"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"/>
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_marginTop="10dp"
+				android:id="@+id/all_my_user_check_update"
+				style="@style/common_linear_item_clickable"
+				android:layout_width="match_parent"
+				android:layout_height="50dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="检查更新"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+				
+				<View
+					android:id="@+id/setting_hongdian"
+					android:layout_width="14dp"
+					android:layout_centerVertical="true"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="38dp"
+					android:visibility="gone"
+					android:background="@drawable/setting_hongdian"
+					android:layout_height="14dp"/>
+				
+				<com.joanzapata.iconify.widget.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_gravity="center_vertical"
+					android:gravity="center"
+					android:singleLine="true"
+					android:text="{eam-e909}"
+					android:textColor="@color/FC7"
+					android:textSize="@dimen/f3"
+					/>
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_marginTop="1dp"
+				android:id="@+id/all_my_user_clear_catch"
+				style="@style/common_linear_item_clickable"
+				android:layout_width="match_parent"
+				android:layout_height="50dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="清理缓存"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+				<com.joanzapata.iconify.widget.IconTextView
+					android:id="@+id/clear_sise"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="7dp"
+					android:gravity="center"
+					android:singleLine="true"
+					android:text=""
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"
+					/>
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:layout_marginTop="10dp"
+				android:id="@+id/all_my_user_feedback"
+				style="@style/common_linear_item_clickable"
+				android:layout_width="match_parent"
+				android:layout_height="50dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:text="意见反馈"
+					android:layout_centerVertical="true"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+				<com.joanzapata.iconify.widget.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_centerVertical="true"
+					android:gravity="center"
+					android:singleLine="true"
+					android:text="{eam-e909}"
+					android:layout_alignParentRight="true"
+					android:textColor="@color/FC7"
+					android:textSize="@dimen/f3"
+					/>
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_marginTop="1dp"
+				android:id="@+id/all_my_user_contact_us"
+				style="@style/common_linear_item_clickable"
+				android:layout_width="match_parent"
+				android:layout_height="50dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="联系我们"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+				<com.joanzapata.iconify.widget.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_centerVertical="true"
+					android:layout_alignParentRight="true"
+					android:gravity="center"
+					android:singleLine="true"
+					android:text="{eam-e909}"
+					android:textColor="@color/FC7"
+					android:textSize="@dimen/f3"
+					/>
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:layout_marginTop="1dp"
+				android:id="@+id/all_my_user_about"
+				style="@style/common_linear_item_clickable"
+				android:layout_width="match_parent"
+				android:layout_height="50dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:layout_centerVertical="true"
+					android:text="关于《看脸吃饭》"
+					android:textColor="@color/C0321"
+					android:textSize="@dimen/f3"/>
+				<com.joanzapata.iconify.widget.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:gravity="center"
+					android:singleLine="true"
+					android:text="{eam-e909}"
+					android:layout_alignParentRight="true"
+					android:textColor="@color/FC7"
+					android:textSize="@dimen/f3"
+					/>
+			</RelativeLayout>
+
+
+			<Button
+				android:layout_marginTop="10dp"
+				android:id="@+id/btn_quit_system"
+				style="@style/square_corner_main_btn_white_bg"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:text="退出账号"
+				android:layout_alignParentBottom="true"
+				android:textColor="@color/C0313"
+				android:textSize="@dimen/f3"
+				/>
+
+		</LinearLayout>
+
+
+	</ScrollView>
+
+
+</RelativeLayout>

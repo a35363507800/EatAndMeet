@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:paddingLeft="10px"
+	android:paddingRight="10px"
+	android:orientation="vertical">
+	<!--头像-->
+	<com.makeramen.roundedimageview.RoundedImageView
+		android:id="@+id/riv_live_aud_head"
+		android:layout_width="72px"
+		android:layout_height="72px"
+		android:scaleType="centerCrop"
+		app:riv_border_color="@color/MC1"
+		app:riv_border_width="1px"
+		app:riv_oval="true"/>
+</com.zhy.autolayout.AutoLinearLayout>

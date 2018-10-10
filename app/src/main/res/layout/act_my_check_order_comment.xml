@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:custom="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="@color/c5"
+	android:orientation="vertical"
+	tools:context=".activities.DOrderCommentAct">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<ScrollView android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1">
+		<com.zhy.autolayout.AutoLinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:orientation="vertical">
+			>
+			<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="352px"
+				android:scrollbars="none"
+				android:layout_marginLeft="24px"
+				android:layout_marginRight="24px"
+				android:layout_marginTop="30px"
+				android:background="@drawable/input_bg"
+			>
+				<LinearLayout android:layout_width="match_parent"
+							  android:layout_height="wrap_content"
+							  android:orientation="vertical">
+					<TextView
+						android:layout_margin="20px"
+						android:id="@+id/et_refund_reason"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="left|top"
+						android:lineSpacingMultiplier="1.5"
+						android:padding="10px"
+						android:textColor="@color/c3"
+						android:textSize="@dimen/f3"/>
+				</LinearLayout>
+			</ScrollView>
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/rv_comment_imgs"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="14px"
+				android:layout_marginRight="14px"
+				android:layout_marginTop="20px"
+				android:scrollbars="none"
+			/>
+			<View android:layout_width="match_parent" android:layout_height="1px"
+				  android:layout_marginLeft="24px"
+				  android:layout_marginRight="24px"
+				  android:layout_marginTop="30px"
+				  android:background="@color/c5"/>
+			<com.zhy.autolayout.AutoLinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="88px"
+				android:layout_marginLeft="24px"
+				android:layout_marginRight="24px"
+				android:gravity="center_vertical">
+				<TextView android:layout_width="0dp"
+						  android:layout_height="wrap_content"
+						  android:layout_gravity="center_vertical"
+						  android:layout_weight="1"
+						  android:gravity="center_vertical"
+						  android:text="餐厅评星"
+						  android:textColor="@color/c2"
+						  android:textSize="@dimen/f3"/>
+
+				<com.echoesnet.eatandmeet.views.widgets.CustomRatingBar.CustomRatingBar
+					android:id="@+id/rateBar"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					custom:isIndicator="true">
+				</com.echoesnet.eatandmeet.views.widgets.CustomRatingBar.CustomRatingBar>
+			</com.zhy.autolayout.AutoLinearLayout>
+			<View android:layout_width="match_parent" android:layout_height="18px"
+				  android:background="@color/c5"/>
+			<com.zhy.autolayout.AutoLinearLayout
+				android:id="@+id/all_dish"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white"
+				android:orientation="vertical"
+				android:paddingLeft="24px"
+				android:paddingRight="24px"
+				android:paddingTop="30px">
+				<TextView android:layout_width="wrap_content"
+						  android:layout_height="wrap_content"
+						  android:text="菜品评星"
+						  android:textColor="@color/c2"
+						  android:textSize="@dimen/f3"/>
+				<com.linearlistview.LinearListView
+					android:id="@+id/lv_res_dish_lst"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="20px"
+					android:layout_marginTop="20px"
+					android:orientation="vertical"
+				/>
+			</com.zhy.autolayout.AutoLinearLayout>
+
+		</com.zhy.autolayout.AutoLinearLayout>
+	</ScrollView>
+	<!--	<Button
+			android:id="@+id/btn_commit_comment"
+			android:layout_width="match_parent"
+			android:layout_height="98px"
+			android:textSize="@dimen/f2"
+			android:background="@drawable/btn4_selector"
+			android:textColor="@color/white"
+			android:text="提交"
+		/>-->
+</com.zhy.autolayout.AutoLinearLayout>
+

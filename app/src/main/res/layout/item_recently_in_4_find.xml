@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.echoesnet.eatandmeet.views.widgets.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+<ImageView
+    android:id="@+id/img_res_pic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"/>
+
+        <View
+            android:id="@+id/v_transpant"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/booty_call_shade_bg"/>
+     <TextView
+         android:id="@+id/tv_res_name"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ellipsize="marquee"
+         android:focusable="true"
+         android:focusableInTouchMode="true"
+         android:marqueeRepeatLimit="marquee_forever"
+         android:scrollHorizontally="true"
+         android:singleLine="true"
+         android:textColor="@color/C0324"
+         android:textSize="@dimen/f3"
+         android:text=" "
+         android:includeFontPadding="false"
+         android:layout_alignLeft="@+id/img_res_pic"
+         android:layout_alignBottom="@+id/img_res_pic"
+         android:layout_marginLeft="12px"
+         android:layout_marginBottom="10px"
+         android:gravity="center"
+         android:layout_alignParentBottom="true" />
+
+
+</com.echoesnet.eatandmeet.views.widgets.SquareRelativeLayout>

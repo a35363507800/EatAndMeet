@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/main_background_color">
+<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+    android:id="@+id/top_bar_switch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:topbarType="TEXT"/>
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/icon_tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/C0323"
+            android:textSize="@dimen/f3"
+            android:gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/round_99_white_bg"
+            android:text="{eam-s-search} 搜索附近位置"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_search_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

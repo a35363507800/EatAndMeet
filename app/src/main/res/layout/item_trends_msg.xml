@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:paddingTop="10dp"
+              android:paddingLeft="12dp"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+            android:id="@+id/riv_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="12dp"
+            app:riv_oval="true"/>
+
+        <LinearLayout
+            android:id="@+id/rl_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/tv_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLength="15"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.echoesnet.eatandmeet.views.widgets.GenderView
+                    android:id="@+id/icon_tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    app:text_size ="@dimen/f6"
+                    android:textColor="@color/white"/>
+
+                <com.echoesnet.eatandmeet.views.widgets.LevelView
+                    android:id="@+id/icon_tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    app:text_size ="@dimen/f6"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <TextView
+
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/C0321"
+                android:textSize="@dimen/f3"/>
+
+            <com.echoesnet.eatandmeet.views.widgets.FolderTextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/C0321"
+                android:textSize="@dimen/f3"
+                app:foldline="2"/>
+
+            <TextView
+                android:id="@+id/tv_time_and_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/C0322"
+                android:textSize="@dimen/f6"/>
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_99_c0412_bg_hollow"
+                android:paddingBottom="4dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/C0412"
+                android:text="回复"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="15dp">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/riv_cover"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:riv_corner_radius="4dp"/>
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/icon_tv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:visibility="gone"
+                android:text="{eam-s-play-video}"/>
+            <TextView
+                android:id="@+id/tv_describe"
+                android:visibility="visible"
+                android:background="@drawable/round_corner_4_c0333_bg"
+                android:maxEms="15"
+                android:maxLines="4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/C0322"
+                android:textSize="@dimen/f4"
+                tools:text="测试测试测试测试测试测试测试测试策划"
+                android:ellipsize="end"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/main_separator_color"/>
+
+</LinearLayout>

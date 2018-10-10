@@ -1,0 +1,30 @@
+<com.zhy.autolayout.AutoFrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ptr="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/main_background_color"
+	tools:context="com.echoesnet.eatandmeet.fragments.OrderAllFrg">
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		android:id="@+id/ptfl_lstview1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+		android:cacheColorHint="@color/transparent"
+		android:divider="@color/main_background_color"
+		android:dividerHeight="10dp"
+		android:fastScrollEnabled="false"
+		android:footerDividersEnabled="false"
+		android:headerDividersEnabled="false"
+		android:listSelector="@color/transparent"
+		android:scrollbars="none"
+		android:smoothScrollbar="true"
+		ptr:ptrHeaderTextColor="@color/FC2"
+	    />
+	<include
+		android:id="@+id/loading_view"
+		layout="@layout/view_loading_cover"
+		android:visibility="gone"/>
+
+</com.zhy.autolayout.AutoFrameLayout>

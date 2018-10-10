@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--置顶系统消息-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_background_color">
+    <RelativeLayout
+        android:id="@+id/rl_all_sysInfo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_icon_and_dian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_sys_icon"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/ico_dazhaohu"
+            />
+
+        <com.echoesnet.eatandmeet.views.CircleTextView
+            android:id="@+id/ctv_sys_unRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_sys_icon"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/f4"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_sys_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_sys_time"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/rl_icon_and_dian"
+        android:text="系统通知"
+        android:textColor="@color/C0321"
+        android:textSize="@dimen/f3"/>
+
+    <TextView
+        android:id="@+id/tv_sys_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sys_title"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/rl_icon_and_dian"
+        android:ellipsize="end"
+        android:maxEms="18"
+        android:maxLines="1"
+        tools:text="升级系统"/>
+
+    <TextView
+        android:id="@+id/tv_sys_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/C0322"
+        android:textSize="@dimen/f6"
+        tools:text="1分钟前"/>
+
+</RelativeLayout>
+</RelativeLayout>
+

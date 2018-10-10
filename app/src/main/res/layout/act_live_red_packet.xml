@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/C0324">
+
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar_switch"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="TEXT"/>
+
+
+	<com.echoesnet.eatandmeet.views.widgets.ChooseMoneyLayout
+		android:id="@+id/cml_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/top_bar_switch"
+		android:layout_marginBottom="10dp"
+		android:layout_marginLeft="12dp"
+		android:layout_marginRight="12dp"
+		android:layout_marginTop="10dp"
+		android:horizontalSpacing="10dp"
+		android:numColumns="3"
+		android:verticalSpacing="10dp"/>
+
+	<TextView
+		android:id="@+id/tv_amount_hint"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_below="@id/top_bar_switch"
+		android:background="@color/C0314"
+		android:gravity="center"
+		android:text="@string/red_packet_hint"
+		android:textColor="@color/C0321"
+		android:textSize="@dimen/f3"
+		android:visibility="gone"/>
+
+	<View
+		android:id="@+id/view_line"
+		android:layout_width="match_parent"
+		android:layout_height="10dp"
+		android:layout_below="@+id/cml_layout"
+		android:background="@color/c16"/>
+
+	<LinearLayout
+		android:id="@+id/rl_red_count"
+		android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_below="@+id/view_line"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/tv_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="红包个数"
+			android:textColor="@color/C0322"
+			android:textSize="@dimen/f3"/>
+		<EditText
+			android:id="@+id/et_gift_money_amount"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@color/transparent"
+			android:gravity="right"
+			android:hint="填写个数"
+			android:inputType="number"
+			android:maxLength="3"
+			android:textColor="@color/C0321"
+			android:textColorHint="@color/C0322"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:id="@+id/tv_count"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=" 个"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+	</LinearLayout>
+
+
+	<RelativeLayout
+		android:id="@+id/rl_money"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/rl_red_count"
+		android:background="@color/c16"
+		android:paddingTop="44dp">
+
+		<LinearLayout
+			android:id="@+id/ll_money"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:orientation="horizontal">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="¥"
+				android:textColor="@color/C0321"
+				android:textSize="@dimen/f1"/>
+
+			<TextView
+				android:id="@+id/tv_money_amount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="8dp"
+				android:text="0.00"
+				android:textColor="@color/C0321"
+				android:textSize="40sp"/>
+
+		</LinearLayout>
+		<!--style="@style/circle_corner_btn_36_red_bg"-->
+		<Button
+			android:id="@+id/btn_send_red_packet"
+			style="@style/circle_corner_btn_36_ash_bg"
+			android:layout_width="291dp"
+			android:layout_height="44dp"
+			android:layout_below="@+id/ll_money"
+			android:layout_marginTop="44dp"
+			android:clickable="false"
+			android:text="发送红包"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f1"/>
+
+		<TextView
+			android:id="@+id/tv_explain"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/btn_send_red_packet"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="10dp"
+			android:text="红包说明"
+			android:textColor="@color/C0313"
+			android:textSize="@dimen/f6"/>
+
+	</RelativeLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/top_bar_switch"
+		android:visibility="gone">
+
+		<include
+			android:id="@+id/loading_view"
+			layout="@layout/view_loading_cover"
+			android:visibility="visible"/>
+	</FrameLayout>
+
+</RelativeLayout>

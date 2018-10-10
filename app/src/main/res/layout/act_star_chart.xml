@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:orientation="vertical"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/tbs_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/ptflv_view"
+        android:layout_width="match_parent"
+        android:background="@color/main_background_color"
+        android:divider="@color/main_background_color"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        app:ptrAnimationStyle="echoes"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_top_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:gravity="center"
+        android:text="当前排名：第1名"
+        android:textColor="@color/black"
+        android:textSize="@dimen/f2"/>
+
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="刷新"
+        android:textColor="@color/black"
+        android:textSize="@dimen/f3"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/total_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.echoesnet.eatandmeet.fragments.OrderMealFrg">
+
+    <!--<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch-->
+        <!--android:id="@+id/top_bar_switch"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:topbarType="TEXT"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar_switch">
+
+        <RelativeLayout
+            android:id="@+id/rl_search_all"
+            android:background="@color/main_background_color"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <LinearLayout
+                android:id="@+id/ll_search_restaurant"
+                android:layout_width="351dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/reservation_input_round_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.joanzapata.iconify.widget.IconTextView
+                        android:id="@+id/itv_res_search"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:text="{eam-s-search}"
+                        android:textSize="14sp"
+                        android:textColor="@color/C0323"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="11.5dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="请输入餐厅名或商圈"
+                        android:textColor="@color/C0323"
+                        android:textSize="@dimen/f4"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_search_all"
+            android:orientation="vertical">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/listview_order_meal_frg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/main_background_color"
+                android:cacheColorHint="#00000000"
+                app:ptrAnimationStyle="echoes"
+                android:scrollbars="none"/>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_view"
+            layout="@layout/view_loading_cover"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

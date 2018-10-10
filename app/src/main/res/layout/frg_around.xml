@@ -1,0 +1,21 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c16"
+	android:orientation="vertical">
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar_switch"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+	    app:topbarType="SWITCH"
+		app:switchBtnInterval="50dp"
+	    />
+	<android.support.v4.view.ViewPager
+		android:id="@+id/vp_around"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+</LinearLayout>
+

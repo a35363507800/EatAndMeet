@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/area_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/area_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:text="@string/order_area"
+                android:textColor="@color/c3"
+                android:textSize="@dimen/f3" />
+
+            <ImageView
+                android:id="@+id/area_img"
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:layout_toRightOf="@+id/area_textView"
+                android:scaleType="fitCenter"
+                android:src="@color/c1" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/c6" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/wage_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/wage_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:text="@string/order_class"
+                android:textColor="@color/c3"
+                android:textSize="@dimen/f3" />
+
+            <ImageView
+                android:id="@+id/wage_img"
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:layout_toRightOf="@+id/wage_textView"
+                android:scaleType="fitCenter"
+                android:src="@color/c1" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/c6" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/class_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/class_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:text="@string/order_selection"
+                android:textColor="@color/c3"
+                android:textSize="@dimen/f3" />
+
+            <ImageView
+                android:id="@+id/class_img"
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:layout_toRightOf="@+id/class_textView"
+                android:scaleType="fitCenter"
+                android:src="@color/c1" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:background="@color/c6" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/search_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/order_search"
+                android:textColor="@color/c3"
+                android:textSize="@dimen/f3" />
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:layout_toRightOf="@+id/search_textView"
+                android:scaleType="fitCenter"
+                android:src="@color/c1" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/FC7" />
+
+
+</com.zhy.autolayout.AutoLinearLayout>

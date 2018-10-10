@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:custom="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="@color/main_background_color"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.MyAuthenticationAct"
+>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+		<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+			android:id="@+id/top_bar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:topbarType="TEXT"/>
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:scrollbars="none">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:background="@color/white"
+					android:orientation="horizontal"
+					android:paddingLeft="12dp"
+					android:paddingRight="12dp"
+				>
+					<TextView android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:gravity="center_vertical"
+							  android:text="真实姓名："
+							  android:textColor="@color/FC1"
+							  android:textSize="@dimen/f3"/>
+					<RelativeLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:orientation="vertical">
+
+						<EditText
+							android:id="@+id/ev_id_name"
+							style="@style/inputTextStyle"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_alignParentEnd="true"
+							android:layout_alignParentRight="true"
+							android:layout_alignParentTop="true"
+							android:layout_gravity="center_vertical"
+							android:background="@color/transparent"
+							android:hint="请如实填写您的姓名"
+							android:textColor="@color/C0321"
+							android:textColorHint="@color/FC3"
+						/>
+					</RelativeLayout>
+
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="350dp"
+					android:layout_height="1px"
+					android:layout_gravity="center_horizontal"
+					android:background="@color/main_separator_color"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:background="@color/white"
+					android:orientation="horizontal"
+					android:paddingLeft="12dp"
+					android:paddingRight="12dp">
+					<TextView android:layout_width="wrap_content"
+							  android:layout_height="match_parent"
+							  android:gravity="center_vertical"
+							  android:text="身份证号："
+							  android:textColor="@color/FC1"
+							  android:textSize="@dimen/f3"/>
+					<RelativeLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:orientation="vertical">
+						<EditText
+							android:id="@+id/ev_id_number"
+							style="@style/inputTextStyle"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_gravity="center_vertical"
+							android:background="@color/transparent"
+							android:digits="0123456789xX"
+							android:hint="请如实填写您的身份证号"
+							android:maxLength="18"
+							android:textColor="@color/FC2"
+							android:textColorHint="@color/FC3"
+						/>
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1px"
+							android:layout_alignBottom="@+id/ev_id_number"
+							android:background="@color/main_separator_color"/>
+					</RelativeLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="336dp"
+					android:layout_marginTop="5dp"
+					android:background="@color/white"
+					android:orientation="vertical"
+				>
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+					>
+
+						<com.joanzapata.iconify.widget.IconTextView
+							android:id="@+id/itv_del_card"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignBottom="@+id/iv_id_pic1_layout"
+							android:layout_marginLeft="5dp"
+							android:layout_toRightOf="@+id/iv_id_pic1_layout"
+							android:text="删除"
+							android:textColor="@color/C0412"
+							android:textSize="@dimen/f4"
+							android:visibility="gone"/>
+
+						<TextView android:id="@+id/textView4"
+								  android:layout_width="64dp"
+								  android:layout_height="145dp"
+								  android:layout_alignTop="@+id/iv_id_pic1_layout"
+								  android:layout_centerVertical="true"
+								  android:layout_marginLeft="11dp"
+								  android:layout_toLeftOf="@+id/iv_id_pic1_layout"
+								  android:gravity="top"
+								  android:text="身份证件正面照"
+								  android:textColor="@color/FC1"
+								  android:textSize="@dimen/f3"/>
+						<RelativeLayout
+							android:id="@+id/iv_id_pic1_layout"
+							android:layout_width="200dp"
+							android:layout_height="125dp"
+							android:layout_centerInParent="true">
+							<com.makeramen.roundedimageview.RoundedImageView
+								android:id="@+id/iv_id_pic1"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:src="@drawable/wd_rz_newshenfenzheng"
+								custom:riv_corner_radius="10dp"/>
+						</RelativeLayout>
+
+						<com.makeramen.roundedimageview.RoundedImageView
+							android:id="@+id/btn_upload_id_img1"
+							android:layout_width="72dp"
+							android:layout_height="72dp"
+							android:layout_centerInParent="true"
+							android:src="@drawable/upload_button"
+							custom:riv_corner_radius="1dp"
+						/>
+
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+					>
+						<com.joanzapata.iconify.widget.IconTextView
+							android:id="@+id/itv_del_person"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignBottom="@+id/iv_id_pic2"
+							android:layout_marginLeft="5dp"
+							android:layout_toRightOf="@+id/iv_id_pic2"
+							android:text="删除"
+							android:textColor="@color/C0412"
+							android:textSize="@dimen/f4"
+							android:visibility="gone"/>
+
+
+						<TextView android:layout_width="64dp"
+								  android:layout_height="145dp"
+								  android:layout_alignTop="@+id/iv_id_pic2"
+								  android:layout_centerVertical="true"
+								  android:layout_marginLeft="24px"
+								  android:layout_toLeftOf="@+id/iv_id_pic2"
+								  android:gravity="top"
+								  android:text="手持身份证正面照"
+								  android:textColor="@color/FC1"
+								  android:textSize="@dimen/f3"/>
+
+						<com.makeramen.roundedimageview.RoundedImageView
+							android:id="@+id/iv_id_pic2"
+							android:layout_width="200dp"
+							android:layout_height="125dp"
+							android:layout_centerInParent="true"
+							android:src="@drawable/wd_newtouzhao"
+
+							custom:riv_corner_radius="6dp"
+						/>
+
+
+						<com.makeramen.roundedimageview.RoundedImageView
+							android:id="@+id/btn_upload_id_img2"
+							android:layout_width="72dp"
+							android:layout_height="72dp"
+							android:layout_centerInParent="true"
+							android:src="@drawable/upload_button"
+							custom:riv_corner_radius="1dp"
+						/>
+
+					</RelativeLayout>
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginTop="30px"
+					android:layout_weight="1"
+					android:background="@color/main_background_color"
+					android:orientation="vertical"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+
+				>
+					<com.zhy.autolayout.AutoLinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+					>
+						<TextView android:layout_width="wrap_content"
+								  android:layout_height="match_parent"
+								  android:text="申请要求："
+								  android:textColor="@color/FC3"
+								  android:textSize="@dimen/f3"
+						/>
+						<TextView android:id="@+id/textView3"
+								  android:layout_width="match_parent"
+								  android:layout_height="match_parent"
+								  android:background="@color/main_background_color"
+								  android:lineSpacingMultiplier="1.1"
+								  android:singleLine="false"
+								  android:text="@string/id_virify_policy"
+								  android:textColor="@color/FC3" android:textSize="@dimen/f3"/>
+					</com.zhy.autolayout.AutoLinearLayout>
+
+					<TextView
+						android:id="@+id/realName_Not_Pass"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="您的实名认证未通过"
+						android:textColor="@color/c1"
+						android:textSize="@dimen/f3"
+						android:visibility="gone"/>
+
+
+				</LinearLayout>
+			</LinearLayout>
+		</ScrollView>
+
+		<Button
+			android:id="@+id/btn_id_info_commit"
+			style="@style/square_corner_main_btn_mc1_bg"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:text="提交"
+			android:textStyle="bold"
+		/>
+	</LinearLayout>
+
+
+
+</RelativeLayout>

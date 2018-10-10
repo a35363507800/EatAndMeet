@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		android:id="@+id/ptfl_lstview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:cacheColorHint="@color/transparent"
+		android:divider="@color/main_separator_color"
+		android:dividerHeight="0.5dp"
+		android:fastScrollEnabled="true"
+		android:footerDividersEnabled="false"
+		android:headerDividersEnabled="false"
+		android:listSelector="@color/transparent"
+		android:scrollbars="none"
+		android:smoothScrollbar="true"
+	/>
+</com.zhy.autolayout.AutoRelativeLayout>

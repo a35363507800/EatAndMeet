@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center">
+<RelativeLayout
+    android:layout_width="270dp"
+    android:layout_height="335dp">
+    <ImageView
+        android:id="@+id/img_red_packet_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/red_packet_remind_bg"/>
+    <TextView
+        android:id="@+id/tv_red_packet_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/tv_total_income"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/f2"/>
+    <TextView
+        android:id="@+id/tv_total_income"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/f2"
+        android:textColor="#551400"
+        android:gravity="center"
+        android:background="@drawable/cumulative_bg_img"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/tv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="{eam-e974}"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        />
+</LinearLayout>

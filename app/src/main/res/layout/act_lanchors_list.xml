@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lanchors_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c16"
+    android:fitsSystemWindows="true">
+    <!--topbar-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_topBar"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingTop="5px"
+        android:paddingBottom="5px"
+        android:background="@color/MC1">
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_live_search"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:background="@drawable/search_dish_round_strock">
+            <TextView
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:layout_toLeftOf="@+id/ll_search"
+                android:layout_toRightOf="@+id/iv_search"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/live_search_hint"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/FC3"
+                android:textSize="@dimen/f4"/>
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10px"
+                android:text="{eam-s-search @color/FC3 @dimen/f4}"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <!---->
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/rl_live_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/c8"
+        android:dividerHeight="8dp"
+        android:layout_below="@+id/rl_topBar"
+        android:cacheColorHint="#00000000"
+        android:background="@color/main_background_color" />
+    <ImageView
+        android:id="@+id/img_live_play"
+        android:layout_width="240px"
+        android:layout_height="88px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30px"
+        android:src="@drawable/zb_woyaozb"/>
+    <ImageView
+        android:id="@+id/img_live_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30px"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/zb_dingbu"/>
+
+</com.zhy.autolayout.AutoRelativeLayout>

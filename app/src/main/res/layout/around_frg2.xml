@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:paddingTop="20dp">
+	<TextView
+		android:id="@+id/around_contact"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="13dp"
+		android:layout_marginTop="16dp"
+		android:text="通讯录"
+		android:textColor="@color/C0412"
+		android:textSize="@dimen/f2"/>
+	<View
+		android:layout_width="9dp"
+		android:layout_height="9dp"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="7dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/small_red_point"
+	/>
+	<android.support.design.widget.TabLayout
+		android:id="@+id/tabLayout_around"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="85dp"
+		android:layout_marginRight="76dp"
+		android:layout_marginTop="5dp"
+		android:background="@color/white"
+		app:tabGravity="fill"
+		app:tabIndicatorHeight="0dp"
+		app:tabMode="fixed"/>
+	<android.support.v4.view.ViewPager
+		android:id="@+id/vp_around"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/tabLayout_around"/>
+</RelativeLayout>

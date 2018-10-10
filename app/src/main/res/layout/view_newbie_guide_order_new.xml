@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blackT20"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_order1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:visibility="visible"
+        android:src="@drawable/time"/>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp">
+        <ImageView
+            android:id="@+id/img_order2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_order1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/location"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_click_dismiss2"
+
+            android:background="@color/transparent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_width="75dp"
+            android:layout_height="35dp"/>
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/img_order3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/name"
+        android:layout_marginBottom="87dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_click_dismiss1"
+
+        android:background="@color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:layout_width="75dp"
+        android:layout_height="30dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_click_dismiss3"
+
+        android:background="@color/transparent"
+        android:layout_marginLeft="168dp"
+       android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
+        android:layout_width="75dp"
+        android:layout_height="30dp"/>
+
+</RelativeLayout>

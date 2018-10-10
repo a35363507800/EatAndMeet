@@ -1,0 +1,8 @@
+ext {
+    minSdkVersion = 18   //uclound最低支持到18  4.3
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = "26.0.2"
+    kotlinVersion = "1.2.10"
+    supportVersion = "27.0.1"
+}

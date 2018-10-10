@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.MyAboutAppAct">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<ImageView android:layout_width="70dp"
+			   android:layout_height="70dp"
+			   android:layout_gravity="center_horizontal"
+			   android:layout_marginTop="135dp"
+			   android:src="@mipmap/ic_launcher"/>
+	<TextView
+		android:id="@+id/tv_app_version"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="6dp"
+		android:gravity="center_horizontal"
+		android:textColor="@color/C0321"
+		android:text="看脸吃饭"
+		android:textSize="@dimen/f3"/>
+	<TextView
+		android:id="@+id/tv_version"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:gravity="center_horizontal"
+		android:textColor="@color/C0322"
+		tools:text="V4.1.5"
+		android:textSize="@dimen/f3"/>
+	<TextView
+		android:id="@+id/tv_copyright"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="14dp"
+		android:gravity="center_horizontal"
+		android:textColor="@color/C0322"
+		android:text="Copyright © 2016 在线回声"
+		android:textSize="@dimen/f4"/>
+	<TextView
+		android:id="@+id/tv_culture_a"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:gravity="center_horizontal"
+		android:textColor="@color/C0322"
+		android:text="许可证号  津网文〔2016〕4349-062号"
+		android:textSize="@dimen/f5"/>
+</LinearLayout>

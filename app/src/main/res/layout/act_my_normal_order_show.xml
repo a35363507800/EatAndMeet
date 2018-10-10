@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/main"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:background="@color/main_background_color"
+	tools:context="com.echoesnet.eatandmeet.activities.MyNormalOrderShowAct">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<FrameLayout android:layout_width="match_parent"
+				 android:layout_height="match_parent">
+		<include android:id="@+id/empty_view"
+				 layout="@layout/empty_view"/>
+		<com.handmark.pulltorefresh.library.PullToRefreshListView
+			android:id="@+id/ptfl_lstview"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scrollbars="none"
+            android:background="@color/main_background_color"
+			android:cacheColorHint="@color/transparent"
+			android:listSelector="@color/transparent"
+			android:divider="@color/c16"
+			android:fastScrollEnabled="false"
+			android:headerDividersEnabled="false"
+			android:footerDividersEnabled="false"
+			android:smoothScrollbar="true"
+			android:dividerHeight="10dp"
+			android:paddingLeft="6dp"
+			android:paddingRight="6dp"/>
+	</FrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

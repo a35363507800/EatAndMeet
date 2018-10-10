@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.echoesnet.eatandmeet.views.widgets.LevelHeaderAdpView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="58dp"
+    android:layout_height="73dp"
+    android:id="@+id/crvAvatar"
+    app:live_state="true"
+    ></com.echoesnet.eatandmeet.views.widgets.LevelHeaderAdpView>
+
+
+

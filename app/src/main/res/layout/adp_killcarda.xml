@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_prize"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/prize_bg"
+                android:layout_width="64dp"
+                android:layout_height="64dp"></ImageView>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="43dp"
+              android:layout_centerInParent="true"
+                android:layout_height="43dp"
+                android:layout_marginTop="14dp"
+                android:id="@+id/rv_prize"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_alignLeft="@+id/rl_prize"
+            android:layout_alignRight="@+id/rl_prize"
+            android:gravity="center"
+            android:layout_below="@+id/rl_prize"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/prize_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/f6"
+                android:textColor="@color/C0322"
+                />
+
+            <TextView
+                android:id="@+id/prize_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/f6"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/C0313"
+                android:layout_toRightOf="@+id/prize_name"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

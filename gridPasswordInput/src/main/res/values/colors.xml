@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+十六进制透明度参照表:
+00%=FF（不透明）    5%=F2    10%=E5    15%=D8    20%=CC    25%=BF    30%=B3    35%=A5    40%=99    45%=8c    50%=7F
+55%=72    60%=66    65%=59    70%=4c    75%=3F    80%=33    85%=21    90%=19    95%=0c    100%=00（全透明）
+-->
+
+<resources>
+	<color name="colorPrimary">#3F51B5</color>
+	<color name="colorPrimaryDark">#303F9F</color>
+	<color name="colorAccent">#FF4081</color>
+
+	<color name="white">#FFFFFF</color>
+	<color name="whiteT50">#7FFFFFFF</color>
+	<color name="whiteT7F">#7FFFFFFF</color>
+	<color name="black">#000000</color>
+	<!--黑色透明度 例如：blackT70  就是70%的透明度-->
+	<color name="blackT10">#E5000000</color>
+	<color name="blackT20">#CC000000</color>
+	<color name="blackT30">#b3000000</color>
+	<color name="blackT40">#99000000</color>
+	<color name="blackT50">#7F000000</color>
+	<color name="blackT60">#66000000</color>
+	<color name="blackT70">#4c000000</color>
+	<color name="blackT80">#33000000</color>
+	<color name="blackT90">#19000000</color>
+
+	<color name="transparent">#00000000</color>
+	<color name="translucent">#7f000000</color>
+	<color name="T80">#33000000</color>
+	<color name="WhiteP">#F0F0F0</color>
+	<color name="BlackP">#1a1a1a</color>
+	<color name="C0312Te6">#e6f2a437</color>
+	<color name="C0323T7f">#7f999999</color>
+	<color name="C0312TE5">#e5f2a437</color>
+	<color name="C0321T7F">#7f1a1a1a</color>
+	<color name="C0331T7F">#7fbfbfbf</color>
+	<color name="C0331T4C">#4cbfbfbf</color>
+	<color name="C0313T50">#7fff3657</color>
+	<color name="C0312T70">#4cf2a437</color>
+
+
+	<!--新版颜色表示，与旧版 兼容 start-->
+	<color name="C0311">@color/MC7</color>
+	<color name="C0311T80">#3359c5ff</color>
+	<color name="C0312">@color/MC0312</color>
+	<color name="C0312T80">#33f2a437</color>
+	<color name="C0313">@color/MC5</color>
+	<color name="C0314">@color/MC2</color>
+	<color name="C0315">@color/MC8</color>
+	<color name="C0316">@color/MC3</color>
+	<color name="C0317">@color/MC4</color>
+	<color name="C0318">@color/MC0318</color>
+	<color name="C0319">#ff5b4c</color>
+
+	<color name="C0325">@color/FC11</color>
+	<color name="C0321">@color/FC1</color>
+	<color name="C0322">@color/FC2</color>
+	<color name="C0323">@color/FC3</color>
+	<color name="C0331">@color/FC7</color>
+	<color name="C0323T50">#50999999</color>
+	<color name="C0332">@color/FC0332</color>
+	<color name="C0324">@color/FC0324</color>
+	<color name="C0324T80">#33ffffff</color>
+	<color name="C0333">@color/FC5</color>
+	<color name="C0333T50">#7Ff2f2f2</color>
+
+	<color name="C0412">@color/MC1</color>
+	<color name="C0412T95">#0c6c19f6</color>
+	<color name="C0412T98">#fcfaff</color>
+	<color name="C0412T50">#7f6c19f6</color>
+	<color name="C0411">#b717e5</color>
+
+	<!--新版颜色按下表示，与旧版 兼容-->
+	<color name="C0311P">@color/MC7P</color>
+	<color name="C0312P">@color/MC0312P</color>
+	<color name="C0313P">@color/MC5P</color>
+	<color name="C0314P">@color/MC2P</color>
+	<color name="C0315P">@color/MC8P</color>
+	<color name="C0316P">@color/MC3P</color>
+	<color name="C0317P">@color/MC4P</color>
+	<color name="C0318P">@color/MC0318P</color>
+
+	<color name="C0322P">@color/FC2P</color>
+	<color name="C0323P">@color/FC3P</color>
+	<color name="C0324P">@color/FC0324P</color>
+	<color name="C0331P">@color/FC7P</color>
+	<color name="C0332P">@color/FC0332P</color>
+	<color name="C0333P">@color/FC5P</color>
+	<color name="C0341P">#b7f3d5</color>
+	<color name="C0342P">#9eddff</color>
+	<color name="C0343P">#ffb0bd</color>
+	<color name="C0344P">#f5bb44</color>
+	<color name="C0345P">#9b6ccd</color>
+	<color name="C0321T50">#501a1a1a</color>
+	<color name="C0321T20">#cc1a1a1a</color>
+	<color name="C0324T50">#50ffffff</color>
+	<color name="C0324T20">#CCffffff</color>
+	<color name="C0346P">#36ace7</color>
+	<!--底色-->
+	<color name="main_background_color">@color/FC5</color>
+	<!--分割线-->
+	<color name="main_separator_color">@color/C0332</color>
+	<!--新版颜色表示，与旧版 兼容 end-->
+
+	<!--旧版颜色，不用于标注 start-->
+	<color name="c1">#db3c38</color>
+	<color name="c2">#333333</color>
+	<color name="c3">#666666</color>
+	<color name="c4">#999999</color>
+	<color name="c5">#e3e3e3</color>
+	<color name="c6">#e5e5e5</color>
+	<color name="c7">#f5f5f5</color>
+	<color name="c8">#f9f9f9</color>
+	<color name="c9">#59ce99</color>
+	<color name="c10">#4cb4fb</color>
+	<color name="c11">#96cc21</color>
+	<color name="c12">#fd9534</color>
+	<color name="c13">#ffb933</color>
+	<color name="c14">#e5e5e5</color>
+	<color name="c15">#c3c3c3</color>
+	<color name="c16">#f0f0f0</color>
+	<color name="cp1">#c93734</color>
+	<color name="cp9">#51bd8c</color>
+	<color name="cp10">#46a7e8</color>
+	<color name="cp11">#8bbd1e</color>
+	<color name="cp12">#eb8b31</color>
+	<color name="cp13">#edab2f</color>
+	<color name="MC1">#6c19f6</color>
+	<color name="MC2">#fff100</color>
+	<color name="MC3">#4a156e</color>
+	<color name="MC4">#7e46a2</color>
+	<color name="MC5">#ff3657</color>
+	<color name="MC6">#ff3657</color><!--美工升级版本要求 两个一样颜色-->
+	<color name="MC7">#59c5ff</color>
+	<color name="MC8">#44cf89</color>
+	<color name="MC0312">#f2a437</color>
+	<color name="MC0318">#d193f7</color>
+
+
+	<color name="MC2P">#d4c606</color>
+	<color name="MC3P">#2e0054</color>
+	<color name="MC4P">#4a156e</color>
+	<color name="MC5P">#e10041</color>
+	<color name="MC6P">#e10041</color>
+	<color name="MC7P">#35aae1</color>
+	<color name="MC8P">#009957</color>
+	<color name="MC0312P">#d38a17</color>
+	<color name="MC0318P">#b479da</color>
+	<color name="FC11">#001a1a1a</color>
+	<color name="FC1">#1a1a1a</color>
+	<color name="FC2">#666666</color>
+	<color name="FC3">#999999</color>
+	<color name="FC4">#e5e5e5</color>
+	<color name="FC5">#f2f2f2</color>
+	<color name="FC6">#f7f7f7</color>
+	<color name="FC7">#bfbfbf</color>
+	<color name="FC0324">#ffffff</color>
+	<color name="FC0332">#e6e6e6</color>
+	<color name="C0332T50">#7Fe6e6e6</color>
+
+	<color name="FC2P">#373737</color>
+	<color name="FC3P">#666666</color>
+	<color name="FC5P">#a3a3a3</color>
+	<color name="FC7P">#a3a3a3</color>
+	<color name="FC0324P">#e2e2e2</color>
+	<color name="FC0332P">#a3a3a3</color>
+	<color name="MCP1">#551797</color>
+	<color name="MCP5">#db68c9</color>
+	<color name="MCP7">#1986bc</color>
+	<color name="MCP8">#2BB778</color>
+	<!--旧版颜色，不用于标注 end-->
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--没用，将来好改-->
+
+    <RelativeLayout
+        android:id="@+id/rlLiveControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btnSendMessage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/d8"
+            android:layout_marginStart="@dimen/d8"
+            android:background="@drawable/live_fayan_selector" />
+
+        <Button
+            android:id="@+id/btnReport"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/d12"
+            android:layout_marginStart="@dimen/d12"
+            android:layout_toEndOf="@+id/btnSendMessage"
+            android:layout_toRightOf="@+id/btnSendMessage"
+            android:background="@drawable/live_report_selector" />
+
+
+        <!--to Right-->
+
+        <Button
+            android:id="@+id/btnShow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/d8"
+            android:layout_marginLeft="@dimen/d12"
+            android:layout_marginRight="@dimen/d8"
+            android:layout_marginStart="@dimen/d12"
+            android:background="@drawable/live_clear_selector"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btnGift"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/d8"
+            android:layout_marginLeft="@dimen/d12"
+            android:layout_marginRight="@dimen/d8"
+            android:layout_marginStart="@dimen/d12"
+            android:background="@drawable/live_gif_selector" />
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/d12"
+            android:layout_marginStart="@dimen/d12"
+            android:layout_toLeftOf="@+id/btnGift"
+            android:layout_toStartOf="@+id/btnGift"
+            android:background="@drawable/live_paizhao_selector" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/d12"
+            android:layout_marginStart="@dimen/d12"
+            android:layout_toLeftOf="@+id/btnCamera"
+            android:layout_toStartOf="@+id/btnCamera"
+            android:background="@drawable/live_shared_selector" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/d12"
+            android:layout_marginStart="@dimen/d12"
+            android:layout_toLeftOf="@+id/btnShare"
+            android:layout_toStartOf="@+id/btnShare"
+            android:background="@drawable/live_clear_selector" />
+
+    </RelativeLayout>
+</LinearLayout>

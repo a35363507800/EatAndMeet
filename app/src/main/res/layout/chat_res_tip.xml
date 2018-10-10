@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:orientation="horizontal">
+	<ImageView
+		android:id="@+id/image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:background="@drawable/chat_ico_restaurant_dolphin"/>
+	<LinearLayout android:layout_width="match_parent"
+				  android:layout_height="match_parent"
+				  android:gravity="center"
+				  android:orientation="vertical">
+		<LinearLayout android:layout_width="match_parent"
+					  android:layout_height="wrap_content"
+					  android:gravity="center"
+					  android:orientation="vertical">
+			<TextView
+				android:id="@+id/tv_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="聊得这么嗨"
+				android:textColor="@color/C0323"
+				android:textSize="@dimen/f2"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="match_parent"
+					  android:layout_height="wrap_content"
+					  android:layout_marginTop="15dp"
+					  android:gravity="center"
+					  android:orientation="horizontal">
+			<TextView
+				android:id="@+id/tv_2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="不如"
+				android:textColor="@color/C0323"
+				android:textSize="@dimen/f2"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="订一家餐厅"
+				android:textColor="@color/C0321"
+				android:textSize="@dimen/f2"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="边吃边聊吧"
+				android:textColor="@color/C0323"
+				android:textSize="@dimen/f2"/>
+		</LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/all_gift_view"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/main_background_color"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.CApplyGiftAct">
+
+
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="TEXT"
+	/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginLeft="12dp"
+		android:layout_marginRight="12dp"
+		android:layout_marginTop="80dp"
+		android:background="@drawable/act_pack_red_white_round">
+
+		<TextView
+			android:id="@+id/text_money"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="17dp"
+			android:text="金额:"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"
+			android:textStyle="bold"/>
+
+		<EditText
+			android:id="@+id/et_gift_money_amount"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_gravity="center_vertical"
+			android:layout_marginRight="43dp"
+			android:layout_toRightOf="@+id/text_money"
+			android:layout_weight="1"
+			android:background="@color/transparent"
+			android:gravity="right|center_vertical"
+			android:hint="0.00"
+			android:inputType="numberDecimal"
+			android:maxLength="9"
+			android:textColor="@color/C0321"
+			android:textCursorDrawable="@drawable/ease_editcursor"
+			android:textSize="@dimen/f3"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="14dp"
+			android:text="元"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"
+			android:textStyle="bold"/>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="24px"
+		android:gravity="center">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="发给“"
+			android:textColor="@color/FC2"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:id="@+id/tv_to_user"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=""
+			android:textColor="@color/C0412"
+			android:textSize="@dimen/f3"
+		/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="”的红包"
+			android:textColor="@color/FC2"
+			android:textSize="@dimen/f3"/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="37dp">
+
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:paddingTop="20dp"
+			android:text="￥"
+			android:textColor="@color/FC1"
+			android:textSize="30dp"/>
+		<TextView
+			android:id="@+id/tv_money_amount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="0.00"
+			android:textColor="@color/FC1"
+			android:textSize="65dp"/>
+	</LinearLayout>
+
+
+	<Button
+		android:id="@+id/btn_send_gift"
+		android:layout_width="275dp"
+		android:layout_height="44dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="30dp"
+		android:background="@drawable/round_btn_c0412t50_bg"
+		android:enabled="false"
+		android:text="发送"
+		android:textColor="@color/white"
+		android:textSize="@dimen/f3"
+	/>
+	<TextView
+		android:id="@+id/tv_gift_instruction"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="40px"
+		android:layout_marginTop="20px"
+		android:text="未领取的红包将于24小时之后退回至账户余额"
+		android:textColor="@color/FC3"
+		android:textSize="@dimen/f4"/>
+</LinearLayout>
+

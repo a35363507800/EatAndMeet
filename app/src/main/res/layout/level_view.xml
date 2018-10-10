@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/root"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+>
+
+	<RelativeLayout android:layout_width="25dp"
+					android:layout_height="match_parent"
+	>
+
+		<!--纯图片布局-->
+		<ImageView
+			android:id="@+id/iv_level"
+			android:layout_width="25dp"
+			android:layout_height="match_parent"
+			android:scaleType="center"
+		/>
+
+		<!--纯图片布局-->
+		<ImageView
+			android:id="@+id/iv_number1"
+			android:layout_width="4.5dp"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="1px"
+			android:layout_toLeftOf="@+id/iv_number2"
+			android:paddingTop="0.5dp"
+			android:scaleType="centerInside"
+		/>
+
+		<!--纯图片布局-->
+		<ImageView
+			android:id="@+id/iv_number2"
+			android:layout_width="4.5dp"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="3dp"
+			android:paddingTop="0.5dp"
+			android:scaleType="centerInside"
+		/>
+	</RelativeLayout>
+
+
+	<!--文字布局-->
+	<LinearLayout
+		android:id="@+id/iv_icon_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:visibility="visible">
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:id="@+id/iv_icon"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingLeft="3dp"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f6"
+		/>
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:id="@+id/iv_icon_text"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingRight="3dp"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f6"/>
+	</LinearLayout>
+</RelativeLayout>

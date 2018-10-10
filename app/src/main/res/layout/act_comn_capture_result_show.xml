@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	android:id="@+id/act_comn_capture_result_show"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/main_background_color"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.ComnCaptureResultShowAct">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<TextView
+		android:id="@+id/tv_qrcode_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:textColor="@color/FC1"
+		android:textSize="@dimen/f1"
+	    android:layout_margin="20px"/>
+</com.zhy.autolayout.AutoLinearLayout>

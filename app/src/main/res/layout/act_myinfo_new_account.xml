@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:orientation="vertical">
+
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="TEXT"/>
+	<!--加个scrollview-->
+	<ScrollView
+		android:id="@+id/sl_scrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<RelativeLayout
+				android:id="@+id/rl_use_infor"
+				android:background="@color/C0311"
+				android:layout_width="match_parent"
+				android:layout_height="145dp">
+
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+
+
+				</LinearLayout>
+
+					<TextView
+						android:id="@+id/tv_num"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerHorizontal="true"
+						android:gravity="center"
+						android:layout_marginTop="15dp"
+						android:textColor="@color/white"
+						android:textStyle="bold"
+						android:textSize="35sp"/>
+
+					<com.joanzapata.iconify.widget.IconTextView
+						android:id="@+id/tv_rule"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignBottom="@+id/tv_num"
+						android:layout_toRightOf="@id/tv_num"
+						android:layout_marginBottom="10dp"
+						android:gravity="center_vertical"
+						android:textColor="@color/white"
+						android:textSize="20sp"
+						android:layout_marginLeft="10dp"
+						android:text="{eam-e60d}"
+						/>
+
+
+
+				<!-- 提现按钮-->
+				<TextView
+					android:id="@+id/tixian_yue"
+					android:layout_width="65dp"
+					android:layout_below="@+id/tv_num"
+					android:layout_height="27dp"
+					android:layout_centerHorizontal="true"
+					android:background="@drawable/shape_remain_tixian"
+					android:gravity="center"
+					android:text="提现"
+			         android:layout_marginTop="5dp"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f4"/>
+
+				<LinearLayout
+					android:layout_marginTop="5dp"
+					android:id="@+id/ll_levelprogressbar_layout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center_horizontal"
+					android:layout_below="@+id/tixian_yue"
+			>
+
+					<TextView
+						android:id="@+id/tv_levelprogressbar_leftlv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginRight="5dp"
+
+						android:gravity="center"
+						android:textColor="@color/white"
+						android:textSize="@dimen/f3"
+
+						/>
+
+
+					<!--  经验值值进度条-->
+					<com.echoesnet.eatandmeet.views.widgets.LevelProgressBar
+						android:id="@+id/lpb_bar"
+						android:layout_width="252dp"
+						app:bar_style="white_margin"
+						android:layout_height="12dp"
+						android:layout_gravity="center_vertical"
+						/>
+
+					<TextView
+						android:id="@+id/tv_levelprogressbar_rightlv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="5dp"
+
+						android:gravity="center"
+						android:textColor="@color/white"
+						android:textSize="@dimen/f3"
+						/>
+				</LinearLayout>
+
+
+
+				<!--经验值文字提示-->
+				<LinearLayout
+					android:id="@+id/all_info_reminder"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_below="@+id/ll_levelprogressbar_layout"
+                    android:layout_centerHorizontal="true"
+					android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/tv_info_experience"
+
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="还差"
+						android:textColor="@color/white"
+						android:textSize="@dimen/f4"/>
+
+					<TextView
+						android:id="@+id/tv_num_experience"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="99"
+						android:textColor="@color/white"
+						android:textSize="@dimen/f4"/>
+
+					<TextView
+						android:id="@+id/tv_info_experience_late"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="经验"
+						android:textColor="@color/white"
+						android:textSize="@dimen/f4"/>
+				</LinearLayout>
+
+
+			</RelativeLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="5dp"
+				android:background="@color/C0333"/>
+
+			<!--充值布局-->
+			<com.echoesnet.eatandmeet.views.widgets.MyGridView
+				android:id="@+id/mgv_count"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="18dp"
+				android:layout_marginRight="18dp"
+				android:layout_marginTop="50dp"
+				android:cacheColorHint="@android:color/transparent"
+				android:horizontalSpacing="18dp"
+				android:listSelector="@color/transparent"
+				android:numColumns="3"
+				android:verticalSpacing="25dp"/>
+
+
+
+			<!--支付宝支付  微信支付-->
+			<com.echoesnet.eatandmeet.views.widgets.MyCustomListView
+				android:id="@+id/lv_pay"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="24px"
+				android:layout_marginRight="24px"
+				android:divider="@color/c5"
+				android:dividerHeight="1px"/>
+
+
+			<Button
+				android:id="@+id/btn_pay_ok"
+				android:layout_width="275dp"
+				android:layout_height="44dp"
+				style="@style/Widget.AppCompat.Button.Borderless"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="83dp"
+				android:background="@drawable/pay_sure_selector"
+				android:text="充值"
+				android:textColor="@color/C0324"
+				android:textSize="@dimen/f1"/>
+
+			<!-- 充值服务协议-->
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginTop="10dp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+
+
+				<com.joanzapata.iconify.widget.IconTextView
+					android:id="@+id/iv_agree_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="{eam-p-box}"
+					android:textColor="@color/C0311"
+					android:layout_marginRight="2dp"
+					android:textSize="@dimen/f3"
+					android:src="@drawable/check_box_p"/>
+
+				<TextView
+					android:id="@+id/tv_pay_agree"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:layout_marginLeft="14px"
+					android:text="我同意"
+					android:textColor="@color/C0323"
+					android:textSize="@dimen/f4"
+				/>
+
+				<TextView
+					android:id="@+id/tv_pay_word"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="10px"
+					android:text="《充值有礼服务协议》"
+					android:textColor="@color/C0311"
+					android:textSize="@dimen/f4"
+				/>
+			</LinearLayout>
+
+		</LinearLayout>
+	</ScrollView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

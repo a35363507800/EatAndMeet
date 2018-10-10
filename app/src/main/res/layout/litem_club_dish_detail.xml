@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/iv_dish_pic"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:textSize="@dimen/f3"/>
+
+    <TextView
+        android:id="@+id/tv_dish_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_dish_pic"
+        android:text="12"
+        android:layout_centerInParent="true"
+        android:textColor="@color/c3"
+        android:textSize="@dimen/f3"/>
+
+    <TextView
+        android:id="@+id/tv_dish_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="123"
+        android:layout_centerInParent="true"
+        android:textColor="@color/c3"
+        android:textSize="@dimen/f3"
+        tools:text="X3"/>
+</RelativeLayout>

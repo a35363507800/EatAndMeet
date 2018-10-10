@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  android:orientation="vertical"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content">
+	<com.makeramen.roundedimageview.RoundedImageView
+		android:id="@+id/riv_dish_img"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:scaleType="centerCrop"
+		app:riv_border_width="0dp"
+		app:riv_border_color="@color/c15"
+		app:riv_oval="false"
+	    android:layout_marginLeft="8dp"/>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.PreviewActivity">
+
+    <com.echoesnet.eatandmeet.views.widgets.ViewPagerFixed
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/layout_toolbar" />
+
+    <FrameLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dd2B2B2B"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:id="@+id/fl_photo_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:id="@+id/original_picture"
+                style="@style/circle_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:visibility="gone"
+                android:padding="6dp"
+                android:text="原图"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/select"
+                style="@style/rect_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="选择"
+                android:textSize="16sp" />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/ll_edit_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:layout_weight="1"
+                android:textColor="@color/C0323"
+                android:text="动态只能分享10秒内的视频,需进行编辑"
+                android:lines="1"/>
+            <TextView
+                android:id="@+id/tv_edit_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/C0412"
+                android:text="编辑"/>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

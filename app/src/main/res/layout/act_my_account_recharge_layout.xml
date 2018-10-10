@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     android:background="@color/white"
+                                     android:orientation="vertical">
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_bar"
+        app:topbarType="TEXT"
+        ></com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp">
+
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{eam-s-smile-face @color/C0312 @dimen/rechargeSuccess}"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/go_recharge_content"
+        android:textColor="@color/C0321"
+        android:textSize="@dimen/f3" />
+
+    <Button
+        android:id="@+id/btn_balance"
+        style="@style/circle_corner_btn_36_red_bg"
+        android:layout_width="275dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="22dp"
+        android:text="@string/profile_finish" />
+
+
+
+</com.zhy.autolayout.AutoLinearLayout>

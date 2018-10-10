@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="112dp"
+        android:layout_height="44dp"
+        android:paddingLeft="20dp"
+        android:gravity="start">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/itv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/f3"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/itv_icon"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/f3"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/red_point"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignRight="@+id/tv_title"
+            android:layout_alignTop="@+id/tv_title"
+            android:visibility="gone"
+            android:src="@color/C0313"
+            app:riv_oval="true"
+            android:layout_marginRight="-5dp"
+            android:layout_marginTop="-5dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

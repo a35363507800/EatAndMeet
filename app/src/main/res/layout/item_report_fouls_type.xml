@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/itvRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{eam-s-grade1 @color/C0323 @dimen/f3}"
+        android:paddingBottom="10dp"/>
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/C0321"
+        android:textSize="@dimen/f3"
+        android:layout_marginLeft="11.75dp"
+        android:paddingBottom="10dp"/>
+
+</LinearLayout>

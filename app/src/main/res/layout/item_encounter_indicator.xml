@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.echoesnet.eatandmeet.views.widgets.ImageIndicatorView.NetworkImageIndicatorView
+    android:id="@+id/icv_cycle_view_enc"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:visibility="gone"/>
+</LinearLayout>

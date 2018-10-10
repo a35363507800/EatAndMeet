@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c7">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/top_bar"
+            layout="@layout/topbar_template" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="24px"
+            android:layout_marginRight="24px"
+            android:layout_marginTop="20px"
+            android:background="@drawable/search_round_strock">
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_marginLeft="@dimen/f5"
+                    android:layout_marginRight="@dimen/f5"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/res_discount" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll_search"
+                android:background="@null"
+                android:singleLine="true" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_search"
+            android:divider="@color/c8"
+            android:cacheColorHint="#00000000"
+            android:background="@color/main_background_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_bottom"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_checkout"
+            style="@style/square_corner_main_btn_mc1_bg"
+            android:layout_width="320px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="满200元起订"
+            android:textColor="@color/white" />
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btn_checkout"
+            android:background="#3d000000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="40px"
+                android:text="您还没有点菜哦"
+                android:textColor="@color/white"
+                android:textSize="@dimen/f1"
+                android:visibility="gone" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+
+                <com.zhy.autolayout.AutoFrameLayout
+                    android:id="@+id/fl_carimg"
+                    android:layout_width="64px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40px">
+
+                    <ImageView
+                        android:layout_width="48px"
+                        android:layout_height="48px"
+                        android:layout_gravity="center_vertical"
+                        android:src="@color/c10" />
+
+                    <ImageView
+                        android:layout_width="32px"
+                        android:layout_height="32px"
+                        android:layout_gravity="right|top"
+                        android:layout_marginTop="9px"
+                        android:src="@color/c1" />
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="32px"
+                        android:layout_height="32px"
+                        android:layout_gravity="right|top"
+                        android:layout_marginTop="9px"
+                        android:gravity="center"
+                        android:text="25"
+                        android:textColor="@color/white"
+                        android:textSize="18px" />
+
+                </com.zhy.autolayout.AutoFrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/fl_carimg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="40px"
+                    android:text="￥300.00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f1" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+        </com.zhy.autolayout.AutoFrameLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

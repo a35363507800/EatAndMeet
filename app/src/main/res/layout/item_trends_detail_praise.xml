@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/main_background_color"/>
+<com.echoesnet.eatandmeet.views.widgets.ImageOverlayView
+    android:id="@+id/iov_praise"
+    android:layout_width="wrap_content"
+    android:layout_height="25dp"
+    android:layout_centerVertical="true"
+    android:layout_marginBottom="14dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="12dp"
+    app:image_height="25dp"
+    app:image_width="25dp"/>
+    <TextView
+        android:id="@+id/tv_praise_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_cusp"
+        android:layout_marginRight="14dp"
+        android:layout_centerVertical="true"
+        android:text="100人点赞"
+        android:textColor="@color/C0322"
+        android:textSize="@dimen/f4"/>
+    <TextView
+        android:id="@+id/tv_cusp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginRight="14dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/C0322"
+        android:text=">"/>
+</RelativeLayout>

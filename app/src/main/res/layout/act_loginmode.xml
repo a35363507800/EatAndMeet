@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/root"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/white"
+	android:orientation="vertical"
+	xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:id="@+id/iv_background"
+		android:src="@drawable/login"
+		android:scaleType="fitXY"
+		android:layout_height="match_parent"/>
+
+
+	<TextView
+		android:id="@+id/btn_start"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="visible"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="75dp"
+		android:layout_marginTop="25dp"
+		android:layout_centerHorizontal="true"
+		android:text="手机号登录"
+		android:textSize="@dimen/f3"
+		android:textColor="@color/C0322"
+		android:autoLink="all"
+		/>
+
+	<ImageView
+		android:id="@+id/im_weixin_login"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="115dp"
+		android:layout_alignParentBottom="true"
+		android:visibility="visible"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/wechat_login"
+		/>
+
+	<include
+		android:id="@+id/loading_view"
+		layout="@layout/view_loading_cover"
+		android:visibility="gone"/>
+
+</RelativeLayout>

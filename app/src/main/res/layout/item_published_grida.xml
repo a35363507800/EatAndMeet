@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="77dp"
+    android:layout_height="77dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/item_grida_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="20px"
+        android:layout_alignParentBottom="true"
+    >
+    </com.makeramen.roundedimageview.RoundedImageView>
+
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/btn_delete_xhdpi"
+        />
+</RelativeLayout>

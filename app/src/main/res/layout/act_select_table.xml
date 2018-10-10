@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	android:id="@+id/all_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:custom="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/c16"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.SelectTableAct">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<!--日期栏-->
+	<com.zhy.autolayout.AutoLinearLayout
+		style="@style/common_linear_item"
+		android:layout_width="match_parent"
+		android:layout_height="88px">
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/tv_date1"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="今天"
+				android:textColor="@color/C0321"
+				android:textSize="@dimen/f3" />
+
+			<View
+				android:id="@+id/v_bottom_1"
+				android:layout_width="match_parent"
+				android:layout_height="4px"
+				android:background="@color/MC1" />
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/tv_date2"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="明天"
+				android:textColor="@color/FC1"
+				android:textSize="@dimen/f3" />
+
+			<View
+				android:id="@+id/v_bottom_2"
+				android:layout_width="match_parent"
+				android:layout_height="4px"
+				android:background="@color/white" />
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/tv_date3"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="明天"
+				android:textColor="@color/FC1"
+				android:textSize="@dimen/f3" />
+
+			<View
+				android:id="@+id/v_bottom_3"
+				android:layout_width="match_parent"
+				android:layout_height="4px"
+				android:background="@color/white" />
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<View
+			android:layout_width="2px"
+			android:layout_height="match_parent"
+			android:background="@color/c15" />
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:id="@+id/itv_st_calender"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1"
+			android:gravity="center_vertical|center"
+			android:text="{eam-s-calender} 更多"
+			android:textColor="@color/C0322"
+			android:textSize="@dimen/f3" />
+	</com.zhy.autolayout.AutoLinearLayout>
+	<!--时间栏-->
+	<com.zhy.autolayout.AutoLinearLayout
+		android:id="@+id/all_select_time"
+		android:layout_width="match_parent"
+		android:layout_height="88px"
+		android:layout_marginTop="10px"
+		android:background="@color/white"
+		android:gravity="center_horizontal">
+		<com.joanzapata.iconify.widget.IconTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:text="{eam-e913}"
+			android:textColor="@color/C0412"
+			android:textSize="@dimen/f3"/>
+		<com.joanzapata.iconify.widget.IconTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="14px"
+			android:gravity="center_vertical"
+			android:text=" 请选择就餐时间:"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:id="@+id/tv_time_period"
+			android:layout_width="120px"
+			android:layout_height="52px"
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="30px"
+			android:background="@drawable/round_frame_52_mc3"
+			android:gravity="center"
+			android:text="12:00"
+			android:textColor="@color/C0412"
+			android:textSize="@dimen/f4"/>
+	</com.zhy.autolayout.AutoLinearLayout>
+	<com.joanzapata.iconify.widget.IconTextView
+		android:layout_width="match_parent"
+		android:layout_height="88px"
+		android:layout_gravity="center_vertical"
+		android:layout_marginTop="10px"
+		android:background="@color/white"
+		android:gravity="center"
+		android:text="{eam-e991} 请选择就餐楼层及位置（双击可放大）"
+		android:textColor="@color/C0322"
+		android:textSize="@dimen/f3"/>
+	<!--桌子选择-->
+	<com.echoesnet.eatandmeet.views.widgets.NoTouchRelativeLayout
+		android:id="@+id/arl_select_table_container"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:background="@color/c4">
+		<com.echoesnet.eatandmeet.views.widgets.selectTableView.SelectTableView
+			android:id="@+id/st_st_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			custom:enableScale="true"/>
+		<Button
+			android:id="@+id/btn_floors"
+			android:layout_width="88px"
+			android:layout_height="88px"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginBottom="6dp"
+			android:layout_marginRight="6dp"
+			android:background="@drawable/circle_black_bg"
+			android:text="1F"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f3"/>
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/all_floor_container"
+			android:layout_width="88px"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginBottom="110px"
+			android:layout_marginRight="6dp"
+			android:background="@drawable/res_floors_small"
+			android:visibility="gone">
+			<ListView
+				android:id="@+id/lv_floors"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="18dp"
+				android:divider="@color/transparent"
+				android:listSelector="@color/transparent"/>
+		</com.zhy.autolayout.AutoLinearLayout>
+	</com.echoesnet.eatandmeet.views.widgets.NoTouchRelativeLayout>
+	<!--选择桌子栏-->
+	<com.zhy.autolayout.AutoLinearLayout
+		style="@style/common_linear_item"
+		android:layout_width="match_parent"
+		android:layout_height="88px">
+		<com.joanzapata.iconify.widget.IconTextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center_vertical"
+			android:text="{eam-e983} 您已选择"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:id="@+id/tv_st_type1"
+			android:layout_width="wrap_content"
+			android:layout_height="52px"
+			android:layout_gravity="center_vertical"
+			android:background="@drawable/round_frame_52_mc3"
+			android:gravity="center_vertical"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:text=" 1号桌（4人）"
+			android:textColor="@color/C0412"
+			android:textSize="@dimen/f5"
+			android:layout_marginLeft="5dp"
+			android:visibility="invisible"/>
+		<TextView
+			android:id="@+id/tv_st_type2"
+			android:layout_width="wrap_content"
+			android:layout_height="52px"
+			android:layout_gravity="center_vertical"
+			android:background="@drawable/round_frame_52_mc3"
+			android:gravity="center_vertical"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:text=" 1号桌（4人）"
+			android:textColor="@color/C0412"
+			android:textSize="@dimen/f5"
+			android:layout_marginLeft="5dp"
+			android:visibility="invisible"/>
+	</com.zhy.autolayout.AutoLinearLayout>
+	<!--预定人信息-->
+	<com.zhy.autolayout.AutoRelativeLayout
+		style="@style/common_linear_item"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:layout_marginTop="12dp"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp">
+
+		<TextView
+			android:id="@+id/tv_info"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="预订人信息"
+			android:textColor="@color/C0322"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:layout_below="@+id/tv_info"
+			android:id="@+id/tv_st_phone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="12.5dp"
+			android:text="手机号："
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+
+		<TextView
+			android:id="@+id/tv_st_phone_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@id/tv_st_phone"
+			tools:text="13513512345"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:id="@+id/tv_st_name_in"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tv_st_phone"
+			android:layout_marginTop="12dp"
+			android:text="姓    名："
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+		<EditText
+			android:id="@+id/et_st_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tv_st_phone"
+			android:layout_marginTop="12dp"
+			android:layout_toRightOf="@id/tv_st_name_in"
+			android:background="@color/white"
+			android:hint="请输入订餐人姓名"
+			android:gravity="bottom"
+			android:textColorHint="@color/FC4"
+			android:singleLine="true"
+			android:maxLength="7"
+			android:textCursorDrawable="@drawable/ease_editcursor"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f3"/>
+		<View
+			android:id="@+id/line"
+			android:layout_below="@+id/et_st_name"
+			android:layout_width="131dp"
+			android:layout_height="0.5dp"
+			android:layout_alignLeft="@+id/et_st_name"
+			android:layout_marginTop="4.5dp"
+			android:background="@color/C0332"/>
+		<Button
+			android:id="@+id/btn_st_modifyPhone"
+			android:layout_width="44dp"
+			android:layout_height="22dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@drawable/round_frame_44_mc7"
+			android:text="修改"
+			android:textColor="@color/MC7"
+			android:textSize="@dimen/f5"/>
+
+		<RadioGroup
+			android:id="@+id/rg_st_gender"
+			android:layout_width="wrap_content"
+			android:layout_height="20dp"
+			android:layout_alignParentRight="true"
+			android:layout_alignBottom="@+id/line"
+			android:orientation="horizontal">
+			<RadioButton
+				android:id="@+id/rb_st_female"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical|right"
+				android:checked="true"
+				android:gravity="center_vertical|right"
+				android:text=" 女士"
+				android:textColor="@color/C0322"
+				android:textSize="@dimen/f3"/>
+			<RadioButton
+				android:id="@+id/rb_st_male"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical|right"
+				android:layout_marginLeft="25dp"
+				android:gravity="center_vertical|right"
+				android:text=" 先生"
+				android:textColor="@color/C0322"
+				android:textSize="@dimen/f3"/>
+		</RadioGroup>
+	</com.zhy.autolayout.AutoRelativeLayout>
+	<TextView android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:gravity="center"
+			  android:paddingTop="10dp"
+			  android:paddingBottom="10dp"
+			  android:text="支付成功后，该手机号将接收到该订单消费码哦~"
+			  android:textColor="@color/C0313"
+			  android:textSize="@dimen/f4"/>
+
+	<Button
+		android:id="@+id/btn_next"
+		android:layout_width="match_parent"
+		android:layout_height="98px"
+		android:background="@drawable/btn4_selector"
+		android:text="下一步"
+		android:textColor="@color/white"
+		android:textSize="@dimen/f2" />
+</com.zhy.autolayout.AutoLinearLayout>

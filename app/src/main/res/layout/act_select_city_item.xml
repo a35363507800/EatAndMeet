@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="160px"
+        android:layout_height="60px"
+        android:background="@drawable/city_no_option"
+        android:gravity="center"
+        android:text="北京"
+        android:textColor="@color/FC3"
+        android:textSize="@dimen/f3" />
+
+</com.zhy.autolayout.AutoLinearLayout>

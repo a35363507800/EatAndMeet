@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <TextView
+        android:id="@+id/tv_dian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="· "
+        android:textColor="@color/MC3" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tv_dian"
+        android:text="颜值"
+        android:textColor="@color/FC2"
+        android:textSize="@dimen/f3" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="很满意"
+            android:checked="false"
+            android:drawablePadding="5dp"
+            android:button="@null"
+            android:textColor="@drawable/comment_selector"
+            android:textSize="@dimen/f3"/>
+
+        <RadioButton
+            android:id="@+id/rb_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="不满意"
+            android:checked="false"
+            android:drawablePadding="5dp"
+            android:button="@null"
+            android:textColor="@drawable/comment_selector"
+            android:textSize="@dimen/f3"/>
+    </RadioGroup>
+
+</com.zhy.autolayout.AutoRelativeLayout>

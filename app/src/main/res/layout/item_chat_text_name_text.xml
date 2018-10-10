@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/llMsgItemGroup"
+			  xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:minHeight="22dp"
+			  android:orientation="horizontal">
+
+
+	<TextView
+		android:id="@+id/tv_content_l"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top"
+		android:layout_marginLeft="6dp"
+		android:layout_marginStart="10dp"
+		android:ellipsize="end"
+		android:lines="1"
+		android:maxEms="8"
+		android:textColor="#44cf89"
+		android:textSize="@dimen/f2"
+		tools:text="消息:"/>
+
+	<TextView
+		android:id="@+id/tv_user"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top"
+		android:ellipsize="end"
+		android:lines="1"
+		android:maxEms="8"
+		android:textColor="#f2a437"
+		android:textSize="@dimen/f2"
+		tools:text="王二狗"/>
+
+	<TextView
+		android:id="@+id/tv_content_r"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="2dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="2dp"
+		android:layout_weight="1"
+		android:gravity="bottom"
+		android:textColor="#44cf89"
+		android:textSize="@dimen/f2"
+		android:visibility="visible"
+		tools:text="这是内容啊这是内容啊这是内容啊这是内容"	/>
+
+</LinearLayout>

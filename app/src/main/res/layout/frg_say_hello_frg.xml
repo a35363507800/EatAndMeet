@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/main_background_color"
+			  android:orientation="vertical">
+	<com.echoesnet.eatandmeet.views.widgets.IMwidget.ConversationList
+		android:id="@+id/con_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+	<com.echoesnet.eatandmeet.utils.EmptyView
+		android:id="@+id/empty_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+	<TextView
+		android:id="@+id/live_empty_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:background="@color/white"
+		android:text="暂时还没有人打招呼呢~"
+		android:textColor="@color/C0322"
+		android:textSize="@dimen/f3"/>
+</LinearLayout>

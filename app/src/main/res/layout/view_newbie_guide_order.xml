@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:orientation="vertical" android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:background="@color/blackT30">
+    <ImageView
+        android:id="@+id/img_order1"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginTop="90px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dingcan1"/>
+    <ImageView
+        android:id="@+id/img_next1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/img_order1"
+        android:layout_marginTop="248px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/next_xia"/>
+    <ImageView
+        android:id="@+id/img_order2"
+        android:layout_width="match_parent"
+        android:layout_height="413dp"
+        android:visibility="gone"
+        android:layout_marginTop="140px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dingcan2"/>
+    <ImageView
+        android:id="@+id/img_next2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_below="@+id/img_order2"
+        android:layout_marginTop="74px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/next_xia"/>
+    <ImageView
+        android:id="@+id/img_iknow"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/img_order3"
+        android:layout_marginBottom="78px"
+        android:src="@drawable/iknow_xia" />
+    <ImageView
+        android:id="@+id/img_order3"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dingcan3"/>
+
+</RelativeLayout>

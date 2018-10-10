@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp">
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+            android:id="@+id/riv_loser_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/userhead"
+       />
+
+        <TextView
+            android:id="@+id/tv_loser_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:maxWidth="110dp"
+            android:layout_toRightOf="@+id/riv_loser_head"
+            android:gravity="center"
+            android:textColor="@color/C0321"
+            android:singleLine="true"
+            android:textSize="@dimen/f3"
+            tools:text="测试名称"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.CustomRatingBar.CustomRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_loser_nickname"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_loser_nickname"
+            android:layout_below="@+id/tv_loser_nickname"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/C0322"
+            android:textSize="@dimen/f4"
+            tools:text="2017-06-12"/>
+
+        <!--<com.ms.square.android.expandabletextview.ExpandableTextView-->
+        <com.echoesnet.eatandmeet.views.widgets.CustomExpandableTextView
+            android:id="@+id/tv_loser_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_date"
+            android:layout_below="@id/tv_date"
+            android:layout_marginTop="12dp"
+            app:animDuration="200"
+            app:maxCollapsedLines="3">
+
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="@color/c2"
+                android:textSize="@dimen/f3"/>
+
+            <TextView
+                android:textColor="@color/C0412"
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:padding="5dp"/>
+        </com.echoesnet.eatandmeet.views.widgets.CustomExpandableTextView>
+
+        <TableLayout
+            android:id="@+id/tl_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_loser_comment"
+            android:layout_below="@id/tv_loser_comment"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp">
+
+            <TableRow
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10px"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10px"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/tv_merchant_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tl_img_container"
+            android:layout_alignRight="@+id/tl_img_container"
+            android:layout_below="@id/tl_img_container"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dd_huifu_hdpi"
+            android:lineSpacingMultiplier="1.5"
+            android:paddingLeft="20px"
+            android:singleLine="false"
+            android:textSize="@dimen/f3"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/tv_loser_nickname">
+
+            <com.echoesnet.eatandmeet.views.widgets.GenderView
+                android:id="@+id/img_u_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="{eam-e94f @color/white @dimen/f6}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/f6"/>
+
+            <com.echoesnet.eatandmeet.views.widgets.LevelView
+                android:id="@+id/level_view"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                app:text_size = "@dimen/f6"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/img_u_sex"
+                android:textColor="@color/white"/>
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:visibility="gone"
+                android:id="@+id/itv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/img_u_sex"
+                android:background="@drawable/shape_round_2corner_15_c0315"
+                android:gravity="center"
+                android:paddingBottom="1dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/f6"
+                tools:text="22"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_main"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/C0332"/>
+
+</RelativeLayout>

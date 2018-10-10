@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/iv_around"
+        style="@style/bottomBarImg"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/tv_around"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_around"
+        android:text="聊天"
+        style="@style/bottomBarText"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/unread_msg_number"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25px"
+        android:includeFontPadding="false"
+        android:background="@drawable/shape_circle_c0319_bg"
+        android:gravity="center"
+        android:text="99+"
+        android:minWidth="14dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textColor="@color/C0324"
+        android:textSize="10sp" />
+    <!--<com.echoesnet.eatandmeet.views.CircleTextView
+        android:id="@+id/unread_msg_number"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="26px"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:text="7"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />-->
+
+</com.zhy.autolayout.AutoRelativeLayout>

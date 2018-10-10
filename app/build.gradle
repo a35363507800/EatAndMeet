@@ -1,0 +1,430 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'com.mob.sdk'//插件 shareSDK
+
+//未指定返回类型
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd-HH-mm")
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    //use legacy for android 6.0 环信
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.echoesnet.eatandmeet"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 423
+//        versionName "yalitest" //开发时使用，不然会污染百度统计
+        versionName "neice" //开发时使用，不然会污染百度统计
+        versionName "4.2.3" //发布时后放开
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            ndkBuild {
+                arguments "NDK_APPLICATION_MK:=src/main/jni/Application.mk"
+            }
+        }
+        resConfigs("zh")
+        multiDexEnabled true
+        resValue("string", "app_name", "看脸吃饭")
+        // 默认官方的渠道
+        manifestPlaceholders = [MARKET_CHANNEL_VALUE: "guanfang"]
+        ndk {
+            abiFilters "armeabi"//'armeabi-v7a'//, "x86", "mips","arm64-v8a","mips64","x86_64",
+        }
+    }
+
+    // Configure only for each module that uses Java 8
+    // language features (either in its source code or through dependencies)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds true//build release 版本时开启lint 检测
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            //把java-gen文件夹下的java文件也归入srcDir中
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'lib/armeabi/libagora-rtc-sdk-jni.so'
+        exclude 'lib/armeabi/libHDACEngine.so'
+    }
+    signingConfigs {
+        debug {
+            storeFile file("../SignKeyStore.keystore")
+            storePassword "Echoes666"
+            keyAlias "echoessign"
+            keyPassword "Echoes666"
+        }
+        release {
+            storeFile file("../SignKeyStore.keystore")
+            storePassword "Echoes666"
+            keyAlias "echoessign"
+            keyPassword "Echoes666"
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 此处演示了如何设置配置变量和资源，相关人员可以参考改进相关代码--wb
+            buildConfigField "boolean", "enableDebugLog", "true"
+            resValue("string", "bdtj_evn", "5c692942f2")//a59dcff372 测试环境key
+            buildConfigField "Integer", "evnIndex", "2"
+            resValue("string", "im_hx_evn", "echoesonline#echoeseatandmeetdev")
+
+            buildConfigField "String", "miPushAppID", '"2882303761517510463"'
+            buildConfigField "String", "miPushAppKey", '"5981751087463"'
+
+//                    buildConfigField "Integer", "evnIndex", "1"
+//                    resValue("string", "im_hx_evn", "echoesonline#echoeseatandmeet")
+            dependencies
+                    {
+                        //检测内存泄漏
+                        debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+                        releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+                    }
+            debuggable true
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+
+            matchingFallbacks = ['release']
+        }
+        release {
+            buildConfigField "boolean", "enableDebugLog", "false"
+            resValue("string", "bdtj_evn", "5c692942f2")
+            buildConfigField "Integer", "evnIndex", "1"
+            resValue("string", "im_hx_evn", "echoesonline#echoeseatandmeet")
+            buildConfigField "String", "miPushAppID", '"2882303761517510463"'
+            buildConfigField "String", "miPushAppKey", '"5981751087463"'
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+/*                    applicationVariants.all
+                            { variant ->
+                                variant.outputs.all
+                                        { output ->
+                                            outputFileName="eatandmeet_v${defaultConfig.versionName}_${variant.buildType.name}_${variant.productFlavors[0].name}.apk"
+                                        }
+                            }*/
+        }
+    }
+
+    flavorDimensions ("versionCode")
+    productFlavors
+            {
+//                neice {
+//                    // Assigns this product flavor to the "versionCode" flavor dimension. Specifying
+//                    // this property is optional if you are using only one dimension.
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']//APP存在flavor dimension 但是library不存在
+//                }
+//                yalitest {
+//                    // Assigns this product flavor to the "versionCode" flavor dimension. Specifying
+//                    // this property is optional if you are using only one dimension.
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']//APP存在flavor dimension 但是library不存在
+//                }
+                ali {
+                    dimension "versionCode"
+                    matchingFallbacks = ['versionCode']
+                }
+                xiaomi {
+                    dimension "versionCode"
+                    matchingFallbacks = ['versionCode']
+                }
+                c360 {
+                    dimension "versionCode"
+                    matchingFallbacks = ['versionCode']
+                }
+                tencent {
+                    dimension "versionCode"
+                    matchingFallbacks = ['versionCode']
+                }
+                baidu {
+                    dimension "versionCode"
+                    matchingFallbacks = ['versionCode']
+                }
+                oppo {
+                    dimension "versionCode"
+                    matchingFallbacks = ['versionCode']
+                }
+//                vivo {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                huawei {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                lenovo {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                meizu {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                anzhi {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                jifeng {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                yinyonghui {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                sougou {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                guanfang {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                jinli {
+//                    dimension "versionCode"
+//                    matchingFallbacks = ['versionCode']
+//                }
+//                mjtencent {
+//                    //所有马甲包名一致，不然百度定位会出问题，现在也需要再给这个包名申请一个key
+//                    applicationId android.defaultConfig.applicationId + ".mj"
+//                    resValue "string", "app_name", "夜场真人直播"
+//                }
+                productFlavors.all { flavor ->
+                    flavor.manifestPlaceholders = [MARKET_CHANNEL_VALUE: name]
+                }
+            }
+/*    dexOptions {
+        preDexLibraries = false
+    }*/
+}
+
+task addCurrentDate() {
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def date = new Date().format("yyyy-MM-dd")
+            def fileName = variant.name + "_" + date + ".apk"
+            output.outputFileName = fileName
+        }
+    }
+}
+gradle.taskGraph.whenReady {
+    addCurrentDate
+}
+
+
+configurations.all {
+    //gradle 中有不同版本support  强制使用相同版本
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion rootProject.supportVersion
+            }
+        }
+        if (requested.group == 'com.squareup.okhttp3') {
+            details.useVersion '3.3.0'
+        }
+    }
+}
+
+//repositories {
+//    flatDir {
+//        dirs 'libs'
+//    }
+//
+//}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //本地单元测试需要，写在test文件夹中的
+    testImplementation 'junit:junit:4.12'
+    //Mockito framework 用来模拟Android框架依赖
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    //仪表测试，就是写在androidTest中的，运行在设备或者模拟器上的测试
+    androidTestCompile 'com.android.support:support-annotations:24.0.0'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    // Optional -- Hamcrest library
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+    // Optional -- UI testing with Espresso
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    // Optional -- UI testing with UI Automator
+    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportVersion"
+    implementation "com.android.support:design:$rootProject.supportVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportVersion"
+    implementation "com.android.support:multidex:1.0.1"
+
+    implementation 'org.greenrobot:eventbus:3.0.0'//消息总线
+    implementation 'com.zhy:autolayout:1.4.5'//UI适配库
+    implementation 'com.github.bumptech.glide:glide:4.1.1'//多媒体，如图片，视频等加载库
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    implementation 'com.github.orhanobut:logger:1.12'//日志系统
+    implementation 'com.makeramen:roundedimageview:2.2.1'//圆形，方形照片库
+    implementation 'com.zhy:okhttputils:2.5.2'//okhttp封装库
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+//这个版本需要跟OKHttp版本号 一致； 上头的这个封装 用的3.3.0;
+    implementation 'org.apmem.tools:layouts:1.10@aar' //自动换行layout
+    implementation 'com.squareup:android-times-square:1.6.5@aar' //日期控件
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'com.github.jakob-grabner:Circle-Progress-View:v1.3'//进度条
+    implementation 'com.github.castorflex.verticalviewpager:library:19.0.1'
+    implementation 'com.soundcloud.android:android-crop:1.0.1@aar'//截图
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'//圆形裁剪
+
+    implementation 'cn.qqtheme.framework:WheelPicker:1.5.5'//添加数字选择器(如身高、体重、年龄)
+    implementation 'me.iwf.photopicker:PhotoPicker:0.9.10@aar'
+    implementation 'com.github.frankiesardo:linearlistview:1.0.1@aar'
+//解决scrollview里嵌套listview的问题，以及实现横向listview
+    //检测内存泄漏
+    // debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    //releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //facebook 出的调试工具，可以在chrome里面调试，发布时候关掉
+    //implementation 'com.facebook.stetho:stetho:1.4.2'
+    //implementation 'com.wingjay:blurimageviewlib:2.0.1'
+    //card  facebook
+    //implementation 'com.facebook.rebound:rebound:0.3.8'
+    //implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+
+    implementation project(path: ':jazzyViewPager_lib')
+    implementation project(':pull_refresh_lib')
+    implementation project(':ufilesdk')
+    implementation project(':viewpage_indicator_lib')
+    implementation project(path: ':gridPasswordInput')//密码框
+    implementation project(path: ':ShortcutBadger')//桌面通知，当大部分Android升级到8.0这个东西该废了
+    implementation project(path: ':cycleImageShow')//轮播图
+    implementation project(path: ':jsBridge')
+    implementation project(path: ':photo_view_lib')
+    implementation project(':icontextmodule')//字体图标
+
+    //***腾讯直播业务功能 start***
+    implementation 'com.tencent.livesdk:livesdk:1.1.4'
+    implementation 'com.tencent.ilivesdk:ilivesdk:1.8.1'//核心功能
+    implementation 'com.tencent.ilivefilter:liteav_normal:1.1.18'//滤镜，美颜功能
+    //***腾讯直播业务功能 end***
+
+    //环信start
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    //Optional compile for GCM (Google Cloud Messaging).
+//    compile 'com.google.android.gms:play-services-gcm:11.8.0'
+    compile 'com.hyphenate:hyphenate-sdk-lite:3.3.9'
+    //环信end
+    //***支付业务功能 start***
+    implementation 'com.pingxx:pingpp-core:2.1.9'
+    implementation 'com.pingxx:pingpp-alipay:2.1.9'
+    implementation 'com.pingxx:pingpp-wxpay:2.1.9'
+    //***支付业务功能 end***
+
+    // ***retrofit2 start***
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    // ***retrofit2 end***
+
+    //***ButterKnife注解 start***
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    //***ButterKnife注解 end***
+
+    //***Rxbinding start***
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+//    implementation 'com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0'
+//    implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:2.0.0'
+    //***Rxbinding end***
+
+    //***RxLifecycle start***
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.1.0'
+// If you want to bind to Android-specific lifecycles
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+// If you want pre-written Activities and Fragments you can subclass as providers
+    //***RxLifecycle end***
+
+    //***权限管理 start***
+    implementation('com.github.hotchemi:permissionsdispatcher:3.1.0') {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.1.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //***权限管理 end***
+    implementation project(path: ':swiprecycleview_lib')
+    implementation 'com.airbnb.android:lottie:2.3.0'
+    implementation 'com.writingminds:FFmpegAndroid:0.3.2'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.9.0'
+    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
+    implementation 'com.shuyu:GSYVideoPlayer:4.1.0'
+    //compile 'com.github.romainguy:ViewServer:-SNAPSHOT'
+
+
+}
+
+MobSDK {
+    appKey "15b9f5b376065"
+    appSecret "23f55e7494c6e6bc762683defed8514d"
+
+    ShareSDK {
+        devInfo {
+            SinaWeibo {
+                appKey "459239179"
+                appSecret "21f5c69c0b83684ebea7fda28cfec48b"
+                callbackUri "http://www.echoesnet.com/index.html"
+                shareByAppClient true
+                enable true
+            }
+            Wechat {
+                appId "wxde3ae73543e89d6c"
+                appSecret "f5f2a8aa518439ca69e1137a612ce40a"
+                enable true
+            }
+            WechatMoments {
+                appId "wxde3ae73543e89d6c"
+                appSecret "f5f2a8aa518439ca69e1137a612ce40a"
+                enable true
+            }
+            QQ {
+                appId  "1105623859"
+                appKey  "IlkDaCTxzrxi68t6"
+                shareByAppClient true
+                enable true
+            }
+            QZone {
+                appId "1105623859"
+                appKey "IlkDaCTxzrxi68t6"
+                enable true
+            }
+
+        }
+    }
+}
+
+

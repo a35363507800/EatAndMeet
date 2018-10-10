@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/transparent"
+	android:orientation="vertical">
+	<com.zhy.autolayout.AutoLinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@drawable/paypupop_bg">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="请选择支付方式"
+				android:textColor="@color/C0321"
+				android:textSize="@dimen/f2"/>
+		</RelativeLayout>
+
+		<ListView
+			android:id="@+id/lv_pay"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:divider="@color/c5"
+			android:dividerHeight="1px">
+		</ListView>
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="100px"
+			android:orientation="vertical">
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:background="@color/FC5"/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal">
+				<Button
+					android:id="@+id/btn_pay_cancel"
+					style="@style/square_corner_l_r_white_bg"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="取消"
+					android:textColor="@color/C0412"
+					android:textSize="@dimen/f2"/>
+
+				<Button
+					android:id="@+id/btn_pay_ok"
+					style="@style/commonButton4"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="确认"
+					android:textColor="@color/C0324"
+					android:textSize="@dimen/f2"/>
+
+			</LinearLayout>
+
+		</com.zhy.autolayout.AutoLinearLayout>
+
+	</com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

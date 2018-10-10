@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	android:id="@+id/act_my_info_fan_page_detail"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/main_background_color"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.live.MyInfoFanPageDetailActivity">
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="TEXT"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:background="@color/C0315"
+		android:orientation="horizontal"
+		android:layout_height="135dp">
+
+
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:layout_weight="1"
+				>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="累计收益（饭票）"
+					android:layout_marginTop="16dp"
+					android:layout_centerInParent="true"
+					android:layout_below="@+id/tv_canUse_fanPage"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f3"/>
+				<TextView
+					android:id="@+id/tv_canUse_fanPage"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="0"
+					android:layout_centerInParent="true"
+					android:textColor="@color/white"
+					android:textStyle="bold"
+					android:textSize="36sp"/>
+
+			</RelativeLayout>
+
+		<View
+			android:layout_width="1px"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:background="@color/C0324"
+			></View>
+
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:layout_weight="1"
+				>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+			        android:layout_centerInParent="true"
+					android:text="收益余额（饭票）"
+					android:layout_marginTop="16dp"
+					android:textColor="@color/white"
+					android:layout_below="@+id/tv_canWithDraw_fan_page"
+					android:textSize="@dimen/f3"/>
+				<TextView
+					android:id="@+id/tv_canWithDraw_fan_page"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="0"
+					android:textColor="@color/white"
+					android:textSize="36sp"
+					android:textStyle="bold"
+					android:layout_centerHorizontal="true"/>
+
+			</RelativeLayout>
+
+	</LinearLayout>
+	<!--<com.zhy.autolayout.AutoLinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="88px"
+		android:background="@color/white"
+		android:gravity="center_vertical">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="24px"
+			android:text="每天只可提现1次，每次最低提现1元"
+			android:textColor="@color/FC3"
+			android:textSize="@dimen/f3"/>
+	</com.zhy.autolayout.AutoLinearLayout>-->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="65dp"
+		android:layout_marginTop="29dp"
+		android:background="@drawable/white"
+		android:gravity="center_vertical">
+		<EditText
+			android:id="@+id/et_draw_money"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_centerInParent="true"
+			android:layout_toLeftOf="@+id/yuan"
+			android:layout_toRightOf="@+id/duihuan"
+			android:maxLength="8"
+			android:textColorHint="@color/C0331"
+			android:textSize="23sp"
+			android:background="@color/transparent"
+			android:gravity="center_vertical|left"
+			android:textCursorDrawable="@drawable/ease_editcursor"
+			android:padding="5dp"
+			android:hint=" 0.0"
+			android:inputType="numberDecimal"
+		/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="11dp"
+			android:text="￥"
+			android:textColor="@color/C0321"
+			android:textSize="25sp"/>
+
+		<TextView
+			android:id="@+id/duihuan"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="34dp"
+			android:text="可提现:"
+			android:textColor="@color/FC3"
+			android:textSize="@dimen/f2"/>
+		<TextView
+			android:id="@+id/yuan"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="15dp"
+			android:text="全部提现"
+			android:paddingTop="5dp"
+			android:paddingBottom="5dp"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:background="@drawable/changemoney_all_bg"
+			android:textColor="@color/C0412"
+			android:textSize="@dimen/f4"/>
+
+	</RelativeLayout>
+
+	<Button
+		android:id="@+id/btn_withDraw_ok"
+		android:background="@drawable/egg_bt_bg0331"
+		android:layout_width="275dp"
+		android:layout_height="44dp"
+		android:layout_marginTop="46dp"
+		style="@style/Widget.AppCompat.Button.Borderless"
+		android:text="确认提现"
+		android:textColor="@color/white"
+		android:textSize="@dimen/f1"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="收益将提现到余额账户中"
+		android:textSize="@dimen/f4"
+		android:textColor="@color/C0323"
+		android:layout_marginTop="12dp"
+		/>
+</com.zhy.autolayout.AutoLinearLayout>

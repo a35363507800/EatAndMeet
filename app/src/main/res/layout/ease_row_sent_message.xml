@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tool="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:orientation="vertical"
+				android:paddingTop="13dp">
+
+	<TextView
+		android:id="@+id/timestamp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textColor="@color/C0323"
+		android:textSize="@dimen/f4"
+		tool:text="下午 06:01"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/timestamp"
+		android:layout_marginTop="@dimen/margin_chat_activity">
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+			android:id="@+id/iv_userhead"
+			android:layout_width="@dimen/size_avatar"
+			android:layout_height="@dimen/size_avatar"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginRight="@dimen/margin_chat_activity"/>
+
+		<RelativeLayout
+			android:id="@+id/bubble"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/tv_userid"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="@dimen/margin_chat_activity"
+			android:layout_toLeftOf="@id/iv_userhead"
+			android:background="@drawable/chat_sender_bg"
+			android:minHeight="39dp"
+			android:minWidth="5dp"
+		>
+
+			<TextView
+				android:id="@+id/tv_chatcontent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:gravity="center|left"
+				android:lineSpacingExtra="2dp"
+				android:maxWidth="225.0dip"
+				android:minHeight="30dp"
+				android:paddingBottom="2dp"
+				android:paddingLeft="6dp"
+				android:paddingRight="6dp"
+				android:paddingTop="2dp"
+				android:textColor="@color/white"
+				android:textSize="15sp"
+				tool:text="我6不6"/>
+		</RelativeLayout>
+		<ImageView
+			android:id="@+id/msg_status"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="6dp"
+			android:layout_toLeftOf="@id/bubble"
+			android:clickable="true"
+			android:src="@drawable/chat_send_error"
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/tv_ack"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="6dp"
+			android:layout_toLeftOf="@id/bubble"
+			android:background="@drawable/round_btn_c0315"
+			android:paddingBottom="2dp"
+			android:paddingLeft="4dp"
+			android:paddingRight="4dp"
+			android:paddingTop="2dp"
+			android:text="@string/chat_is_sending"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f6"/>
+	</RelativeLayout>
+
+</RelativeLayout>

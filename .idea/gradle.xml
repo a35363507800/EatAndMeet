@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ShortcutBadger" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/cycleImageShow" />
+            <option value="$PROJECT_DIR$/gridPasswordInput" />
+            <option value="$PROJECT_DIR$/icontextmodule" />
+            <option value="$PROJECT_DIR$/jazzyViewPager_lib" />
+            <option value="$PROJECT_DIR$/jsBridge" />
+            <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/lib/pingpp" />
+            <option value="$PROJECT_DIR$/lib/pingpp_one" />
+            <option value="$PROJECT_DIR$/photo_view_lib" />
+            <option value="$PROJECT_DIR$/pingpp" />
+            <option value="$PROJECT_DIR$/pull_refresh_lib" />
+            <option value="$PROJECT_DIR$/swiprecycleview_lib" />
+            <option value="$PROJECT_DIR$/ufilesdk" />
+            <option value="$PROJECT_DIR$/viewpage_indicator_lib" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

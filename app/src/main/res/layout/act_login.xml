@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/root"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/white"
+	android:orientation="vertical"
+	xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="用户登录"
+		android:textSize="@dimen/f1"
+		android:textColor="@color/C0321"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="14dp"
+		android:visibility="gone"/>
+
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar_switch"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		custom:topbarType="TEXT"/>
+	
+	<ImageView
+		android:id="@+id/login_logo"
+		android:layout_width="107dp"
+		android:layout_height="26dp"
+		android:layout_marginTop="78dp"
+		android:layout_centerHorizontal="true"
+		android:src="@drawable/login_kanlian"
+		/>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="153dp">
+		<!--手机号-->
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/all_phone"
+			android:layout_width="275dp"
+			android:layout_height="44dp"
+			android:layout_centerHorizontal="true"
+			android:background="@drawable/border_background">
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="8dp"
+				android:text="{eam-s-call}"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+				android:textColor="@color/C0322"
+				android:textSize="@dimen/f1"/>
+
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="15dp">
+
+				<EditText
+					android:id="@+id/ev_login_phone_num"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:background="@color/transparent"
+					android:gravity="left|center_vertical"
+					android:hint="请输入手机号 / 顾问号"
+					android:inputType="number"
+					android:layout_toLeftOf="@+id/user_clear"
+					android:maxLength="11"
+
+					android:textColor="@color/C0321"
+					android:textColorHint="@color/C0323T50"
+					android:textCursorDrawable="@drawable/ease_editcursor"
+					android:layout_marginRight="12dp"
+					android:textSize="@dimen/f3"/>
+
+				<com.joanzapata.iconify.widget.IconTextView
+					android:id="@+id/user_clear"
+					android:layout_width="15dp"
+					android:layout_height="match_parent"
+					android:text="{eam-s-close-circle}"
+					android:textColor="@color/C0412"
+					android:gravity="center"
+					android:visibility="gone"
+					android:layout_marginRight="15dp"
+
+					android:layout_alignParentTop="true"
+					android:layout_alignParentEnd="true"
+					android:layout_marginEnd="15dp"/>
+			</RelativeLayout>
+		</com.zhy.autolayout.AutoLinearLayout>
+		<!--密码-->
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/all_pwd"
+			android:layout_width="275dp"
+			android:layout_height="44dp"
+			android:layout_below="@+id/all_phone"
+			android:layout_centerHorizontal="true"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="22dp"
+			android:background="@drawable/border_background">
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="8dp"
+				android:text="{eam-s-lock}"
+				android:textColor="@color/C0322"
+				android:textColorHighlight="@color/C0321"
+				android:textSize="@dimen/f1"
+			/>
+
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="15dp">
+
+				<EditText
+					android:id="@+id/et_login_pw"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:background="@color/transparent"
+					android:gravity="left|center_vertical"
+					android:hint="请输入密码"
+					android:inputType="textPassword"
+					android:minWidth="350px"
+					android:textCursorDrawable="@drawable/ease_editcursor"
+					android:textColor="@color/C0321"
+					android:textColorHint="@color/C0323T50"
+					android:layout_toLeftOf="@+id/password_gone"
+					android:layout_marginRight="12dp"
+					android:layout_alignParentLeft="true"
+					android:textSize="@dimen/f3"/>
+
+				<com.joanzapata.iconify.widget.IconTextView
+					android:id="@+id/iv_login_pw_show"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:text="{eam-s-eye}"
+					android:textColor="@color/FC3"
+					android:textSize="@dimen/f1"
+					android:visibility="gone"/>
+				<com.joanzapata.iconify.widget.IconTextView
+					android:id="@+id/password_gone"
+					android:layout_width="15dp"
+					android:layout_height="match_parent"
+					android:layout_marginRight="15dp"
+					android:gravity="center"
+					android:text="{eam-e620 @color/C0322}"
+				    android:layout_alignParentRight="true"
+					/>
+			</RelativeLayout>
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<!--验证码验证-->
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/ll_user_login"
+			android:layout_width="275dp"
+			android:layout_height="44dp"
+			android:layout_below="@+id/all_pwd"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="22dp"
+			android:background="@drawable/border_background"
+			android:paddingRight="8dp">
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="8dp"
+				android:text="{eam-s-protect}"
+				android:textColor="@color/C0322"
+				android:textSize="@dimen/f1"/>
+
+			<com.zhy.autolayout.AutoRelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="15dp"
+				android:orientation="vertical">
+
+				<EditText
+					android:id="@+id/ew_login_verify_code"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:background="@color/transparent"
+					android:gravity="left|center_vertical"
+					android:hint="请输入验证码"
+					android:inputType="number"
+					android:minWidth="150px"
+					android:textCursorDrawable="@drawable/ease_editcursor"
+					android:textColor="@color/C0321"
+					android:textColorHint="@color/C0323T50"
+					android:textSize="@dimen/f3"/>
+
+				<TextView
+					android:id="@+id/tv_login_change_vcode"
+					style="@style/hintTextStyle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="8dp"
+					android:text="@string/change_verify_code"
+					android:textColor="@color/C0322"
+					android:textSize="@dimen/f4"
+					/>
+
+				<com.echoesnet.eatandmeet.views.widgets.securityCodeView.CheckView
+					android:id="@+id/tv_login_vcode"
+					android:layout_width="116px"
+					android:layout_height="61px"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="16px"
+					android:layout_toLeftOf="@+id/tv_login_change_vcode"
+					android:background="@color/c3"/>
+
+			</com.zhy.autolayout.AutoRelativeLayout>
+
+
+		</com.zhy.autolayout.AutoLinearLayout>
+
+		<RelativeLayout
+			android:id="@+id/all_forget_pwd"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/ll_user_login"
+			android:layout_below="@+id/ll_user_login"
+			android:layout_alignRight="@+id/ll_user_login"
+			android:layout_marginTop="11dp"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/tw_login_fpw"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/forget_pw"
+				android:textColor="@color/C0323"
+				android:textSize="@dimen/f4"/>
+
+			<TextView
+				android:id="@+id/btn_register_ok"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="16px"
+				android:layout_alignParentRight="true"
+				android:text="@string/registerAccount"
+				android:textColor="@color/C0412"
+				android:textSize="@dimen/f4"/>
+		</RelativeLayout>
+
+		<Button
+			android:id="@+id/btn_login_ok"
+			style="@style/circle_corner_btn_36_red_bg"
+			android:layout_width="275dp"
+			android:layout_height="44dp"
+			android:layout_below="@+id/all_forget_pwd"
+			android:layout_marginTop="68dp"
+			android:text="@string/login"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f1"/>
+
+		<LinearLayout
+			android:id="@+id/all_third"
+			android:layout_width="275dp"
+			android:visibility="gone"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/btn_login_ok"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="26dp"
+			android:orientation="horizontal">
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="1dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1"
+				android:background="@color/C0332"/>
+
+			<TextView
+				android:id="@+id/textView"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="第三方"
+				android:textColor="@color/C0322"
+				android:textSize="@dimen/f3"/>
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="1dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="1"
+				android:background="@color/C0332"/>
+
+		</LinearLayout>
+
+		<RelativeLayout
+			android:id="@+id/weixin_login"
+			style="@style/circle_corner_btn_36_mc8_bg"
+			android:layout_width="275dp"
+			android:layout_height="44dp"
+			android:layout_below="@+id/all_third"
+			android:layout_centerHorizontal="true"
+			android:visibility="gone"
+			android:layout_marginTop="30dp"
+			android:gravity="center">
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:id="@+id/wx_icon"
+				android:layout_width="22dp"
+				android:layout_height="22dp"
+				android:layout_centerVertical="true"
+				android:gravity="center"
+				android:text="{eam-e992}"
+				android:textColor="@color/white"
+				android:textSize="@dimen/f3"/>
+
+			<TextView
+				android:id="@+id/btn_weixin_login"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="5dp"
+				android:layout_toRightOf="@+id/wx_icon"
+				android:text="微信登录"
+				android:textColor="@color/white"
+				android:textSize="@dimen/f1"/>
+
+		</RelativeLayout>
+	</RelativeLayout>
+
+	<include
+		android:id="@+id/loading_view"
+		layout="@layout/view_loading_cover"
+		android:visibility="gone"/>
+
+</RelativeLayout>

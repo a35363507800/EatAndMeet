@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent" android:layout_height="match_parent"
+				android:orientation="vertical"
+>
+
+	<TextView
+		android:id="@+id/tv_exp_number"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/C0313"
+		android:text="+31"
+		android:textSize="@dimen/f6"
+		android:layout_alignRight="@+id/v_levelprogressbar_bar"
+		android:layout_marginRight="-10dp"
+		/>
+
+
+
+	<RelativeLayout
+		android:id="@+id/rl_levelprogressbar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/tv_exp_number"
+		android:background="@drawable/levelprogressbar0412_background"
+		android:layout_marginLeft="3dp"
+		android:layout_marginRight="3dp"
+		>
+
+		<TextView
+			android:id="@+id/tv_levelprogressbar_progress"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="8dp"
+			android:layout_toLeftOf="@+id/tv_levelprogressbar_g"
+			android:textColor="@color/C0324"
+			android:layout_centerVertical="true"
+			android:visibility="gone"
+			android:textSize="@dimen/f6"
+			android:text="d333"/>
+
+
+		<TextView
+			android:id="@+id/tv_levelprogressbar_g"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="/"
+			android:visibility="gone"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f6"
+
+			/>
+
+		<TextView
+			android:id="@+id/tv_levelprogressbar_max"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:layout_toRightOf="@+id/tv_levelprogressbar_g"
+			android:textColor="@color/C0324"
+			android:visibility="gone"
+			android:layout_centerInParent="true"
+			android:textSize="@dimen/f6"
+			android:text="123321"
+			/>
+
+	</RelativeLayout>
+
+	<View
+		android:layout_below="@+id/tv_exp_number"
+		android:id="@+id/v_levelprogressbar_bar"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/levelprogressbar0412_bar"
+		android:layout_marginLeft="3dp"
+		android:layout_marginRight="3dp"
+		/>
+
+</RelativeLayout>

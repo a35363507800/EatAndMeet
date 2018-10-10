@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/all_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.echoesnet.eatandmeet.activities.MakeUserInfo">
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rl_header_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="54dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="9dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/riv_edit_head"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_bg_head"
+                        android:scaleType="centerCrop"
+                        app:riv_border_color="@color/MC7"
+                        app:riv_border_width="0dp"
+                        app:riv_oval="true"/>
+
+                    <com.joanzapata.iconify.widget.IconTextView
+                        android:id="@+id/itv_add_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="{eam-s-spades}"
+                        android:textColor="@color/C0324"/>
+
+                    <TextView
+                        android:id="@+id/tv_upload_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/C0324"
+                        android:textSize="@dimen/f3"
+                        tools:text="15%"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28dp"
+                    android:text="上传真实美照能被更多的人发现哦~"
+                    android:textColor="@color/C0311"
+                    android:textSize="@dimen/f4"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginRight="115dp"
+                    android:layout_marginTop="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_male"
+                        android:layout_width="41dp"
+                        android:layout_height="41dp"
+                        android:background="@drawable/sex_male_bg_selector">
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/itv_male"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="{eam-e950}"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/C0332"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_female"
+                        android:layout_width="41dp"
+                        android:layout_height="41dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/sex_female_bg_selector">
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/itv_female"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="{eam-e94f}"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:paddingLeft="129dp"
+                    android:paddingRight="129dp">
+
+                    <TextView
+                        android:id="@+id/tv_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="男"
+                        android:textColor="@color/FC3"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:text="女"
+                        android:textColor="@color/FC3"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_birthday"
+                        style="@style/input_bg">
+
+                        <TextView
+                            android:id="@+id/tv_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:text="*"
+                            android:textColor="@color/C0313"/>
+
+                        <TextView
+                            android:id="@+id/tv_birthday_title"
+                            style="@style/profile_item_text_title"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tv_start"
+                            android:text="生  日"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:id="@+id/tv_profile_birthday"
+                            style="@style/input_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@+id/tv_birthday_title"
+                            android:hint="@string/birthday_content"/>
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            style="@style/more_than"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:text="{eam-e909}"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        style="@style/input_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="22dp">
+
+                        <TextView
+                            style="@style/profile_item_text_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:text="昵   称"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"/>
+
+                        <com.echoesnet.eatandmeet.views.widgets.MaxByteLengthEditText
+                            android:id="@+id/tv_profile_nickname"
+                            style="@style/input_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="14dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/take_nickName"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_city"
+                        style="@style/input_bg"
+                        android:visibility="gone"
+                        android:layout_marginTop="22dp">
+
+                        <TextView
+                            android:id="@+id/tv_city_title"
+                            style="@style/profile_item_text_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:text="城   市"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"/>
+
+                        <TextView
+                            android:id="@+id/tv_profile_city"
+                            style="@style/input_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_toRightOf="@+id/tv_city_title"
+                            android:hint="@string/in_position"/>
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            style="@style/more_than"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:text="{eam-e909}"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_code"
+                        style="@style/input_bg"
+                        android:layout_marginTop="22dp">
+
+                        <TextView
+                            android:id="@+id/tv_code_title"
+                            style="@style/profile_item_text_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="13dp"
+                            android:text="邀请码"
+
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"/>
+
+                        <EditText
+                            android:id="@+id/tv_profile_invitation_code"
+                            style="@style/input_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="9dp"
+                            android:layout_toRightOf="@+id/tv_code_title"
+                            android:gravity="center_vertical"
+                            android:hint="邀请码"/>
+
+                        <!--<com.joanzapata.iconify.widget.IconTextView
+                            style="@style/more_than"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:text="{eam-e909}"/>-->
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_profile_ok"
+                        style="@style/circle_corner_btn_36_red_bg"
+                        android:layout_width="276dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="34dp"
+                        android:text="完 成"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_make_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/MC5"
+                android:textSize="@dimen/f4"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

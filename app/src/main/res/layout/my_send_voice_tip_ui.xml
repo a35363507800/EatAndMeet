@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/root"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/blackT70"
+	android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/tip_Content"
+		android:layout_width="160dp"
+		android:layout_height="44dp"
+		android:background="@drawable/shape_round_2corner_8_translate20_black"
+		android:gravity="center"
+		android:text="松开手指，取消发送"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="19dp"
+		android:textColor="@color/C0324"
+		android:textSize="@dimen/f3"/>
+</RelativeLayout>

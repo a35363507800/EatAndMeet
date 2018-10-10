@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+    android:orientation="vertical"
+	tools:context="com.echoesnet.eatandmeet.activities.MySetAccountSecAlipayAct">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<com.zhy.autolayout.AutoLinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="50px">
+		<TextView style="@style/profile_item_text_title"
+				  android:layout_marginLeft="30px"
+				  android:text="支付宝账号"/>
+		<View android:layout_width="2px"
+			  android:layout_height="30px"
+			  android:background="@color/main_separator_color"
+			  android:layout_marginLeft="20px"
+			  android:layout_marginRight="15px"
+		      android:layout_gravity="center_vertical"/>
+		<EditText
+			android:id="@+id/tv_alipay_account"
+			style="@style/profile_item_text_content"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1.0"
+			android:gravity="center_vertical"
+			android:textColorHint="@color/FC7"
+			android:hint="请输入支付宝账号"
+		    />
+	</com.zhy.autolayout.AutoLinearLayout>
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="2px"
+		android:background="@color/main_separator_color"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="20px"
+	    android:layout_marginLeft="24px"
+	    android:layout_marginRight="24px"/>
+	<Button
+		android:id="@+id/btn_bind"
+		android:layout_width="550px"
+		android:layout_height="72px"
+		android:text="绑 定"
+		android:layout_marginTop="80px"
+		android:textColor="@color/white"
+		android:layout_gravity="center_horizontal"
+		style="@style/circle_corner_btn_36_mc1_bg"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

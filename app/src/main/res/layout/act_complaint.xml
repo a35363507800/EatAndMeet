@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.echoesnet.eatandmeet.activities.MyAuthenticationAct">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/topbar_template" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10px"
+        android:paddingLeft="24px"
+        android:paddingRight="24px"
+        android:paddingTop="30px">
+
+        <TextView
+            android:id="@+id/tvReportContentDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/actComplaint_Content_Text"
+            android:textColor="@color/FC1"
+            android:textSize="@dimen/f3" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/allRadiosHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvReportContentDesc"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="20px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/main_background_color">
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24px"
+        android:layout_marginTop="30px"
+        android:gravity="top"
+        android:text="@string/actComplaint_Remark_Text"
+        android:textColor="@color/FC1"
+        android:textSize="@dimen/f3" />
+
+    <com.echoesnet.eatandmeet.views.widgets.EditViewWithCharIndicate
+        android:id="@+id/evciRemarkContent"
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:layout_marginTop="30px"
+        android:background="@color/white"
+        custom:bodyBackGroundColor="@color/white"
+        custom:editTextGravity="top"
+        custom:inputHint="请描述您的问题和意见"
+        custom:maxCharNum="100" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30px"
+        android:layout_weight="1"
+        android:background="@color/main_background_color"
+        android:orientation="vertical"
+        android:paddingLeft="24px"
+        android:paddingRight="24px"
+        android:paddingTop="30px">
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <Button
+        android:id="@+id/btnComment"
+        style="@style/square_corner_main_btn_mc1_bg"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:text="提交" />
+</com.zhy.autolayout.AutoLinearLayout>

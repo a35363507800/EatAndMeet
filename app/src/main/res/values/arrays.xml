@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="refund_reason">
+		<item>预约不上</item>
+		<item>商家停业/装修/转让</item>
+		<item>网上评价不好</item>
+		<item>买多了</item>
+		<item>联系不上客服</item>
+		<item>商家营业但不接待</item>
+	</string-array>
+	<string-array name="myinf_lover_height">
+		<item>不限</item>
+		<item>140cm-145cm</item>
+		<item>150cm-155cm</item>
+		<item>155cm-160cm</item>
+		<item>160cm-165cm</item>
+		<item>165cm-170cm</item>
+		<item>170cm-175cm</item>
+		<item>175cm-180cm</item>
+		<item>180cm-185cm</item>
+		<item>185cm-190cm</item>
+		<item>190cm-195cm</item>
+		<item>195cm-200cm</item>
+	</string-array>
+	<string-array name="myinf_emotion_state">
+		<item>单身</item>
+		<item>恋爱中</item>
+		<item>已婚</item>
+		<item>保密</item>
+	</string-array>
+	<string-array name="myinfo_xinzuo">
+		<item>白羊座</item>
+		<item>金牛座</item>
+		<item>双子座</item>
+		<item>巨蟹座</item>
+		<item>狮子座</item>
+		<item>处女座</item>
+		<item>天秤座</item>
+		<item>天蝎座</item>
+		<item>射手座</item>
+		<item>摩羯座</item>
+		<item>水瓶座</item>
+		<item>双鱼座</item>
+	</string-array>
+	<string-array name="myinfo_education_level">
+		<item>中专</item>
+		<item>大专</item>
+		<item>本科</item>
+		<item>双学士</item>
+		<item>硕士</item>
+		<item>博士</item>
+		<item>博士后</item>
+	</string-array>
+	<string-array name="myinfo_lover_education">
+		<item>不限</item>
+		<item>中专</item>
+		<item>大专</item>
+		<item>本科</item>
+		<item>双学士</item>
+		<item>硕士</item>
+		<item>博士</item>
+		<item>博士后</item>
+	</string-array>
+	<string-array name="myinfo_income">
+		<item>2000以下</item>
+		<item>2001-5000</item>
+		<item>5000-10000</item>
+		<item>10001-20000</item>
+		<item>20000以上</item>
+	</string-array>
+	<string-array name="myinfo_lover_income">
+		<item>不限</item>
+		<item>2000以下</item>
+		<item>2001-5000</item>
+		<item>5000-10000</item>
+		<item>10001-20000</item>
+		<item>20000以上</item>
+	</string-array>
+	<string-array name="myinfo_job">
+		<item>通信</item>
+		<item>计算机</item>
+		<item>电信</item>
+		<item>互联网</item>
+		<item>电子自动化</item>
+		<item>金融服务</item>
+		<item>金融/投资/证券</item>
+		<item>贸易/批发/零售</item>
+		<item>食品/饮料/消费品</item>
+		<item>服装/纺织/皮革</item>
+		<item>家居/室内设计/装潢</item>
+		<item>服务(咨询,人力资源)</item>
+		<item>法律相关</item>
+		<item>教育/培训</item>
+		<item>学术/科研</item>
+		<item>酒店/餐饮</item>
+		<item>旅游</item>
+		<item>美容/保健</item>
+		<item>农业</item>
+		<item>政府/非盈利机构></item>
+		<item>其他行业</item>
+	</string-array>
+
+</resources>

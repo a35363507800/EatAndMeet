@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:background="@color/main_background_color">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_all_yue_info"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="70dp">
+        <LinearLayout
+            android:id="@+id/ll_bg_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_red_8radius"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="13dp"
+            android:gravity="center">
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/iv_almclock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="{eam-e622}"
+                android:textSize="30sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+        <TextView
+          android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ll_bg_icon"
+            android:text=""
+            android:layout_marginLeft="6dp"
+            android:lines="2"
+            android:textColor="@color/BlackP"
+            android:layout_alignTop="@+id/ll_bg_icon"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_content"/>
+
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="13dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12.5dp"
+            android:id="@+id/itv_next"
+            android:text="{eam-e909}"
+            android:textColor="@color/C0323"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/C0332"/>
+
+</LinearLayout>

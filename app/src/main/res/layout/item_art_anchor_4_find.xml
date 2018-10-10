@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="268dp"
+    android:orientation="vertical"
+    android:paddingLeft="6dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_uer_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:riv_border_color="@color/C0332"
+        app:riv_border_width="1px" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/booty_call_shade_bg" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="12px"
+            android:paddingRight="6dp">
+
+            <com.echoesnet.eatandmeet.views.widgets.LevelView
+                android:id="@+id/level_view"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginLeft="6dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_sex"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10px"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/C0324"
+                android:textSize="@dimen/f4" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="6dp"
+            android:lines="1"
+            android:textColor="@color/C0324P"
+            android:textSize="@dimen/f6" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

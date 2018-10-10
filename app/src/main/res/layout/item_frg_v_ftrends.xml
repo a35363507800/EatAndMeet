@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_background_color"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_bg_10_radius"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_column_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="@dimen/f1"
+            android:textStyle="bold"
+            android:layout_marginLeft="12dp"
+            android:maxLines="2"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/C0321"
+            android:gravity="center_vertical"
+            android:ellipsize="end"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+
+            android:id="@+id/riv_column"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:riv_corner_radius="2dp"
+            />
+            <RelativeLayout
+            android:id="@+id/img_head_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp">
+
+                <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+                    android:id="@+id/img_head"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    level_ril_icon="true"/>
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_head"
+                    android:layout_marginLeft="12dp"
+                    android:textColor="@color/C0313"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/f4"/>
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_toRightOf="@+id/img_head"
+                    android:layout_below="@+id/tv_nickname"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="测试"
+                    android:textColor="@color/C0323"
+                    android:textSize="@dimen/f5"/>
+
+                <TextView
+                    android:id="@+id/tv_operate"
+                    android:layout_width="60dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_cornor_11_c0412_bg"
+                    android:gravity="center"
+                    android:textColor="@color/C0412"
+                    android:textSize="@dimen/f4"
+                    tools:text="+关注"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@color/C0331"/>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:visibility="gone"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sex"
+            android:orientation="vertical"
+          >
+
+            <com.echoesnet.eatandmeet.views.widgets.FolderTextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/C0322"
+                android:textSize="@dimen/f3"
+                app:foldline="2"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <FrameLayout
+                android:id="@+id/fl_content_video"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="170dp">
+
+                <com.echoesnet.eatandmeet.views.widgets.video.MultiSampleVideo
+                    android:id="@+id/ftrends_uvideo_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"/>
+
+                <FrameLayout
+                    android:id="@+id/fl_thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/qs_cai_canting"/>
+                    <com.joanzapata.iconify.widget.IconTextView
+                        android:id="@+id/tv_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="60sp"
+                        android:background="@drawable/black_33_circle_bg"
+                        android:text="{eam-s-play-video}"
+                        android:textColor="@color/white"/>
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_cover"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:visibility="gone">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/riv_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:riv_corner_radius="4dp"/>
+                <ImageView
+                    android:id="@+id/img_living"
+                    android:layout_width="55dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/encounter_living_ico"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_column"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0.5dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <!--<com.makeramen.roundedimageview.RoundedImageView-->
+                    <!--android:id="@+id/riv_column"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="152dp"-->
+                    <!--app:riv_corner_radius="3dp"-->
+                  <!--/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_column_title"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="25dp"-->
+                    <!--android:textSize="@dimen/f2"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:maxLines="2"-->
+                    <!--android:lineSpacingMultiplier="1.2"-->
+                    <!--android:textColor="@color/C0321"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:ellipsize="end"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/main_background_color"
+        android:layout_height="0dp"/>
+</LinearLayout>

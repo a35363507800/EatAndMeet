@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:descendantFocusability="blocksDescendants"
+	android:gravity="center_vertical"
+	android:orientation="vertical"
+>
+
+	<com.zhy.autolayout.AutoLinearLayout
+		android:id="@+id/ll_all"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="10px"
+		android:layout_marginLeft="24px"
+		android:layout_marginTop="10px"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+			android:id="@+id/ri_focus"
+			android:layout_width="50dp"
+			android:layout_height="50dp" />
+
+		<View
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginLeft="15dp"
+			 />
+
+		<com.echoesnet.eatandmeet.views.widgets.LevelView
+			android:id="@+id/level_view"
+			android:layout_width="wrap_content"
+			android:layout_height="30px"
+			 />
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:id="@+id/tv_focus_age"
+			android:layout_marginLeft="10px"
+			android:layout_gravity="center_vertical"
+			android:layout_width="60px"
+			android:layout_height="30px"
+			android:gravity="center"
+			android:text="{eam-e94f @color/white @dimen/f5}"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f5"/>
+
+		<TextView
+			android:id="@+id/tv_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="张三"
+			android:textColor="@color/FC1"
+			android:textSize="@dimen/f3"
+			android:layout_marginLeft="8dp"
+			/>
+
+
+		<View
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" />
+
+		<com.zhy.autolayout.AutoLinearLayout
+			android:id="@+id/ll_inLive"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="24px">
+
+			<com.joanzapata.iconify.widget.IconTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="{eam-e9ab @color/MC1 @dimen/f3}" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10px"
+				android:text="直播中"
+				android:textColor="@color/MC3"
+				android:textSize="@dimen/f3" />
+		</com.zhy.autolayout.AutoLinearLayout>
+	</com.zhy.autolayout.AutoLinearLayout>
+
+	<View
+		style="@style/line_vertical"
+		android:layout_width="match_parent"
+		android:layout_marginLeft="24px"
+	/>
+</com.zhy.autolayout.AutoLinearLayout>

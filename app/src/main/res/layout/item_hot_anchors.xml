@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingRight="11dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_anchor_head"
+            android:layout_width="340px"
+            android:layout_height="340px"
+            app:riv_corner_radius="12px"
+            app:riv_border_color="@color/FC7"
+            app:riv_border_width="1px"
+            android:scaleType="centerCrop" />
+        <ImageView
+            android:id="@+id/img_anchor_sign"
+            android:layout_width="64dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop" />
+    </com.zhy.autolayout.AutoFrameLayout>
+
+    <TextView
+        android:id="@+id/tv_anchor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/f3"
+        android:gravity="center"
+        android:layout_marginTop="10px"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/FC2"/>
+</com.zhy.autolayout.AutoLinearLayout>

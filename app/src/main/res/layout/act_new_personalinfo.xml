@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--   AppBarLayout必须是CoordinatorLayout的直接子View,不然滚动失效-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:stateListAnimator="@null"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:minHeight="70dp"
+            app:contentScrim="@color/transparent"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+            <!--    scroll: 所有想滚动出屏幕的view都需要设置这个flag， 没有设置这个flag的view将被固定在屏幕顶部。
+                    enterAlways:这个flag让任意向下的滚动都会导致该view变为可见，启用快速“返回模式”。
+                    enterAlwaysCollapsed:当设置minHeight属性又使用此标志时，视图只能已最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度。
+                    exitUntilCollapsed:滚动退出屏幕，最后折叠在顶端。
+                    snap：回弹效果-->
+
+            <!--    layout_collapseMode (折叠模式) - 有两个值:
+                   pin -  设置为这个模式时，当CollapsingToolbarLayout完全收缩后，Toolbar还可以保留在屏幕上。
+                   parallax - 设置为这个模式时，在内容滚动时，CollapsingToolbarLayout中的View也可以同时滚动，
+                   实现视差滚动效果，通常和layout_collapseParallaxMultiplier搭配使用。
+                   layout_collapseParallaxMultiplier(视差因子) - 设置视差滚动因子，值为：0~1。-->
+
+            <RelativeLayout
+                android:id="@+id/rl_head_bg"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"
+                app:layout_scrollFlags="scroll">
+
+                <ImageView
+                    android:id="@+id/iv_bg_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+                <!--50%黑蒙版-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/blackT50"
+                    android:visibility="visible"/>
+
+                <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+                    android:id="@+id/iv_head"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/ll_all_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_head"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/iv_head"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_nick_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text=""
+                        android:maxEms="7"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/C0324"
+                        android:textSize="@dimen/f3"
+                        android:textStyle="bold"/>
+
+                    <com.echoesnet.eatandmeet.views.widgets.GenderView
+                        android:id="@+id/itv_sex_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="13dp"
+                        android:layout_alignBottom="@+id/tv_nick_name"
+                        android:layout_alignTop="@+id/tv_nick_name"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/tv_nick_name"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_all_fanpiao_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_all_info"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_toRightOf="@+id/iv_head"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_fanpiao_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/C0324"
+                        android:textSize="@dimen/f6"
+                        tools:text="饭票：0"/>
+
+                    <View
+                        android:id="@+id/view_divide"
+                        android:layout_width="1dp"
+                        android:layout_height="10dp"
+                        android:layout_alignBottom="@+id/tv_fanpiao_num"
+                        android:layout_alignTop="@+id/tv_fanpiao_num"
+                        android:layout_marginLeft="5.5dp"
+                        android:layout_toRightOf="@+id/tv_fanpiao_num"
+                        android:background="@color/C0333"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_fans_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@+id/view_divide"
+                        android:textColor="@color/C0324"
+                        android:textSize="@dimen/f6"
+                        tools:text="粉丝：0"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_all_level_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_all_fanpiao_info"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4.5dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/iv_head"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_living_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/fanpiao_bg_shape"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_id_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/C0324T20"
+                            android:textSize="@dimen/f7"
+                            tools:text="ID:1355"/>
+
+                        <TextView
+                            android:id="@+id/tv_living"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:includeFontPadding="false"
+                            android:text="正在直播"
+                            android:textColor="@color/C0324T20"
+                            android:textSize="@dimen/f7"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_level_person"
+                        android:layout_width="25dp"
+                        android:visibility="gone"
+                        android:layout_height="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_host_level"
+                        android:layout_width="25dp"
+                        android:layout_height="12dp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:id="@+id/ll_pic_info_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_head"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/transparent"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_user_imgs_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:scrollbars="none"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_my_yue"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/iv_head"
+                    android:layout_marginRight="24.5dp"
+                    android:src="@drawable/yeuchifan"
+                    />
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/ll_pic_info_all"></View>
+
+                <LinearLayout
+                    android:id="@+id/ll_yuePao_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/view"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/tv_yue"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/all_info_selector"
+                        android:gravity="center"
+                        android:text="+ 约会"
+                        android:textColor="@color/C0324"
+                        android:textSize="@dimen/f3"/>
+
+                    <Button
+                        android:id="@+id/tv_hello"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/all_info_selector"
+                        android:gravity="center"
+                        android:text="打招呼"
+                        android:textColor="@color/C0324"
+                        android:textSize="@dimen/f3"/>
+
+                    <Button
+                        android:id="@+id/tv_add_focus_host"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/all_info_selector"
+                        android:gravity="center"
+                        android:text="+ 关注"
+                        android:textColor="@color/C0324"
+                        android:textSize="@dimen/f3"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_tb_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/transparent"
+                app:contentInsetStart="0dp"
+                app:layout_anchor="@id/rl_head_bg"
+                app:layout_collapseMode="pin"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+                    android:id="@+id/top_bar_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    app:topbarType="TEXT"/>
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/C0332"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.ScrollTextTabView
+            android:id="@+id/sttv_tab"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--    必须使用NestedScrollView或者recycleview作为ViewPager中fragment的布局-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_all_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

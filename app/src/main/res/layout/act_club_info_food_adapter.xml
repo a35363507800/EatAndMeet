@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/rv_pic"
+        android:layout_width="45dp"
+        app:riv_corner_radius="6dp"
+        android:layout_height="45dp"/>
+
+    <TextView
+        android:id="@+id/tv_food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/f2"
+        android:textColor="@color/C0321"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_food_count"
+        android:layout_width="match_parent"
+        android:paddingRight="20dp"
+        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/f2"
+        android:textColor="@color/C0321"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        />
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+
+
+</LinearLayout>
+
+
+
+
+
+
+

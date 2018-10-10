@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/room_welcome_welcome"
+              android:layout_width="250dp"
+              android:layout_height="wrap_content"
+              android:visibility="gone"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ImageView
+    android:id="@+id/welcome_bg_im"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/enterroom_01"
+    />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_room_welcome_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textSize="@dimen/f4"
+            android:text="用户姓名"
+            android:textColor="@color/C0314"
+            />
+
+        <ImageView
+            android:id="@+id/llv_room_welcome_lv"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="进入直播间！"
+            android:textColor="@color/C0324"
+            android:textSize="@dimen/f4"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

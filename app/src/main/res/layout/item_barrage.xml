@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    >
+
+    <TextView
+        android:layout_toRightOf="@+id/rl_item_barrage_icon"
+        android:layout_alignBottom="@+id/rl_item_barrage_icon"
+        android:layout_marginLeft="-13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:text="聊天内容聊天内容聊天内容"
+        android:maxLength="20"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/f6"
+        android:textColor="@color/C0324"
+        android:background="@drawable/barrage_back"
+        android:id="@+id/tv_item_barrage_text"
+        android:paddingLeft="15dp"
+        android:paddingRight="4dp"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_item_barrage_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+        <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/riv_item_barrage_icon"/>
+        <ImageView
+            android:id="@+id/img_item_barrage_level"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/img_item_barrage_level2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/rl_item_barrage_icon"
+        >
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelView
+
+            android:layout_marginLeft="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/lev_item_barrage_lv"
+            />
+        <TextView
+            android:layout_marginLeft="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="呵呵呵"
+            android:shadowColor="@color/C0321"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:textColor="@color/C0411"
+            android:textSize="@dimen/f5"
+            android:id="@+id/tv_item_barrage_username"
+
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

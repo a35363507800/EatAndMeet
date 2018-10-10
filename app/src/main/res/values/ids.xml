@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item name="selectedTable" type="id"/>
+	<item name="auto_focus" type="id"/>
+	<item name="decode" type="id"/>
+	<item name="decode_failed" type="id"/>
+	<item name="decode_succeeded" type="id"/>
+	<item name="launch_product_query" type="id"/>
+	<item name="quit" type="id"/>
+	<item name="restart_preview" type="id"/>
+	<item name="return_scan_result" type="id"/>
+	<item name="search_book_contents_failed" type="id"/>
+	<item name="search_book_contents_succeeded" type="id"/>
+	<item name="res_call_one" type="id"/>
+	<item name="res_call_two" type="id"/>
+	<item name="glide_tag" type="id"/>
+	<item name="avRootView" type="id"/>
+	<item name="liveReadyCameraPreview" type="id"/>
+	<item name="uLiveCameraView" type="id"/>
+	<item name="uLiveVideoView" type="id"/>
+	<item name="custom_full_id" type="id" />
+	<item name="custom_small_id" type="id" />
+	<!-- 原始textview -->
+	<item name="id_source_textview" type="id"></item>
+	<!-- 收起展开按钮textview -->
+	<item name="id_expand_textview" type="id"></item>
+
+	<item name="TAG_FOR_MESSAGE_TYPE" type="id"/>
+	<item name="TAG_FOR_MESSAGE_IS_MONEY_ATTRIBUTE" type="id"/>
+	<item name="TAG_FOR_MESSAGE_IS_BIG_EXPRESSION_ATTRIBUTE" type="id"/>
+
+	<item name="club_info_position" type="id"/>
+	<item name="club_info_isCanCheck" type="id"/>
+
+
+	<item name="date_info_position" type="id"/>
+	<item name="date_info_isCanCheck" type="id"/>
+
+
+</resources>

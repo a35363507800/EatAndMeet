@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp">
+
+        <ImageView
+            android:id="@+id/img_sh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/myinfo_bg_pressed"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blackT70"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:minWidth="130dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/reservation_name_rectangle_bg"
+            android:gravity="center_horizontal"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sh_name"
+                android:layout_width="wrap_content"
+                android:maxLines="2"
+                android:maxEms="12"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:textColor="@color/C0324"
+                android:textSize="@dimen/f1"
+                android:textStyle="bold"
+                tools:text="餐厅测试名字餐厅测试名字餐厅测试名字"/>
+
+            <TextView
+                android:id="@+id/tv_cost"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11.5dp"
+                android:textColor="@color/C0324"
+                android:textSize="@dimen/f4"
+                tools:text="$75.00/人"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/itv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:gravity="center"
+            android:text="{eam-e9c1}"
+            android:textColor="@color/C0322"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6.5dp"
+            android:layout_toRightOf="@+id/itv_location"
+            android:textColor="@color/C0322"
+            android:textSize="@dimen/f4"
+            tools:text="和平路"/>
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6.5dp"
+            android:layout_toRightOf="@+id/tv_circle"
+            android:textColor="@color/C0322"
+            android:textSize="@dimen/f4"
+            tools:text="110m"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12.5dp"
+            android:orientation="vertical">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/iv_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="{eam-p-praise}"
+                android:textColor="@color/C0412"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_praise_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/C0323"
+                android:textSize="@dimen/f6"
+                tools:text="99+"/>
+
+        </LinearLayout>
+
+        <com.echoesnet.eatandmeet.views.widgets.ImageOverlayView
+            android:id="@+id/horizon_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/ll_praise"
+            app:image_height="25dp"
+            app:image_width="25dp"
+            app:negative_overlap="30"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

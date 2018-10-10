@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="112dp"
+				android:layout_height="112dp"
+			  	android:gravity="center"
+			  	android:paddingBottom="10dp"
+			  android:paddingTop="10dp"
+				android:background="@drawable/toast_bg"
+				android:orientation="vertical">
+	<com.joanzapata.iconify.widget.IconTextView
+		android:id="@+id/toast_bg_g"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:gravity="center"
+		android:text="{eam-e661}"
+		android:textColor="@color/C0324"
+		android:textSize="25sp"/>
+
+	<com.joanzapata.iconify.widget.IconTextView
+		android:id="@+id/toast_content"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:lines="1"
+		android:gravity="center"
+		android:text="领取成功"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:textColor="@color/C0324"
+		android:textSize="@dimen/f1"/>
+
+
+</LinearLayout>

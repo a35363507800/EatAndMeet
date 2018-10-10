@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="12dp"
+                android:minHeight="70dp"
+                android:paddingLeft="12dp">
+
+    <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+        android:id="@+id/riv_manage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/btn_operate"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        style="@style/Borderless"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_corner_13_0311_bg"
+        android:text="取消管理"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/C0311"
+        android:textSize="@dimen/f4"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toLeftOf="@+id/btn_operate"
+        android:layout_toRightOf="@+id/riv_manage">
+
+        <TextView
+            android:id="@+id/tv_manage_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3"
+            tools:text="测试姓名"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.GenderView
+            android:id="@+id/iv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_alignLeft="@+id/tv_manage_name"
+            android:layout_alignParentBottom="true"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelView
+            android:id="@+id/levelView"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_alignTop="@+id/iv_sex"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_sex"
+            android:textColor="@color/white"
+            app:text_size="@dimen/f6"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/line_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="57dp"/>
+
+</RelativeLayout>

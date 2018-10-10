@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="310dp"
+	android:layout_height="360dp"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@drawable/btn_lingqu_xhdpi"
+	android:orientation="vertical">
+	
+	<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+		android:id="@+id/pack_headimage"
+		android:layout_width="70dp"
+		android:layout_marginTop="67dp"
+		android:scaleType="centerCrop"
+		app:riv_oval="true"
+		android:layout_centerHorizontal="true"
+		android:layout_height="70dp"/>
+	<TextView
+		android:id="@+id/tv_r_from_user"
+		android:layout_width="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/pack_headimage"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:textColor="@color/C0321"
+		android:textSize="@dimen/f2"
+		android:text="111"
+		android:textStyle="bold"/>
+	<TextView
+		android:id="@+id/tv_r_amount"
+		android:layout_below="@+id/tv_r_from_user"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="58dp"
+		android:textColor="@color/C0321"
+		android:textSize="30dp"
+		android:layout_centerHorizontal="true"
+		android:text="1111"
+		android:textStyle="bold"/>
+	<Button
+		android:layout_below="@+id/tv_r_amount"
+		android:id="@+id/btn_open_packet"
+		android:layout_width="230dp"
+		android:layout_height="44dp"
+		android:layout_centerHorizontal="true"
+		android:text="立即领取"
+		android:textSize="@dimen/f2"
+		android:textColor="@color/FC0324"
+		android:layout_marginTop="20dp"
+		android:background="@drawable/c_red_packet_open_selector"
+		/>
+</RelativeLayout>

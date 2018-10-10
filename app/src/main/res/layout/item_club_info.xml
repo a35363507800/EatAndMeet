@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_itemview"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp">
+
+        <ImageView
+            android:id="@+id/img_sh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/myinfo_bg_pressed"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.5dp"
+            android:gravity="center"
+            android:textColor="@color/C0412"
+            android:textSize="@dimen/f3"
+            android:textStyle="bold"
+            tools:text="￥1299起"/>
+
+        <TextView
+            android:id="@+id/tv_club_name"
+            android:layout_width="wrap_content"
+            android:maxWidth="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.5dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/tv_price"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3"
+            tools:text="火锅KTV沙龙22222222222"/>
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_per_pay"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3"
+            android:text="人均消费:"/>
+
+        <TextView
+            android:id="@+id/tv_per_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11.5dp"
+            android:textColor="@color/C0412"
+            android:textSize="@dimen/f3"
+            android:textStyle="bold"
+            tools:text="110"/>
+    </RelativeLayout>
+
+</LinearLayout>

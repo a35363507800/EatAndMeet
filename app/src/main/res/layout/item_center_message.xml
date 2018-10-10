@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="136px"
+        android:paddingLeft="20px"
+        android:background="@drawable/item_click_white_selector"
+        android:paddingRight="20px">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/arl_layout"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_centerVertical="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/riv_head"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@color/c12"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="2px"
+                app:riv_corner_radius="8px"
+                app:riv_oval="true" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/itv_type_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:text="{eam-s-text @color/FC3 @dimen/f2}" />
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ri_msg_tip"
+                android:layout_width="25px"
+                android:layout_height="25px"
+                android:visibility="gone"
+                android:src="@color/c1"
+                android:layout_alignParentRight="true"
+                app:riv_oval="true"
+            />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/arl_layout"
+            android:text="好友动态"
+            android:textColor="@color/FC1"
+            android:textSize="@dimen/f3" />
+
+
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/itv_more_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="{eam-e909 @color/FC3 @dimen/f3}" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

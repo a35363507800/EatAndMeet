@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?><!--自定义 可滑动的Layout-->
+<RelativeLayout android:id="@+id/rlRoomLayer"
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:visibility="visible">
+	<!--清屏前 布局-->
+	<com.echoesnet.eatandmeet.views.widgets.SwipeMoveRelativeLayout
+		android:id="@+id/slBody"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		tools:visibility="visible">
+
+		<!--优化布局完成！！！！！！！！！！！！！！！！！！！！-->
+		<RelativeLayout
+			android:id="@+id/room_root_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<com.echoesnet.eatandmeet.views.widgets.HeartLikeSurfaceView
+				android:id="@+id/heart_layout"
+				android:layout_width="100dp"
+				android:layout_height="350dp"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentEnd="true"
+				android:layout_alignParentRight="true"
+				android:layout_marginBottom="30dp"
+				android:focusable="true"/>
+
+			<!--饭票信息-->
+			<LinearLayout
+				android:id="@+id/llMealTicketGroup"
+				android:layout_width="wrap_content"
+				android:layout_height="22dp"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentStart="true"
+				android:layout_below="@+id/rlHostInfo"
+				android:layout_marginLeft="8dp"
+				android:layout_marginTop="12.5dp"
+				android:background="@drawable/round_bg_live_play_head"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingLeft="6dp"
+				android:paddingRight="6dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/labelMealTicket"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f4"/>
+
+				<TextView
+					android:id="@+id/tvMealTicketCount"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="10"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f4"/>
+			</LinearLayout>
+			<!--礼物资源信息-->
+			<LinearLayout
+				android:id="@+id/llBigGiftGroup"
+				android:layout_width="wrap_content"
+				android:layout_height="22dp"
+				android:layout_below="@+id/rlHostInfo"
+				android:layout_marginLeft="8dp"
+				android:layout_marginTop="12.5dp"
+				android:layout_toRightOf="@+id/llMealTicketGroup"
+				android:background="@drawable/round_bg_live_play_head"
+				android:gravity="center"
+				android:orientation="horizontal"
+				android:paddingLeft="6dp"
+				android:paddingRight="6dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/labelBigGift"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f4"/>
+
+				<TextView
+					android:id="@+id/tvBigGiftCount"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f4"
+					tools:text="0/10"/>
+			</LinearLayout>
+			<TextView
+				android:id="@+id/refuseDownloadText"
+				android:layout_width="wrap_content"
+				android:layout_height="22dp"
+				android:layout_below="@+id/rlHostInfo"
+				android:layout_marginLeft="8dp"
+				android:layout_marginTop="12.5dp"
+				android:visibility="gone"
+				android:paddingLeft="6dp"
+				android:gravity="center"
+				android:paddingRight="6dp"
+				android:layout_toRightOf="@+id/llMealTicketGroup"
+				android:background="@drawable/round_bg_live_play_head"
+				android:textColor="@color/white"
+				android:textSize="@dimen/f4"
+				android:text="礼物未完成下载"/>
+			<TextView
+				android:id="@+id/tvId"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/rlHostInfo"
+				android:layout_marginRight="6dp"
+				android:layout_marginTop="7.5dp"
+				android:background="@drawable/shape_1dp_cblack"
+				android:gravity="center"
+				android:includeFontPadding="false"
+				android:padding="3dp"
+				android:text="1232151"
+				android:textColor="@color/blackT50"
+				android:textSize="@dimen/f7"/>
+
+			<FrameLayout
+				android:id="@+id/fl_booty_call"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/tvId"
+				android:layout_marginRight="6dp"
+				android:layout_marginTop="22dp"
+				android:visibility="visible">
+
+				<View
+					android:id="@+id/img_booty_red"
+					android:layout_width="10dp"
+					android:layout_height="10dp"
+					android:layout_gravity="right"
+					android:background="@drawable/setting_hongdian"
+					android:visibility="gone"/>
+
+				<ImageView
+					android:id="@+id/img_booty_call"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:scaleType="centerCrop"
+					android:src="@drawable/yeuchifan"/>
+			</FrameLayout>
+
+			<!-- 可能是漂浮消息，demo代码有，使用时修改即可 -->
+			<RelativeLayout
+				android:id="@+id/room_fighting_container"
+				android:layout_width="match_parent"
+				android:layout_height="57dp"
+				android:layout_above="@+id/room_uio_container"
+				android:background="@color/MC2"
+				android:visibility="invisible"/>
+
+			<!-- 同上 -->
+			<RelativeLayout
+				android:id="@+id/room_uio_container"
+				android:layout_width="match_parent"
+				android:layout_height="37dp"
+				android:layout_above="@+id/vBlock"
+				android:background="@color/MC3"
+				android:visibility="invisible"/>
+
+
+			<View
+				android:id="@+id/vBlock"
+				android:layout_width="wrap_content"
+				android:layout_height="175dp"
+				android:layout_above="@+id/room_controller"/>
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="209dp"
+				android:layout_alignParentBottom="true"
+				android:background="@drawable/live_zhezhao"/>
+
+
+			<!--	<com.echoesnet.eatandmeet.views.widgets.GiftUI
+					android:id="@+id/room_amin_giftui"
+					android:layout_width="match_parent"
+					android:layout_height="250dp"
+					android:layout_marginTop="130dp"
+					android:background="@color/transparent"
+					android:visibility="gone"/>-->
+
+
+			<!--android:stackFromBottom="true"-->
+			<!--android:transcriptMode="alwaysScroll"-->
+
+
+			<!-- 底部操作布局  36dp+8dp*2-->
+			<RelativeLayout
+				android:id="@+id/room_controller"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:visibility="visible"/>
+			<!--发送消息布局 设置成与控制条登高-->
+			<LinearLayout
+				android:id="@+id/dialog_send_layout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:background="@color/white"
+				android:orientation="horizontal"
+				android:visibility="invisible">
+
+				<View
+					android:layout_width="0.5dp"
+					android:layout_height="match_parent"
+					android:layout_marginBottom="6dp"
+					android:layout_marginLeft="16dp"
+					android:layout_marginTop="6dp"
+					android:background="#c8c7cc"
+					android:visibility="gone"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/rlHostInfo"
+				android:layout_width="wrap_content"
+				android:layout_height="60dp"
+				android:layout_marginLeft="6dp"
+				android:layout_marginStart="8dp"
+				android:layout_marginTop="9dp"
+				android:background="@drawable/round_bg_live_play_head"
+				android:gravity="center_vertical"
+				android:orientation="vertical"
+				android:paddingEnd="8dp"
+				android:paddingLeft="5dp"
+				android:paddingRight="8dp"
+				android:paddingStart="5dp"
+			>
+
+				<TextView
+					android:id="@+id/tvRoomName"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="53dp"
+					android:layout_marginTop="1dp"
+					android:focusable="true"
+					android:focusableInTouchMode="true"
+					android:includeFontPadding="false"
+					android:marqueeRepeatLimit="marquee_forever"
+					android:maxEms="4"
+					android:minWidth="50dp"
+					android:singleLine="true"
+					android:text="roomName"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f4"/>
+
+				<TextView
+					android:id="@+id/tvAudiencesCount"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="53dp"
+					android:layout_marginTop="5dp"
+					android:includeFontPadding="false"
+					android:text="0"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f6"/>
+
+				<com.joanzapata.iconify.widget.IconTextView
+					android:id="@+id/tvFollow"
+					android:layout_width="40dp"
+					android:layout_height="15dp"
+					android:layout_marginLeft="53dp"
+					android:layout_marginTop="5dp"
+					android:background="@drawable/round_corner_8_0313_bg"
+					android:gravity="center"
+					android:includeFontPadding="false"
+					android:text="@string/liveFollowIconWithDesc"
+					android:textColor="@color/white"
+					android:textSize="@dimen/f7"
+					android:visibility="visible"/>
+
+			</LinearLayout>
+
+			<com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+				android:id="@+id/rivHostAvatar"
+				android:layout_width="45dp"
+				android:layout_height="45dp"
+				android:layout_alignParentLeft="true"
+				android:layout_marginLeft="6dp"
+				app:live_state="true"/>
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/rvAudienceAvatar"
+				android:layout_width="match_parent"
+				android:layout_height="74dp"
+				android:layout_marginEnd="35dp"
+				android:layout_marginLeft="@dimen/d8"
+				android:layout_marginStart="@dimen/d8"
+				android:layout_marginTop="1dp"
+				android:layout_toEndOf="@+id/rlHostInfo"
+				android:layout_toRightOf="@+id/rlHostInfo"/>
+
+			<TextView
+				android:id="@+id/liv_house_manager"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentStart="true"
+				android:layout_below="@+id/llMealTicketGroup"
+				android:layout_marginLeft="@dimen/d8"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/round_bg_live_play_head"
+				android:gravity="center"
+				android:paddingLeft="6dp"
+				android:paddingRight="6dp"
+				android:text="@string/labelRoomAdmin"
+				android:textColor="@color/white"
+				android:textSize="@dimen/f3"
+				android:visibility="gone"/>
+
+			<com.airbnb.lottie.LottieAnimationView
+				android:id="@+id/lav_star"
+				android:layout_width="102dp"
+				android:layout_height="42dp"
+				android:layout_alignParentStart="true"
+				android:layout_below="@+id/liv_house_manager"
+				android:layout_marginLeft="6dp"
+				android:layout_marginTop="10dp"
+				android:visibility="gone"
+				app:lottie_autoPlay="true"
+				app:lottie_fileName="aeScrips/stardata.json"
+				app:lottie_imageAssetsFolder="images/starimage"
+				app:lottie_loop="true"/>
+			<!--星光信息-->
+			<LinearLayout
+				android:id="@+id/ll_star_chart"
+				android:layout_width="92dp"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@+id/lav_star"
+				android:layout_marginLeft="11dp"
+				android:background="@drawable/shape_bg_3dp_star"
+				android:orientation="vertical"
+				android:paddingBottom="5dp"
+				android:paddingLeft="7dp"
+				android:paddingTop="5dp"
+				android:visibility="gone"
+			>
+
+				<TextView
+					android:id="@+id/tv_star_chart_top"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/C0324"
+					android:textSize="@dimen/f5"
+					tools:text="星光榜"/>
+
+				<TextView
+					android:id="@+id/tv_star_chart_count"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:textColor="@color/C0324"
+					android:textSize="@dimen/f5"
+					tools:text="星光值"/>
+
+				<FrameLayout
+					android:id="@+id/tv_show_differ_star"
+					android:layout_width="82dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+				>
+
+					<TextView
+						android:id="@+id/tv_star_show"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:maxLines="2"
+						android:textColor="@color/C0324"
+						android:textSize="@dimen/f5"
+						android:visibility="gone"
+					/>
+				</FrameLayout>
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/ll_beauty"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:orientation="vertical"
+				android:paddingRight="5dp"
+				android:visibility="gone"/>
+
+			<ImageView
+				android:id="@+id/img_game"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/fl_booty_call"
+				android:layout_marginTop="-20dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/btn_game"
+				android:visibility="gone"/>
+
+			<View
+				android:id="@+id/view_game"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/fl_booty_call"
+				android:layout_marginRight="5dp"
+				android:layout_marginTop="5dp"
+				android:visibility="gone"
+			/>
+
+		</RelativeLayout>
+		<!--优化布局完成！！！！！！！！！！！！！！！！！！！！-->
+
+		<include
+			layout="@layout/room_special"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_above="@+id/room_listview"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="10dp"/>
+
+		<ListView
+			android:id="@+id/room_listview"
+			android:layout_width="match_parent"
+			android:layout_height="165dp"
+			android:layout_above="@+id/control_list_view"
+			android:layout_marginBottom="25dp"
+			android:divider="@android:color/transparent"
+			android:maxHeight="176dp"
+			android:visibility="visible"/>
+
+		<!-- 小礼物 *4   放在消息列表之上，防止输入法弹出 消息列表挡住礼物-->
+		<LinearLayout
+			android:id="@+id/room_amin_container"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="100dp"
+			android:orientation="vertical"
+			android:visibility="visible">
+
+			<include layout="@layout/item_gift"/>
+
+			<include layout="@layout/item_gift"/>
+
+			<include layout="@layout/item_gift"/>
+
+			<include layout="@layout/item_gift"/>
+		</LinearLayout>
+
+		<RelativeLayout
+			android:id="@+id/room_barrage_container"
+			android:layout_width="match_parent"
+			android:layout_height="200dp"
+			android:layout_marginTop="155dp"
+			android:background="@color/transparent"
+			android:visibility="visible"/>
+
+		<View
+			android:id="@+id/control_list_view"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="25dp"
+			android:visibility="invisible"/>
+	</com.echoesnet.eatandmeet.views.widgets.SwipeMoveRelativeLayout>
+
+
+	<!--清屏后 布局-->
+	<!--为 pop win 准备的 的背景灰 -->
+	<RelativeLayout
+		android:id="@+id/rlPopCover"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/translucent"
+		android:visibility="gone"/>
+
+	<RelativeLayout
+		android:id="@+id/rlLargeGiftContainer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone">
+
+		<ImageView
+			android:id="@+id/ivBigGift"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"/>
+
+		<com.airbnb.lottie.LottieAnimationView
+			android:id="@+id/lottieBigGift"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"/>
+	</RelativeLayout>
+
+
+	<RelativeLayout
+		android:id="@+id/rlCleanGroup"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/rlPopCover"
+		android:layout_toEndOf="@id/rlPopCover"
+		android:layout_toRightOf="@+id/rlPopCover">
+
+		<!--<ImageButton
+			android:id="@+id/ibCloseLive"
+			android:layout_width="44dp"
+			android:layout_height="44dp"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="5dp"
+			android:background="@color/transparent"
+			android:visibility="gone"
+			android:padding="22dp"
+			android:src="@drawable/btn_live_close_selector"/>-->
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:id="@+id/itCloseLive"
+			android:layout_width="22dp"
+			android:layout_height="22dp"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginLeft="7dp"
+			android:layout_marginRight="7dp"
+			android:layout_marginTop="26dp"
+			android:background="@drawable/room_esc_bg"
+			android:gravity="center"
+			android:padding="4dp"
+			android:text="{eam-s-close}"
+			android:textColor="@color/blackT60"
+		/>
+
+		<Button
+			android:id="@+id/btnCleared_clear"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginBottom="10dp"
+			android:layout_marginRight="14dp"
+			android:background="@drawable/live_clear_selector"
+			android:visibility="gone"/>
+	</RelativeLayout>
+
+	<include
+		android:id="@+id/invite_views"
+		layout="@layout/include_invite_views"
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"/>
+
+	<include
+		android:id="@+id/connect_views"
+		layout="@layout/live_connect_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:visibility="gone"/>
+	<!--直播离开-->
+	<LinearLayout
+		android:id="@+id/llHostLeaveGroup"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#8c000000"
+		android:gravity="center_horizontal"
+		android:orientation="vertical"
+		android:visibility="gone">
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="152dp"
+			android:src="@drawable/waiting_xhdpi"/>
+
+		<TextView
+			android:id="@+id/tvWaitingDesc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/d12"
+			android:text="@string/liveHostLeave"
+			android:textColor="@color/white"
+			android:textSize="@dimen/f2"/>
+	</LinearLayout>
+
+</RelativeLayout>
+
+

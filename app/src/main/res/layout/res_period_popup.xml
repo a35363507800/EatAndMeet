@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+									 android:layout_width="match_parent"
+									 android:layout_height="match_parent"
+									 android:background="@color/white"
+									 android:orientation="vertical">
+	<com.zhy.autolayout.AutoLinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="88px"
+		android:background="@color/c5"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<View android:layout_width="8px"
+			  android:layout_height="30px"
+			  android:layout_marginLeft="24px"
+			  android:background="@color/MC1"/>
+		<TextView android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_marginLeft="10px"
+				  android:text="选择时间"
+				  android:textColor="@color/FC1"
+				  android:textSize="@dimen/f3"/>
+		<View android:layout_width="0dp"
+			  android:layout_height="match_parent"
+			  android:layout_weight="1"/>
+		<TextView
+			android:id="@+id/tv_cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="30px"
+			android:text="取消"
+			android:visibility="visible"
+			android:textColor="@color/FC1"
+			android:textSize="@dimen/f3"/>
+	</com.zhy.autolayout.AutoLinearLayout>
+	<GridView
+		android:id="@+id/gv_select_time_period"
+		android:layout_width="match_parent"
+		android:layout_height="564px"
+		android:layout_gravity="center_horizontal"
+		android:clipToPadding="false"
+		android:gravity="center_horizontal"
+		android:horizontalSpacing="26px"
+		android:listSelector="@color/transparent"
+		android:numColumns="4"
+		android:paddingBottom="30px"
+		android:paddingLeft="26px"
+		android:paddingRight="26px"
+		android:paddingTop="30px"
+		android:scrollbars="none"
+		android:stretchMode="columnWidth"
+		android:verticalSpacing="30px"/>
+	<Button
+		android:id="@+id/btn_commit"
+		style="@style/commonButton4"
+		android:layout_width="match_parent"
+		android:layout_height="98px"
+		android:visibility="gone"
+		android:text="确定"
+		android:textColor="@color/white"
+		android:textSize="@dimen/f2"/>
+</com.zhy.autolayout.AutoLinearLayout>

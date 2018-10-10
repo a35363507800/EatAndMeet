@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+									 android:layout_width="match_parent"
+									 android:layout_height="match_parent"
+									 android:background="@color/c7"
+									 android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="65dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<TextView
+			android:id="@+id/tv_balance_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="提现金额"
+			android:textColor="@color/C0321"
+			android:textSize="@dimen/f2"/>
+
+		<TextView
+			android:id="@+id/tv_balance"
+			android:visibility="gone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/tv_balance_title"
+			android:layout_marginTop="20px"
+			android:text="消耗饭票"
+			android:textColor="@color/FC3"
+			android:textSize="@dimen/f4"/>
+
+		<TextView
+			android:id="@+id/tv_balance_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="收入金额"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="14dp"
+			android:textColor="@color/C0315"
+			android:textSize="@dimen/f2"/>
+		<TextView
+			android:id="@+id/tv_balance_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/tv_balance_title"
+			android:layout_marginTop="20px"
+			android:text="时间"
+			android:textColor="@color/c3"
+			android:textSize="@dimen/f4"/>
+
+	</RelativeLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_marginLeft="24px"
+		android:background="@color/c5"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

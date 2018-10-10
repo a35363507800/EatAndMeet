@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:background="@color/main_background_color"
+	tools:context="com.echoesnet.eatandmeet.activities.CAddEmojsAct">
+	<include android:id="@+id/top_bar"
+			 layout="@layout/topbar_template"/>
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		android:id="@+id/lv_emoj_lst"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+		android:divider="@color/main_separator_color"
+		android:dividerHeight="0.5dp"
+		app:ptrHeaderBackground="@drawable/bg_login_xhdpi"/>
+</LinearLayout>

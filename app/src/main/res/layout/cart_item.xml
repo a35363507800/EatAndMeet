@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/c2"
+            android:textSize="@dimen/f2" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/right_rl"
+            android:gravity="center_vertical"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/f2" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/right_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="3dp"
+            android:animateLayoutChanges="true" >
+
+            <ImageView
+                android:id="@+id/img_substract"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/subtract_selector"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_cost_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:visibility="invisible"
+                android:textColor="@color/MC3"
+                android:textSize="@dimen/f2" />
+
+            <ImageView
+                android:id="@+id/img_add"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/add_selector" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

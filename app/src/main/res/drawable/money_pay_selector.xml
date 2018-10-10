@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/money_round_stroke_yes" android:state_pressed="true" />
+    <item android:drawable="@drawable/money_round_stroke_yes" android:state_selected="true" />
+    <!--<item android:drawable="@drawable/money_round_stroke_yes" android:state_checked="true" />
+    <item>
+        <shape>
+            <solid android:color="@color/transparent" />
+            <stroke
+                android:width="@dimen/strokeWidth"
+                android:color="#ffbfbfbf" />
+        </shape>
+    </item>-->
+
+</selector>

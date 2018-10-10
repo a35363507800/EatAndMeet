@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackT20">
+    <RelativeLayout
+        android:id="@+id/rl_encounter_newbie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:scaleType="fitXY"
+            android:visibility="invisible"
+            android:src="@drawable/found"/>
+        <FrameLayout
+            android:id="@+id/fl_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="70dp">
+            <ImageView
+                android:id="@+id/img_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:src="@drawable/gift_newbie"/>
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="80dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="110dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_known"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="288dp"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/img_known"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:paddingLeft="5dp"
+                android:paddingRight="43dp"
+                android:src="@drawable/click_to_view_data"/>
+            <TextView
+                android:id="@+id/tv_next_1"
+                android:layout_width="80dp"
+                android:layout_height="36dp"
+                android:layout_gravity="bottom|center_horizontal"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_release_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="28dp"
+        android:visibility="gone"
+        android:src="@drawable/release_dynamic"/>
+</com.zhy.autolayout.AutoRelativeLayout>

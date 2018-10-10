@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/white"
+                android:minHeight="70dp">
+<!--
+    <RadioButton
+        android:id="@+id/radio_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_vertical"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/radio_btn"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+        android:id="@+id/ri_focus"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/radio_btn"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4.0dp"
+        android:layout_toRightOf="@+id/ri_focus">
+
+
+        <com.echoesnet.eatandmeet.views.widgets.GenderView
+            android:id="@+id/tv_fans_age"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"/>
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelView
+            android:id="@+id/lv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_toRightOf="@+id/tv_fans_age"
+            android:layout_alignTop="@+id/tv_fans_age"
+            android:layout_marginLeft="5dp"
+            app:text_size="@dimen/f6"/>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_below="@+id/tv_fans_age"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3"
+            tools:text="测试姓名"/>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
+</RelativeLayout>

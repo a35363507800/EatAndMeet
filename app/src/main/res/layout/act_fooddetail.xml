@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/topbar_template" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@+id/top_bar"
+        android:scrollbars="none">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.echoesnet.eatandmeet.views.widgets.ImageIndicatorView.NetworkImageIndicatorView
+                android:id="@+id/icv_cycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="450px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:id="@+id/tv_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30px"
+                    android:textColor="@color/c2"
+                    android:textSize="@dimen/f2" />
+
+                <TextView
+                    android:id="@+id/tv_detail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_detail_title"
+                    android:layout_marginBottom="30px"
+                    android:layout_marginTop="30px"
+                    android:textColor="@color/c1"
+                    android:textSize="@dimen/f3" />
+
+                <ImageView
+                    android:id="@+id/iv_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_detail_price"
+                    android:src="@drawable/dd_702xuxian" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100px"
+                        android:layout_height="1px"
+                        android:src="@color/MC3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:text="菜品评价"
+                        android:textColor="@color/MC3"
+                        android:textSize="@dimen/f4" />
+
+                    <ImageView
+                        android:layout_width="100px"
+                        android:layout_height="1px"
+                        android:src="@color/MC3" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.echoesnet.eatandmeet.views.widgets.CustomRatingBar.CustomRatingBar
+                        android:id="@+id/rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <!--                    <include
+                                            android:id="@+id/rating_bar"
+                                            layout="@layout/rate_bar"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />-->
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100px"
+                        android:layout_height="1px"
+                        android:src="@color/MC3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:text="菜品介绍"
+                        android:textColor="@color/MC3"
+                        android:textSize="@dimen/f4" />
+
+                    <ImageView
+                        android:layout_width="100px"
+                        android:layout_height="1px"
+                        android:src="@color/MC3" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="450px"
+                    android:layout_marginTop="50px"
+                    android:visibility="gone">
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="30px">
+
+                    <TextView
+                        android:id="@+id/tv_context"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c4" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_checkout"
+            style="@style/square_corner_main_btn_mc1_bg"
+            android:layout_width="320px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="加入菜单"
+            android:textColor="@color/white" />
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btn_checkout"
+            android:background="#3d000000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="40px"
+                android:text="您还没有点菜哦"
+                android:textColor="@color/white"
+                android:textSize="@dimen/f1"
+                android:visibility="gone" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/arl_shopCar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#3d000000">
+
+                <com.zhy.autolayout.AutoFrameLayout
+                    android:id="@+id/fl_carimg"
+                    android:layout_width="64px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40px">
+
+                    <ImageView
+                        android:id="@+id/iv_shoppingcart_icon"
+                        android:layout_width="48px"
+                        android:layout_height="48px"
+                        android:layout_gravity="center_vertical"
+                        android:src="@color/c10" />
+
+                    <ImageView
+                        android:id="@+id/iv_goods_num"
+                        android:layout_width="32px"
+                        android:layout_height="32px"
+                        android:layout_gravity="right|top"
+                        android:layout_marginTop="9px"
+                        android:src="@drawable/shoppingcar_total_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="32px"
+                        android:layout_height="32px"
+                        android:layout_gravity="right|top"
+                        android:layout_marginTop="9px"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="18px" />
+
+                </com.zhy.autolayout.AutoFrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/fl_carimg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="40px"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f1" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+        </com.zhy.autolayout.AutoFrameLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingTop="5dp"
+    android:background="@color/main_background_color">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:scaleType="center"
+    android:paddingBottom="2dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:text="- 专栏推荐 -"
+    android:textSize="@dimen/f2"
+    android:textColor="@color/C0321"
+    android:background="@drawable/shadow_1_white_bg"
+    android:layout_gravity="center_horizontal"/>
+<LinearLayout
+    android:id="@+id/ll_focus_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"/>
+</LinearLayout>

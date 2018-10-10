@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     android:background="@color/c7"
+                                     android:orientation="vertical">
+
+
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar_switch"
+        android:layout_width="match_parent"
+
+        app:topbarType="TEXT"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/prl_balance_detail"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:background="@color/main_background_color"
+            android:divider="@color/c2"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+        <include
+            android:id="@+id/loading_view"
+            layout="@layout/view_loading_cover" />
+    </FrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

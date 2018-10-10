@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:background="@drawable/round_corner30_bg_no_input"
+			  android:orientation="horizontal">
+	<com.joanzapata.iconify.widget.IconTextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_marginLeft="8dp"
+		android:text="{eam-s-search}"
+		android:textColor="@color/C0323"
+		android:textSize="@dimen/f2"/>
+	<TextView
+		android:id="@+id/query"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:background="@color/transparent"
+		android:maxLines="1"
+		android:paddingBottom="5dp"
+		android:paddingLeft="5dp"
+		android:paddingTop="5dp"
+		android:layout_gravity="center_vertical"
+		android:text="请输入TA的看脸ID或用户名"
+		android:textColor="@color/C0323"
+		android:textSize="@dimen/f4"/>
+	<com.joanzapata.iconify.widget.IconTextView
+		android:id="@+id/search_clear"
+		android:layout_width="14dp"
+		android:layout_height="14dp"
+		android:layout_gravity="center_vertical"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/cha_clear"
+		android:visibility="gone"/>
+</LinearLayout>

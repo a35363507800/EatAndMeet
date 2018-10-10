@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/main_background_color"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_balance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="22dp"
+        android:background="@color/C0315"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/C0324"
+            android:text="余额"
+            android:textSize="@dimen/f3"
+            android:layout_above="@+id/iconTextView"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="13dp"/>
+        <TextView
+            android:id="@+id/wallet_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/FC0324"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            tools:text="￥11111"
+            android:layout_marginTop="57dp"
+            />
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/C0324"
+            android:textSize="25sp"
+            android:text="{eam-e909}"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/wallet_balance"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/wallet_balance"
+            android:id="@+id/iconTextView"/>
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        >
+        
+        <RelativeLayout
+            android:id="@+id/rl_wallet_face"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_wallet_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/C0321"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/f3"
+                android:layout_marginTop="17dp"
+
+                tools:text="$11111"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/C0323"
+                android:textSize="@dimen/f3"
+                android:layout_centerHorizontal="true"
+                android:text="脸蛋 >"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/tv_wallet_face"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@color/FC0332"
+            ></View>
+        <RelativeLayout
+            android:id="@+id/rl_wallet_reap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_wallet_reap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/C0321"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/f3"
+                android:layout_marginTop="17dp"
+                tools:text="$11111"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/C0323"
+                android:textSize="@dimen/f3"
+                android:layout_centerHorizontal="true"
+                android:text="收益 >"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/tv_wallet_reap"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <com.echoesnet.eatandmeet.views.widgets.ImageOverlayView
+        android:id="@+id/iamge_overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:image_height="50dp"
+        app:image_width="50dp"
+        />
+</LinearLayout>

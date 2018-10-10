@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	android:id="@+id/live_fans_activity"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" android:orientation="vertical">
+	<com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+		android:id="@+id/top_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:topbarType="SWITCH"/>
+	<com.echoesnet.eatandmeet.views.widgets.NoScrollViewPager
+		android:id="@+id/vp_focus_or_fans"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+	</com.echoesnet.eatandmeet.views.widgets.NoScrollViewPager>
+</com.zhy.autolayout.AutoLinearLayout>

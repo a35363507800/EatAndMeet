@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="right"
+	android:orientation="horizontal">
+
+	<!--<TextView
+		android:id="@+id/beauty_btn"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:text="美颜"
+		android:textColor="@color/black"
+		android:layout_marginLeft="10dp"
+		android:background="@drawable/icon_beauty_drawable" />
+
+	<TextView
+		android:id="@+id/white_btn"
+		android:layout_width="40dp"
+		android:text="美白"
+		android:textColor="@color/black"
+		android:gravity="center"
+		android:layout_height="40dp"
+		android:layout_gravity="center"
+		android:layout_marginLeft="10dp"
+		android:background="@drawable/icon_white_drawable" />-->
+
+	<Button
+		android:id="@+id/host_bottom_clear"
+		android:layout_width="60px"
+		android:layout_height="60px"
+		android:layout_marginLeft="56px"
+		android:background="@drawable/live_clear_selector"
+	/>
+	<Button
+		android:id="@+id/host_bottom_shared"
+		android:layout_width="60px"
+		android:layout_height="60px"
+		android:layout_marginLeft="56px"
+		android:background="@drawable/live_shared_selector"
+	/>
+	<Button
+		android:id="@+id/host_bottom_ctr_camera"
+		android:layout_width="60px"
+		android:layout_height="60px"
+		android:layout_marginRight="24px"
+		android:layout_marginLeft="56px"
+		android:background="@drawable/live_paizhao_selector"
+	/>
+	<Button
+		android:id="@+id/host_bottom_gif"
+		android:layout_width="60px"
+		android:layout_height="60px"
+		android:layout_marginRight="30px"
+		android:layout_marginLeft="56px"
+		android:background="@drawable/live_gif_selector"
+	/>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	android:id="@+id/lLayout_bg"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:custom="http://schemas.android.com/apk/res-auto"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@drawable/alert_round_bg_normal"
+	android:gravity="center_horizontal"
+	android:orientation="vertical">
+
+	<com.zhy.autolayout.AutoLinearLayout
+		android:id="@+id/ll_register_1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50px">
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="{eam-s-phone}"
+			android:textColor="@color/FC3"
+			android:textSize="@dimen/f1"/>
+
+		<com.zhy.autolayout.AutoRelativeLayout
+			android:layout_width="490px"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginLeft="20px">
+
+			<EditText
+				android:id="@+id/ev_modify_phone_num"
+				style="@style/inputTextStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:background="@color/transparent"
+				android:hint="@string/input_phone_num"
+				android:inputType="number"
+				android:maxLength="11"
+				android:minWidth="250px"/>
+
+			<Button
+				android:id="@+id/btn_register_get_vcode"
+				android:layout_width="200px"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:background="@color/transparent"
+				android:gravity="center_horizontal"
+				android:text="获取验证码"
+				android:textColor="@color/MC7"
+				android:textSize="@dimen/f3"/>
+
+			<View
+				android:layout_width="1dp"
+				android:layout_height="35px"
+				android:layout_toLeftOf="@id/btn_register_get_vcode"
+				android:background="@color/main_separator_color"/>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="2px"
+				android:layout_below="@+id/ev_modify_phone_num"
+				android:layout_marginTop="20px"
+				android:background="@color/main_separator_color"/>
+		</com.zhy.autolayout.AutoRelativeLayout>
+	</com.zhy.autolayout.AutoLinearLayout>
+
+	<com.zhy.autolayout.AutoLinearLayout
+		android:id="@+id/ll_register_4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50px">
+
+		<com.joanzapata.iconify.widget.IconTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="{eam-s-protect}"
+			android:textColor="@color/FC3"
+			android:textSize="@dimen/f1"/>
+
+		<com.zhy.autolayout.AutoRelativeLayout
+			android:layout_width="490px"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginLeft="20px">
+
+			<EditText
+				android:id="@+id/ew_modify_verify_code"
+				style="@style/inputTextStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:background="@color/transparent"
+				android:hint="@string/input_verify_code"
+				android:inputType="number"/>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="2px"
+				android:layout_below="@+id/ew_modify_verify_code"
+				android:layout_marginTop="20px"
+				android:background="@color/main_separator_color"/>
+		</com.zhy.autolayout.AutoRelativeLayout>
+	</com.zhy.autolayout.AutoLinearLayout>
+	<com.zhy.autolayout.AutoLinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="20px"
+		android:layout_marginTop="20px"
+		android:gravity="right"
+	>
+		<TextView
+			android:id="@+id/tv_tip"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/tryOtherStyle"
+			android:textSize="@dimen/f3"/>
+		<TextView
+			android:id="@+id/tv_sound_code"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="28px"
+			android:layout_toRightOf="@+id/tv_tip"
+			android:text="@string/voiceCode"
+			android:textColor="@color/MC7"
+			android:textSize="@dimen/f3"/>
+
+	</com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

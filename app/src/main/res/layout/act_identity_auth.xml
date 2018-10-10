@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar_switch_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/img_auth_status"
+                android:layout_width="135dp"
+                android:layout_height="143dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/bg_picture_xxhdpi"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/C0322"
+
+                android:gravity="center_horizontal"
+                android:background="@color/white"
+                android:textSize="@dimen/f3"
+                android:text="根据相关规定"
+                android:lineSpacingExtra="4dp"
+                android:paddingTop="15dp"
+              />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/C0322"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:textSize="@dimen/f3"
+                android:text="网络主播必须通过实名认证才可发布直播"
+                android:lineSpacingExtra="4dp"
+
+                android:paddingBottom="25px"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="1dp"
+                android:paddingTop="60px"
+                android:paddingBottom="20px">
+
+                <LinearLayout
+                    android:id="@+id/ll_name_and_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="55dp"
+                    android:paddingRight="55dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/ll_auth_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"
+                            android:text="@string/auth_real_name"/>
+                        <TextView
+                            android:id="@+id/tv_auth_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/C0323P"
+                            android:textSize="@dimen/f3"
+                            android:lines="1"
+                            android:gravity="right"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_id_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48px"
+                        android:layout_marginBottom="30px"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/C0321"
+                            android:textSize="@dimen/f3"
+                            android:text="@string/auth_id_num"/>
+                        <TextView
+                            android:id="@+id/tv_id_num"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/C0323P"
+                            android:textSize="@dimen/f3"
+                            android:gravity="right"
+                            android:lines="1"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/tv_alipay_auth"
+                android:layout_width="275dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="65dp"
+                android:text="支付宝认证已通过"
+                android:gravity="center"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/C0324"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible"
+                android:background="@drawable/round_cornor_36_c0331_bg"/>
+
+            <Button
+                android:id="@+id/tv_official_auth"
+                android:layout_width="275dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/C0412"
+                android:text="@string/auth_official"
+                android:layout_marginBottom="77px"
+
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_btn_c0412_bg_s"/>
+        </LinearLayout>
+    </ScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

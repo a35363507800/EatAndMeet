@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@color/white"
+	android:orientation="vertical"
+	tools:context=".activities.MySetNewPayPwAct">
+	<include android:id="@+id/top_bar" layout="@layout/topbar_template"/>
+	<TextView
+		android:id="@+id/tv_instruction_1"
+		android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:layout_gravity="center_horizontal"
+			  android:layout_marginBottom="60px"
+			  android:layout_marginTop="40px"
+			  android:text="请设置6位支付密码"
+			  android:textColor="@color/FC1"
+			  android:textSize="@dimen/f2"/>
+	<com.jungly.gridpasswordview.GridPasswordView
+		android:id="@+id/pswView"
+		android:layout_width="match_parent"
+		android:layout_height="80px"
+		android:layout_marginLeft="82px"
+		android:layout_marginRight="82px"
+		app:gpvGridColor="@color/white"
+		app:gpvLineColor="@color/FC7"
+		app:gpvLineWidth="1dp"
+		app:gpvPasswordLength="6"
+		app:gpvPasswordType="numberPassword"
+		app:gpvTextColor="@color/FC1"
+		app:gpvTextSize="@dimen/f1"/>
+	<TextView
+		android:id="@+id/tv_instruction_2"
+		android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:layout_gravity="center_horizontal"
+			  android:layout_marginBottom="60px"
+			  android:layout_marginTop="60px"
+			  android:text="请确认6位支付密码"
+			  android:textColor="@color/FC1"
+			  android:textSize="@dimen/f2"/>
+	<com.jungly.gridpasswordview.GridPasswordView
+		android:id="@+id/pswViewConfirm"
+		android:layout_width="match_parent"
+		android:layout_height="80px"
+		android:layout_marginLeft="82px"
+		android:layout_marginRight="82px"
+		app:gpvGridColor="@color/white"
+		app:gpvLineColor="@color/FC7"
+		app:gpvLineWidth="1dp"
+		app:gpvPasswordLength="6"
+		app:gpvPasswordType="numberPassword"
+		app:gpvTextColor="@color/FC1"
+		app:gpvTextSize="@dimen/f1"/>
+<!--	<Button
+		android:id="@+id/btnFinishSet"
+		style="@style/circle_corner_btn_36_mc1_bg"
+		android:layout_width="550px"
+		android:layout_height="72px"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="120px"
+		android:text="完  成"
+	/>-->
+</com.zhy.autolayout.AutoLinearLayout>

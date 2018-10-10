@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlLiveControl"
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="12dp"
+				android:paddingRight="12dp">
+	<Button
+		android:id="@+id/btn_invite_time"
+		android:layout_width="60dp"
+		android:layout_height="30dp"
+		android:background="@drawable/round_white_bg_live_connect"
+		android:gravity="center"
+		android:textColor="@color/white"
+		android:text="30 S"
+		android:layout_marginBottom="13dp"
+		android:textSize="@dimen/f2"
+		android:visibility="gone"/>
+	<Button
+		android:id="@+id/btnSendMessage"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:background="@drawable/live_gengduo_xhdpi"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_marginBottom="13dp"
+		/>
+	<Button
+		android:id="@+id/btnCloseConnectLive"
+		android:layout_width="80dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="15dp"
+		android:layout_toRightOf="@+id/btnSendMessage"
+		android:background="@drawable/round_white_bg_live_connect"
+		android:text="关闭连麦"
+		android:textColor="@color/C0324"
+		android:textSize="@dimen/f3"
+		android:visibility="gone"/>
+
+	<Button
+		android:id="@+id/btnCamera"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginLeft="@dimen/d12"
+		android:layout_marginStart="@dimen/d12"
+		android:background="@drawable/live_paizhao_selector"/>
+
+	<Button
+		android:id="@+id/btnShare"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="@dimen/d12"
+		android:layout_marginStart="@dimen/d12"
+		android:layout_toLeftOf="@+id/btnCamera"
+		android:layout_toStartOf="@+id/btnCamera"
+		android:background="@drawable/live_shared_selector"/>
+
+	<Button
+		android:id="@+id/btnClear"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="@dimen/d12"
+		android:layout_marginStart="@dimen/d12"
+		android:layout_toLeftOf="@+id/btnShare"
+		android:layout_toStartOf="@+id/btnShare"
+		android:background="@drawable/qingping_xhdpi"/>
+
+	<ImageView
+		android:id="@+id/btn_beauty"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginLeft="@dimen/d12"
+		android:layout_toLeftOf="@+id/btnClear"
+		android:scaleType="fitXY"
+		android:visibility="gone"
+		android:background="@drawable/meiyan"/>
+	<RelativeLayout
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_alignParentTop="true"
+		android:layout_toLeftOf="@+id/btn_beauty"
+		android:layout_toStartOf="@+id/btn_beauty"
+		android:background="@drawable/live_xiaoxi_xhdpi">
+		<ImageView
+			android:id="@+id/btn_message"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			/>
+
+		<ImageView
+			android:id="@+id/btn_message_dian"
+			android:layout_width="10dp"
+			android:layout_height="10dp"
+		    android:layout_alignParentRight="true"
+			android:src="@drawable/em_tab_unread_bg"
+			android:visibility="gone"
+			/>
+	</RelativeLayout>
+
+
+</RelativeLayout>

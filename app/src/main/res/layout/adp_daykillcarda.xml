@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:background="@color/C0412T98"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/day_count_ll"
+        android:layout_marginLeft="7dp"
+        android:layout_width="34dp"
+        android:background="@color/C0412T98"
+        android:layout_height="38dp">
+
+            <TextView
+                android:id="@+id/day_count"
+                android:layout_width="24dp"
+                android:layout_centerInParent="true"
+                android:text="01"
+                android:gravity="center"
+                android:textSize="@dimen/f6"
+                android:background="@drawable/killcart_adp_item_round_bg"
+                android:layout_height="24dp"/>
+
+        <ImageView
+            android:id="@+id/day_prize_im"
+            android:layout_width="24dp"
+            android:layout_centerInParent="true"
+            android:layout_height="28dp"/>
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/check_prize"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:textColor="@color/C0315"
+            android:visibility="gone"
+            android:text="{eam-e661}"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

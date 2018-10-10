@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/tbs_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT">
+    </com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/c16"
+        ></View>
+
+    <!--置顶系统消息-->
+    <RelativeLayout
+        android:id="@+id/rl_all_sysInfo"
+        android:layout_width="match_parent"
+        android:layout_height="71dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_icon_and_dian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_sys_icon"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/ico_dazhaohu"
+                />
+            <com.echoesnet.eatandmeet.views.CircleTextView
+                android:id="@+id/ctv_sys_unRead"
+                android:layout_toRightOf="@+id/iv_sys_icon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:gravity="center"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="5dp"
+                android:text="6"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_sys_title"
+            android:layout_alignTop="@+id/tv_sys_time"
+            android:layout_toRightOf="@+id/rl_icon_and_dian"
+            android:layout_marginLeft="9dp"
+            android:textColor="@color/C0321"
+            android:textSize="@dimen/f3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统通知"/>
+        <TextView
+            android:id="@+id/tv_sys_content"
+            android:text="升级系统"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/rl_icon_and_dian"
+            android:layout_below="@+id/tv_sys_title"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_sys_time"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/C0322"
+            android:textSize="@dimen/f6"
+            android:text="1分钟前"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/c16"
+        ></View>
+    <!-- 关注消息-->
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/prl_personInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color">
+
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tool="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_centerHorizontal="true"
+				  android:orientation="vertical">
+		<View android:id="@+id/view"
+			  android:layout_width="match_parent"
+			  android:layout_height="13dp"
+		/>
+		<TextView
+			android:id="@+id/timestamp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:textColor="@color/C0323"
+			android:textSize="@dimen/f4"
+			tool:text="下午 06:01"/>
+		<TextView
+			android:id="@+id/tv_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_marginBottom="5dp"
+			android:layout_marginTop="5dp"
+			android:background="@drawable/round_cornor_20_c0331_bg"
+			android:paddingBottom="3dp"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:paddingTop="3dp"
+			android:textColor="@color/C0324"
+			android:textSize="@dimen/f4"
+			tool:text="你撤回了一条消息"/>
+	</LinearLayout>
+
+</RelativeLayout>

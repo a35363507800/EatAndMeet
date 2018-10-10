@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c16"
+    android:id="@+id/act_myinfo_layout"
+    android:orientation="vertical">
+
+    <com.echoesnet.eatandmeet.views.widgets.TopBarSwich.TopBarSwitch
+        android:id="@+id/top_bar_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topbarType="TEXT"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.echoesnet.eatandmeet.views.widgets.MyGridView
+                android:id="@+id/noScrollgridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:horizontalSpacing="18px"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp"
+                android:scrollbars="none"
+                android:verticalSpacing="12dp"/>
+            <RelativeLayout
+                android:id="@+id/arl_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="头像"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/riv_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/userhead"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="1px"
+                    app:riv_corner_radius="4dp"
+                    app:riv_oval="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/text_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="昵称"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.echoesnet.eatandmeet.views.widgets.MaxByteLengthEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:layout_toLeftOf="@+id/iv_name_more_height"
+                    android:textCursorDrawable="@drawable/ease_editcursor"
+                    android:gravity="right|end"
+                    android:hint="请输入昵称"
+                    android:singleLine="true"
+                    android:textColor="@color/C0321"
+                    android:textColorHint="@color/FC3"
+                    android:textSize="@dimen/f3"
+                    android:textStyle="bold"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_name_more_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_height"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="身高"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_height"
+                    android:text="请选择身高"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_constellation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="星座"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_xz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_constellation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_xz"
+                    android:text="请选择星座"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_state"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="情感状况"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_gq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_gq"
+                    android:text="保密"
+                    android:textColor="@color/C0315"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_identity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="身份认证"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_identity_gq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_identity_gq"
+                    android:text="已通过"
+                    android:textColor="@color/C0315"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@color/C0333"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="个人信息"
+                    android:textColor="@color/C0323"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_brithday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="生日"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_brithday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_brithday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_brithday"
+                    android:textColor="@color/C0412"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_education"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_education"
+                    android:layout_alignBottom="@+id/tv_education"
+                    android:layout_alignParentStart="true"
+                    android:text="学历"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_ed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_ed"
+                    android:text="请选择学历"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_city"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="城市"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_city"
+                    android:text="天津市"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_work"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="职业"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_work"
+                    android:text="策划"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_income"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="月收入"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_income"
+                    android:text="请选择月收入"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/arl_want_to_go"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="最近要去"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <TextView
+                    android:id="@+id/tv_want_to_go"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_want_to_go"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:hint="请选择餐厅"
+                    android:maxLines="1"
+                    android:textColor="@color/FC3"
+                    android:textColorHint="@color/FC3"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_want_to_go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_sign"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:layout_marginBottom="63dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_sign_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="个性签名"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_sign"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="这家伙很懒，什么都没有留下哦~"
+                    android:maxLength="15"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/arl_lable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"></View>
+
+                <TextView
+                    android:id="@+id/tv_label_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="18dp"
+                    android:text="我的标签"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_label_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <com.echoesnet.eatandmeet.views.widgets.MyGridView
+                    android:id="@+id/mgv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toLeftOf="@+id/iv_label_sign"
+                    android:layout_toRightOf="@+id/tv_label_title"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@color/translucent"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:verticalSpacing="6dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@color/C0333"
+                android:paddingLeft="12dp"
+                android:visibility="gone"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="择偶标准"
+                    android:textColor="@color/C0323"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_work_other"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:visibility="gone"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="职业"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_occ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_work_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_occ"
+                    android:text="互联网/产品/策划"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_income_other"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="月收入"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_incomes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_income_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_incomes"
+                    android:text="请选择月收入"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_education_other"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="学历"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_eds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_education_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_eds"
+                    android:text="请选择学历"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_height_other"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:visibility="gone"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="身高"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_heights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_height_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_heights"
+                    android:text="160cm-165cm"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/arl_city_other"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:visibility="gone"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="所在城市"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+
+                <com.joanzapata.iconify.widget.IconTextView
+                    android:id="@+id/iv_more_citys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="{eam-e909 @color/C0323 @dimen/f3}"/>
+
+                <TextView
+                    android:id="@+id/tv_city_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/iv_more_citys"
+                    android:text="天津市"
+                    android:textColor="@color/C0321"
+                    android:textSize="@dimen/f3"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:tool="http://schemas.android.com/tools"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingBottom="16.5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.echoesnet.eatandmeet.views.widgets.LevelHeaderView
+            android:id="@+id/img_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="13dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/C0321"
+                android:maxEms="7"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/f3"/>
+
+            <com.echoesnet.eatandmeet.views.widgets.GenderView
+                android:id="@+id/tv_sex"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_nickname"
+                android:layout_marginLeft="5dp"/>
+
+
+            <com.echoesnet.eatandmeet.views.widgets.LevelView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/tv_sex"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="22"
+                android:textColor="@color/white"
+                app:text_size="@dimen/f5"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_below="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="145dp"
+                android:singleLine="true"
+                tool:text="1232ghfghgfhfhgfhgfhfghfhfhfhfhf132"
+                android:textColor="@color/C0322"
+                android:textSize="@dimen/f4"/>
+
+
+
+            <com.echoesnet.eatandmeet.views.widgets.CustomRatingBar.CustomRatingBar
+                android:id="@+id/crb_content_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:id="@+id/cet_fans_comment"
+                android:layout_alignLeft="@id/tv_time"
+                android:layout_below="@+id/tv_time">
+
+
+                <com.echoesnet.eatandmeet.views.widgets.CustomExpandableTextView
+                    android:id="@+id/tv_club_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:animDuration="200"
+                    app:maxCollapsedLines="2">
+
+                    <TextView
+                        android:id="@id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/C0322"
+                        android:textSize="@dimen/f3"/>
+
+                    <TextView
+                        android:id="@id/expand_collapse"
+                        android:textColor="@color/C0412"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        />
+                </com.echoesnet.eatandmeet.views.widgets.CustomExpandableTextView>
+
+
+
+
+                <!--<com.ms.square.android.expandabletextview.ExpandableTextView-->
+                    <!--android:id="@+id/tv_club_comment"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:animDuration="200"-->
+                    <!--app:maxCollapsedLines="3">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@id/expandable_text"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:lineSpacingMultiplier="1.2"-->
+                        <!--android:textColor="@color/c2"-->
+                        <!--android:textSize="@dimen/f3"/>-->
+
+                    <!--<ImageButton-->
+                        <!--android:id="@id/expand_collapse"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="right|bottom"-->
+                        <!--android:background="@color/transparent"-->
+                        <!--android:padding="5dp"/>-->
+                <!--</com.ms.square.android.expandabletextview.ExpandableTextView>-->
+
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_content_pic"
+                android:layout_below="@+id/cet_fans_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical"/>
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/C0332"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
